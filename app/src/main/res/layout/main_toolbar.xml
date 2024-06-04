@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Home"
+    android:background="@color/white"
+    >
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <ImageView
+                android:id="@+id/id_menu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/common_menu"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:onClick="ClickMenu"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                app:tint="@color/black" />
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@id/id_menu"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:fontFamily="@font/ubuntu_light"
+                android:text="Credse"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/logo"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_toRightOf="@id/name"-->
+<!--                android:src="@drawable/shopping_cart" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/name"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                android:layout_toLeftOf="@id/name"-->
+<!--                android:text="Online shopping"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:textSize="5dp" />-->
+
+            <RelativeLayout
+                android:id="@+id/login_text_layout"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/id_user_account">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="@string/log_in"
+                    android:textColor="@color/white"
+                    android:textStyle="bold|italic" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/username_layout"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/id_user_account">
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/user_account_layout_btn"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/id_user_account"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_user_new"
+                app:tint="@color/white" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+
+                android:layout_marginRight="5dp">
+
+
+                <EditText
+                    android:id="@+id/search"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:hint="@string/search_brands_smart_phones_headset_cloths"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:textColor="#1E1F20"
+                    android:textColorHighlight="#00BCD4"
+                    android:textColorHint="#C46D6D6D"
+                    android:textColorLink="#00BCD4"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/id_action_search2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/ic_search"
+                    app:tint="@color/shadow_1" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+           </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/bottom_nav_home"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_alignParentBottom="true"-->
+
+<!--            android:background="@drawable/splash_gradient"-->
+<!--            android:fontFamily="@font/open_sans_light"-->
+<!--            app:elevation="8dp"-->
+<!--            app:itemIconTint="@color/nav_item_state_list"-->
+<!--            app:itemTextColor="#FFFFFF"-->
+<!--            app:labelVisibilityMode="labeled"-->
+<!--            app:menu="@menu/menu_navigation"-->
+<!--            />-->
+
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/continue_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:layout_gravity="bottom"
+        android:text="ADD CONTACTS"
+        android:background="#008DFF"
+        android:textColor="#FFFFFF" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

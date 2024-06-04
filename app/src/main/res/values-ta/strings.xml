@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Credse Merchant</string>
+    <string name="made_in_india_with">இந்தியாவில் தயாரிக்கப்பட்டது</string>
+    <string name="permissions">அனுமதிகள்</string>
+    <string name="camera_permission_denied">கேமரா அனுமதி மறுக்கப்பட்டது</string>
+    <string name="storage_permission">சேமிப்பக அனுமதி</string>
+    <string name="camera_permission">கேமரா அனுமதி</string>
+    <string name="user_info_permission">பயனர் தகவல் அனுமதி</string>
+    <string name="storage">சேமிப்பு</string>
+    <string name="get_start_storage_permission">இந்தப் பயன்பாட்டில் இருந்து பயன்பாட்டு அம்சத்தை அணுகவும் நிதி ஆவணங்களைப் பதிவிறக்கவும் சேமிப்பக அனுமதி தேவை</string>
+    <string name="camera">புகைப்பட கருவி</string>
+    <string name="get_start_camera_permission">ஆப்ஸ் பயனரின் நோக்கம் சுயவிவரப் படம் மற்றும் அட்டைப் படத்தைப் புதுப்பிக்க கேமரா அம்சத்தைப் பயன்படுத்தவும்.</string>
+    <string name="user_information">பயனர் தகவல்</string>
+    <string name="get_start_user_info_permission">மொபைல் எண், நாடு , பகுதி, பாலினம், வயது, சிறந்த பயன்பாட்டை வழங்குவதற்காக எங்களின் விண்ணப்பத் தேடல் வரலாறு போன்ற உங்கள் தனிப்பட்ட தரவை நாங்கள் சேகரிக்கிறோம்.</string>
+    <string name="continue_">தொடரவும்</string>
+    <string name="choose_language">மொழியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="english">ஆங்கிலம்</string>
+    <string name="tamil">தமிழ்</string>
+    <string name="hindi">ஹிந்தி</string>
+    <string name="log_in">உள்நுழைய</string>
+    <string name="search_brands_smart_phones_headset_cloths">தேடல் பெயர் (அல்லது) மொபைல் எண்</string>
+    <string name="grow_your_nbusiness_nwith_us">எங்களுடன் உங்கள் வணிகத்தை வளர்த்துக் கொள்ளுங்கள்</string>
+</resources>

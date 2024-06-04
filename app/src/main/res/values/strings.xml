@@ -1,7 +1,24 @@
 <resources>
-    <string name="app_name">Credse Merchant</string>
-    <string name="credse">Credse</string>
+    <string name="app_name" translatable="false">Credse Merchant</string>
+    <string name="credse" translatable="false">Credse</string>
     <string name="made_in_india_with">Made in India with</string>
     <string name="permissions">Permissions</string>
     <string name="camera_permission_denied">Camera Permission Denied</string>
+    <string name="storage_permission">Storage permission</string>
+    <string name="camera_permission">Camera permission</string>
+    <string name="user_info_permission">User info permission</string>
+    <string name="storage">Storage</string>
+    <string name="get_start_storage_permission">Need storage permission to access application feature\'s and  download financial documents from in this app</string>
+    <string name="camera">Camera</string>
+    <string name="get_start_camera_permission">Purpose for app user use the camera feature for update profile picture and cover picture.</string>
+    <string name="user_information">User information</string>
+    <string name="get_start_user_info_permission">We collect your personal data such as mobile no, country , region, gender, age, our application searching history for providing better use.</string>
+    <string name="continue_">Continue</string>
+    <string name="choose_language">Choose Language</string>
+    <string name="english">English</string>
+    <string name="tamil">Tamil</string>
+    <string name="hindi">Hindi</string>
+    <string name="log_in">LOG IN</string>
+    <string name="search_brands_smart_phones_headset_cloths">Search Name (or) Mobile Number</string>
+    <string name="grow_your_nbusiness_nwith_us">Grow your \nbusiness \nwith us</string>
 </resources>

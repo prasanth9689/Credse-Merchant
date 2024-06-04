@@ -19,7 +19,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="20dp"
             android:fontFamily="@font/ubuntu_medium"
-            android:text="Grow your \nbusiness \nwith us"
+            android:text="@string/grow_your_nbusiness_nwith_us"
             android:textColor="@color/black"
             android:textSize="40sp" />
 
