@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="made_in_india_with">भारत में निर्मित</string>
+    <string name="permissions">अनुमतियां</string>
+    <string name="camera_permission_denied">कैमरे की अनुमति अस्वीकृत</string>
+    <string name="storage_permission">भंडारण की अनुमति</string>
+    <string name="camera_permission">कैमरे की अनुमति</string>
+    <string name="user_info_permission">उपयोगकर्ता जानकारी अनुमति</string>
+    <string name="storage">भंडारण</string>
+    <string name="get_start_storage_permission">इस ऐप में एप्लिकेशन सुविधाओं तक पहुंचने और वित्तीय दस्तावेज़ डाउनलोड करने के लिए भंडारण अनुमति की आवश्यकता है</string>
+    <string name="camera">कैमरा</string>
+    <string name="get_start_camera_permission">ऐप उपयोगकर्ता के लिए प्रोफ़ाइल चित्र और कवर चित्र को अद्यतन करने के लिए कैमरा सुविधा का उपयोग करना।</string>
+    <string name="user_information">यूजर जानकारी</string>
+    <string name="get_start_user_info_permission">हम बेहतर उपयोग प्रदान करने के लिए आपका व्यक्तिगत डेटा जैसे मोबाइल नंबर, देश, क्षेत्र, लिंग, आयु, हमारा एप्लिकेशन खोज इतिहास एकत्र करते हैं।</string>
+    <string name="continue_">जारी रखना</string>
+    <string name="choose_language">भाषा चुनें</string>
+    <string name="english">अंग्रेज़ी</string>
+    <string name="tamil">तामिल</string>
+    <string name="hindi">हिंदी</string>
+    <string name="log_in">लॉग इन करें</string>
+    <string name="search_brands_smart_phones_headset_cloths">नाम (या) मोबाइल नंबर खोजें</string>
+    <string name="grow_your_nbusiness_nwith_us">हमारे साथ अपना व्यवसाय बढ़ाएँ</string>
+    <string name="sign_in">दाखिल करना</string>
+    <string name="mobile_no">मोबाइल नहीं है</string>
+    <string name="phone_number">फ़ोन नंबर</string>
+    <string name="profile_picture">प्रोफ़ाइल फोटो</string>
+    <string name="welcome">स्वागत</string>
+    <string name="bfsi">बीएफएसआई</string>
+    <string name="solo_proprietorship">एकल स्वामित्व</string>
+    <string name="our_products">हमारे उत्पाद</string>
+    <string name="company">कंपनी</string>
+    <string name="company_gateway">कंपनी गेटवे</string>
+    <string name="contacts">संपर्क</string>
+    <string name="business_area">व्यवसायिक क्षेत्र</string>
+    <string name="management">प्रबंध</string>
+    <string name="settings">समायोजन</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="app_name">Credse Merchant</string>
+    <string name="about_the_app">ऐप के बारे में</string>
+    <string name="get_started">शुरू हो जाओ</string>
+    <string name="enter_mobile_number_to_get_otp">ओटीपी प्राप्त करने के लिए मोबाइल नंबर दर्ज करें</string>
+    <string name="get_otp">ओटीपी प्राप्त करें</string>
+    <string name="add_contacts">संपर्क जोड़ें</string>
+</resources>

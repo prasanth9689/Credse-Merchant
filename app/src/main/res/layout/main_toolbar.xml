@@ -216,7 +216,7 @@
         android:layout_marginStart="10dp"
         android:fontFamily="@font/ubuntu_light"
         android:layout_gravity="bottom"
-        android:text="ADD CONTACTS"
+        android:text="@string/add_contacts"
         android:background="#008DFF"
         android:textColor="#FFFFFF" />
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Credse Merchant</string>
     <string name="made_in_india_with">இந்தியாவில் தயாரிக்கப்பட்டது</string>
     <string name="permissions">அனுமதிகள்</string>
     <string name="camera_permission_denied">கேமரா அனுமதி மறுக்கப்பட்டது</string>
@@ -21,4 +20,24 @@
     <string name="log_in">உள்நுழைய</string>
     <string name="search_brands_smart_phones_headset_cloths">தேடல் பெயர் (அல்லது) மொபைல் எண்</string>
     <string name="grow_your_nbusiness_nwith_us">எங்களுடன் உங்கள் வணிகத்தை வளர்த்துக் கொள்ளுங்கள்</string>
+    <string name="sign_in">உள்நுழையவும்</string>
+    <string name="mobile_no">அலைபேசி எண்</string>
+    <string name="phone_number">தொலைபேசி எண்</string>
+    <string name="profile_picture">சுயவிவர படம்</string>
+    <string name="welcome">வரவேற்பு</string>
+    <string name="bfsi">பிஎப்எஸ்ஐ</string>
+    <string name="solo_proprietorship">தனி உரிமையாளர்</string>
+    <string name="our_products">எங்கள் தயாரிப்புகள்</string>
+    <string name="company">நிறுவனம்</string>
+    <string name="company_gateway">நிறுவனத்தின் நுழைவாயில்</string>
+    <string name="contacts">தொடர்புகள்</string>
+    <string name="business_area">வணிக பகுதியில்</string>
+    <string name="management">மேலாண்மை</string>
+    <string name="settings">அமைப்புகள்</string>
+    <string name="logout">வெளியேறு</string>
+    <string name="about_the_app">பயன்பாட்டைப் பற்றி</string>
+    <string name="get_started">தொடங்குங்கள்</string>
+    <string name="enter_mobile_number_to_get_otp">OTP பெற மொபைல் எண்ணை உள்ளிடவும்</string>
+    <string name="get_otp">OTP பெறவும்</string>
+    <string name="add_contacts">தொடர்புகளைச் சேர்க்கவும்</string>
 </resources>

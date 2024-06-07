@@ -30,6 +30,7 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.SessionHandler;
 
 public class GetStartedActivity extends AppCompatActivity {
     private ActivityGetStartedBinding binding;
+    private SessionHandler session;
     private static final String SHARED_PREFE_ID = "mypref";
     private static final String KEY_PREFE_GET_STARTED = "get_started";
     private Dialog permissionDialog;
@@ -47,7 +48,7 @@ public class GetStartedActivity extends AppCompatActivity {
         initPermissionDialog();
         binding.getStartBtn.setOnClickListener(view1 -> {permissionDialog.show();});
 
-        SessionHandler session = new SessionHandler(getApplicationContext());
+        session = new SessionHandler(getApplicationContext());
 
         if(session.isLoggedIn()){
             loadHome();
@@ -128,10 +129,14 @@ public class GetStartedActivity extends AppCompatActivity {
     }
 
     private void redirect(){
-        Intent intent = new Intent(context, Home.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intent);
-        finish();
+        if (session.isLoggedIn()) {
+            Intent intent = new Intent(context, Home.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+        } else {
+            startActivity(new Intent(context, LoginActivity.class));
+        }
     }
 
     private void loadHome() {

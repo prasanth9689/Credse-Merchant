@@ -23,7 +23,7 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.User;
 public class Home extends AppCompatActivity {
     private ActivityHomeBinding binding;
     private SessionHandler session;
-    private Context context = this;
+    private final Context context = this;
     private final static String TAG = "Home";
     private String currentLanguage = "en", currentLang;
     private Locale myLocale;
@@ -47,15 +47,15 @@ public class Home extends AppCompatActivity {
             binding.toolbar.usernameLayout.setVisibility(View.VISIBLE);
             binding.toolbar.loginTextLayout.setVisibility(View.INVISIBLE);
             // Drawer
-            binding.navDrawerLayout.loginBtn.setVisibility(View.INVISIBLE);
+        //    binding.navDrawerLayout.loginBtn.setVisibility(View.INVISIBLE);
         }else{
             binding.toolbar.loginTextLayout.setVisibility(View.VISIBLE);
             binding.toolbar.usernameLayout.setVisibility(View.INVISIBLE);
 
             // Drawer
             binding.navDrawerLayout.userName.setVisibility(View.INVISIBLE);
-            binding.navDrawerLayout.usernamePlaceHolder.setVisibility(View.INVISIBLE);
-            binding.navDrawerLayout.loginBtn.setVisibility(View.VISIBLE);
+        //    binding.navDrawerLayout.usernamePlaceHolder.setVisibility(View.INVISIBLE);
+         //   binding.navDrawerLayout.loginBtn.setVisibility(View.VISIBLE);
         }
     }
 
