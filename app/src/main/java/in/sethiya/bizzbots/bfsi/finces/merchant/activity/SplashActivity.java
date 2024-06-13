@@ -45,31 +45,31 @@ public class SplashActivity extends AppCompatActivity {
         SessionHandler session = new SessionHandler(getApplicationContext());
 
         Handler handler = new Handler();
-        handler.postDelayed(() -> {
-
-            String LANG_ID = sp.getString(KEY_PREFE_LANG, String.valueOf(3));
-            if (LANG_ID.equals("1")){
-                if (status.equals("true")){
-                    if (session.isLoggedIn()) {
-                        Intent intent = new Intent(context, Home.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        startActivity(new Intent(context, LoginActivity.class));
-                    }
-                }else {
-                    Intent intent = new Intent(context, GetStartedActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
-                    finish();
-                }
-            }else{
-                Intent intent = new Intent(context, ChooseLanguageActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-                finish();
-            }
-        },1500);
+//        handler.postDelayed(() -> {
+//
+//            String LANG_ID = sp.getString(KEY_PREFE_LANG, String.valueOf(3));
+//            if (LANG_ID.equals("1")){
+//                if (status.equals("true")){
+//                    if (session.isLoggedIn()) {
+//                        Intent intent = new Intent(context, Home.class);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                        startActivity(intent);
+//                        finish();
+//                    } else {
+//                        startActivity(new Intent(context, LoginActivity.class));
+//                    }
+//                }else {
+//                    Intent intent = new Intent(context, GetStartedActivity.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    startActivity(intent);
+//                    finish();
+//                }
+//            }else{
+//                Intent intent = new Intent(context, ChooseLanguageActivity.class);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                startActivity(intent);
+//                finish();
+//            }
+//        },1500);
     }
 }
