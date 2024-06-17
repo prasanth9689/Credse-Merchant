@@ -6,5 +6,9 @@
         <item name="colorAccent">@color/colorPrimary3</item>
     </style>
 
-    <style name="Theme.CredseMerchant" parent="Base.Theme.CredseMerchant" />
+    <style name="Theme.CredseMerchant" parent="Base.Theme.CredseMerchant" >
+        <item name="colorPrimary">@color/colorPrimary2</item>
+        <item name="colorPrimaryDark">#FFFFFF</item>
+        <item name="colorAccent">@color/colorPrimary3</item>
+    </style>
 </resources>

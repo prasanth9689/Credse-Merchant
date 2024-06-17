@@ -126,10 +126,32 @@
                 android:src="@drawable/ic_user_new"
                 app:tint="@color/white" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/account_balance_wallet"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5,256.00"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="sans-serif-medium"/>
+            </LinearLayout>
 
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/search_container"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginLeft="5dp"
@@ -144,13 +166,11 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="5dp"
-
                 android:layout_marginRight="5dp">
 
 
                 <EditText
                     android:id="@+id/search"
-
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_centerInParent="true"
@@ -181,12 +201,51 @@
             </RelativeLayout>
 
         </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#F2F2F3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Contacts"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(777)"
+                    android:textColor="#B3B3B3"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_filter"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
            </com.google.android.material.appbar.AppBarLayout>
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp">
 
 <!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
 <!--            android:id="@+id/bottom_nav_home"-->
@@ -204,11 +263,17 @@
 <!--            />-->
 
 
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            />
     </RelativeLayout>
 
     <Button
-        android:id="@+id/continue_btn"
+        android:id="@+id/add_contacts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"

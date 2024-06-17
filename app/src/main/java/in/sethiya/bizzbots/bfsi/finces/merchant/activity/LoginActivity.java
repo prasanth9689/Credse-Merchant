@@ -26,12 +26,12 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.getOtp.setOnClickListener(view -> {
-            String mobile = binding.mobile.getText().toString();
-            if (mobile.isEmpty()) {
-                binding.mobile.setError("Please enter mobile number");
-                binding.mobile.requestFocus();
-                return;
-            }
+//            String mobile = binding.mobile.getText().toString();
+//            if (mobile.isEmpty()) {
+//                binding.mobile.setError("Please enter mobile number");
+//                binding.mobile.requestFocus();
+//                return;
+//            }
             startActivity(new Intent(context, Home.class));
         });
     }

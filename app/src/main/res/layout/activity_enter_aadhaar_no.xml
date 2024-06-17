@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.main.EnterAadhaarNoActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="20dp"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/back"
+            android:fontFamily="sans-serif-medium"
+            android:text="Aadhar verification"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Enter Aadhar Number"
+            android:fontFamily="sans-serif-medium"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:gravity="center"
+            android:text="Enter yours customer's 12 digit Aadhar number and Click on Send OTP to recive OTP on Customer's Aadhar Registered Mobile Number."
+            android:fontFamily="sans-serif-light"
+            android:textSize="10sp"
+            android:layout_marginTop="15dp"/>
+
+
+        <EditText
+            android:id="@+id/mobile"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit_text_login"
+            android:fontFamily="@font/ubuntu_light"
+            android:hint=""
+            android:inputType="phone"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:singleLine="true"
+            android:textCursorDrawable="@drawable/cursor_blue"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/get_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_blue_gradient"
+            android:fontFamily="@font/ubuntu_medium"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Send OTP"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>
