@@ -15,7 +15,6 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.databinding.DataBindingUtil;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
-import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.MyReviewActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.RegisterMobileActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivitySplashBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.SessionHandler;
@@ -80,7 +79,7 @@ public class SplashActivity extends AppCompatActivity {
 //                startActivity(new Intent(context, RegisterMobileActivity.class));
 //                finish();
 
-                startActivity(new Intent(context, MyReviewActivity.class));
+                startActivity(new Intent(context, RegisterMobileActivity.class));
                 finish();
             }
         },3000);
