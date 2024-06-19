@@ -10,12 +10,17 @@ import androidx.core.view.WindowInsetsCompat;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
 
-public class OffenceAddActivity extends AppCompatActivity {
+public class ReportActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_offence_add);
-
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_report);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
     }
 }

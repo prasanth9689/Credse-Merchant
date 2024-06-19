@@ -581,6 +581,7 @@
                     android:orientation="horizontal">
 
                     <Button
+                        android:id="@+id/registered"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:paddingStart="10dp"
@@ -589,10 +590,11 @@
                         android:background="@drawable/bg_blue_gradient"
                         android:fontFamily="@font/ubuntu_medium"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:text="Registered Offence"
+                        android:text="Registered"
                         android:textColor="@color/white" />
 
                     <Button
+                        android:id="@+id/un_registered"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:paddingStart="10dp"
@@ -602,9 +604,289 @@
                         android:background="@drawable/bg_blue_gradient"
                         android:fontFamily="@font/ubuntu_medium"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:text="Un-Registered Offence"
+                        android:text="Un-Registered"
                         android:textColor="@color/white" />
 
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_registered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="District"
+                        android:textColor="@color/grey"/>
+
+                    <EditText
+                        android:id="@+id/district"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:hint=""
+                        android:inputType="textPostalAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/cursor_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Police station"
+                        android:textColor="@color/grey"/>
+
+                    <EditText
+                        android:id="@+id/police_station"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:hint=""
+                        android:inputType="textPostalAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/cursor_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FIR"
+                        android:textColor="@color/grey"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:hint=""
+                        android:inputType="textPostalAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/cursor_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type of offence"
+                        android:textColor="@color/grey"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:hint=""
+                        android:inputType="textPostalAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/cursor_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date an Time offence"
+                        android:textColor="@color/grey"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:hint=""
+                        android:inputType="textPostalAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/cursor_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Place of offence"
+                        android:textColor="@color/grey"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:hint=""
+                        android:inputType="textPostalAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/cursor_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No off witness"
+                        android:textColor="@color/grey"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:hint=""
+                        android:inputType="textPostalAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/cursor_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Whether allegation proved"
+                        android:textColor="@color/grey"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:hint=""
+                        android:inputType="textPostalAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/cursor_blue"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_un_registered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type of offence"
+                        android:textColor="@color/grey"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:hint=""
+                        android:inputType="textPostalAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/cursor_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date an Time offence"
+                        android:textColor="@color/grey"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:hint=""
+                        android:inputType="textPostalAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/cursor_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Place of offence"
+                        android:textColor="@color/grey"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:hint=""
+                        android:inputType="textPostalAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/cursor_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No off witness"
+                        android:textColor="@color/grey"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:hint=""
+                        android:inputType="textPostalAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/cursor_blue"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Whether allegation proved"
+                        android:textColor="@color/grey"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:fontFamily="@font/ubuntu_light"
+                        android:hint=""
+                        android:inputType="textPostalAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/cursor_blue"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <TextView
