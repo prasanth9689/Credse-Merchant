@@ -80,7 +80,7 @@ public class SplashActivity extends AppCompatActivity {
 //                startActivity(new Intent(context, RegisterMobileActivity.class));
 //                finish();
 
-                startActivity(new Intent(context, MyReviewActivity.class));
+                startActivity(new Intent(context, RegisterMobileActivity.class));
                 finish();
             }
         },3000);

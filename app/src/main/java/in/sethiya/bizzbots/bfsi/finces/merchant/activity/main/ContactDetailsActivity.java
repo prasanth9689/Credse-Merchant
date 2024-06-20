@@ -31,6 +31,12 @@ public class ContactDetailsActivity extends AppCompatActivity {
             }
         });
 
+        binding.report.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(context, ReportActivity.class));
+            }
+        });
 
     }
 }

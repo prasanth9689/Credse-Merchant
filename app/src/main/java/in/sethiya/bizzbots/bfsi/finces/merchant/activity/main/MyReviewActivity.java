@@ -1,6 +1,7 @@
 package in.sethiya.bizzbots.bfsi.finces.merchant.activity.main;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -36,6 +37,13 @@ public class MyReviewActivity extends AppCompatActivity {
             public void onClick(View view) {
                 binding.layoutUnRegistered.setVisibility(View.VISIBLE);
                 binding.layoutRegistered.setVisibility(View.GONE);
+            }
+        });
+
+        binding.registeredOffenceBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(context, RegisteredOffenceActivity.class));
             }
         });
     }

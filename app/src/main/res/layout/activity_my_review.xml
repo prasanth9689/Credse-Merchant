@@ -532,6 +532,16 @@
                         android:fontFamily="sans-serif-medium"
                         android:text="0" />
 
+                    <TextView
+                        android:id="@+id/registered_offence_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View"
+                        android:layout_marginStart="10dp"
+                        android:textColor="#0073CF"
+                        android:fontFamily="sans-serif-medium"
+                        android:textStyle="bold"/>
+
                 </LinearLayout>
 
                 <LinearLayout
