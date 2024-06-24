@@ -79,10 +79,12 @@
          android:background="@color/shadow_1"/>
 
     <LinearLayout
+        android:id="@+id/my_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:onClick="onProfile"
         android:background="@drawable/button_click_default"
         android:clickable="true"
         android:focusable="true">
@@ -101,7 +103,7 @@
             android:layout_marginStart="0dp"
             android:fontFamily="@font/ubuntu_light"
             android:padding="12dp"
-            android:text="@string/bfsi"
+            android:text="Profile"
             android:textColor="@color/black" />
 
     </LinearLayout>
@@ -109,6 +111,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onSoloProp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:background="@drawable/button_click_default"
@@ -139,6 +142,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
+            android:onClick="onAbout"
             android:background="@drawable/button_click_default"
             android:clickable="true"
             android:focusable="true">
@@ -162,14 +166,43 @@
 
         </LinearLayout>
 
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:background="@drawable/button_click_default"-->
+<!--            android:clickable="true"-->
+<!--            android:focusable="true">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:contentDescription="@string/icons"-->
+<!--                android:src="@drawable/ic_launcher_foreground"-->
+<!--                app:tint="@color/shadow_1"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="0dp"-->
+<!--                android:fontFamily="@font/ubuntu_light"-->
+<!--                android:padding="12dp"-->
+<!--                android:text="@string/our_products"-->
+<!--                android:textColor="@color/black" />-->
+
+<!--        </LinearLayout>-->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
             android:background="@drawable/button_click_default"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:onClick="onMyCompany"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="30dp"
@@ -177,7 +210,7 @@
                 android:layout_marginStart="5dp"
                 android:contentDescription="@string/icons"
                 android:src="@drawable/ic_launcher_foreground"
-                app:tint="@color/shadow_1"/>
+                app:tint="@color/shadow_1" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -185,101 +218,74 @@
                 android:layout_marginStart="0dp"
                 android:fontFamily="@font/ubuntu_light"
                 android:padding="12dp"
-                android:text="@string/our_products"
-                android:textColor="@color/black" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:background="@drawable/button_click_default"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="5dp"
-                android:contentDescription="@string/icons"
-                android:src="@drawable/ic_launcher_foreground"
-                app:tint="@color/shadow_1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:fontFamily="@font/ubuntu_light"
-                android:padding="12dp"
-                android:text="@string/company"
+                android:text="My company"
                 android:textColor="@color/black" />
 
 
         </LinearLayout>
 
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:background="@drawable/button_click_default"-->
+<!--            android:clickable="true"-->
+<!--            android:focusable="true">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:contentDescription="@string/icons"-->
+<!--                android:src="@drawable/ic_launcher_foreground"-->
+<!--                app:tint="@color/shadow_1"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="0dp"-->
+<!--                android:fontFamily="@font/ubuntu_light"-->
+<!--                android:padding="12dp"-->
+<!--                android:text="@string/company_gateway"-->
+<!--                android:textColor="@color/black" />-->
+
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:background="@drawable/button_click_default"-->
+<!--            android:clickable="true"-->
+<!--            android:focusable="true">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:contentDescription="@string/icons"-->
+<!--                android:src="@drawable/ic_launcher_foreground"-->
+<!--                app:tint="@color/shadow_1"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="0dp"-->
+<!--                android:fontFamily="@font/ubuntu_light"-->
+<!--                android:padding="12dp"-->
+<!--                android:text="@string/contacts"-->
+<!--                android:textColor="@color/black" />-->
+
+
+<!--        </LinearLayout>-->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:background="@drawable/button_click_default"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="5dp"
-                android:contentDescription="@string/icons"
-                android:src="@drawable/ic_launcher_foreground"
-                app:tint="@color/shadow_1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:fontFamily="@font/ubuntu_light"
-                android:padding="12dp"
-                android:text="@string/company_gateway"
-                android:textColor="@color/black" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:background="@drawable/button_click_default"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="5dp"
-                android:contentDescription="@string/icons"
-                android:src="@drawable/ic_launcher_foreground"
-                app:tint="@color/shadow_1"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="0dp"
-                android:fontFamily="@font/ubuntu_light"
-                android:padding="12dp"
-                android:text="@string/contacts"
-                android:textColor="@color/black" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:onClick="onBusinessArea"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:background="@drawable/button_click_default"
@@ -311,6 +317,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
+            android:onClick="onWalletStatements"
             android:background="@drawable/button_click_default"
             android:clickable="true"
             android:focusable="true">
@@ -329,7 +336,7 @@
                 android:layout_marginStart="0dp"
                 android:fontFamily="@font/ubuntu_light"
                 android:padding="12dp"
-                android:text="@string/management"
+                android:text="Wallet satements"
                 android:textColor="@color/black" />
 
         </LinearLayout>

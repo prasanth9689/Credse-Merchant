@@ -28,6 +28,24 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".activity.navigation_drawer.WalletStatementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.navigation_drawer.BusinessAreaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.navigation_drawer.MyCompanyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.navigation_drawer.AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.navigation_drawer.SoleProprietorshipActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.navigation_drawer.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.main.RegisteredOffenceActivity"
             android:exported="false" />
         <activity

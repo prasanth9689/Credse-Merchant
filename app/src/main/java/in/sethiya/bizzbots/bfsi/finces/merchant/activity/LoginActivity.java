@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 //                return;
 //            }
             startActivity(new Intent(context, Home.class));
+            finish();
         });
     }
 }

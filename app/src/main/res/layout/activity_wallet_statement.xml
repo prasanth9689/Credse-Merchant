@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.navigation_drawer.WalletStatementActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="20dp"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/back"
+            android:fontFamily="sans-serif-medium"
+            android:text="Wallet statements"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Current balance :"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:text="Rs 1000"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/report"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Add money"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/bg_blue_gradient"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/my_review"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/add_money"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-light"
+            android:background="@drawable/edit_text_login"
+            android:inputType="phone"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:singleLine="true"
+            android:textCursorDrawable="@drawable/cursor_blue"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-light"
+                android:background="@drawable/edit_text_login"
+                android:inputType="phone"
+                android:paddingStart="10dp"
+                android:text="+ 100"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/cursor_blue"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="sans-serif-light"
+                android:background="@drawable/edit_text_login"
+                android:inputType="phone"
+                android:paddingStart="10dp"
+                android:text="+ 500"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/cursor_blue"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif-light"
+                android:background="@drawable/edit_text_login"
+                android:inputType="phone"
+                android:paddingStart="10dp"
+                android:text="+ 1000"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/cursor_blue"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif-light"
+                android:background="@drawable/edit_text_login"
+                android:inputType="phone"
+                android:paddingStart="10dp"
+                android:text="+ 500dp"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/cursor_blue"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Add"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:fontFamily="sans-serif"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_blue_gradient"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/my_review"
+            android:layout_marginTop="20dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transactions"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/black"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/bg_card_view"
+            app:cardBackgroundColor="#FFFFFF"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardCornerRadius="10dp"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iconImageView"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/logo_2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/iconImageView"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Paid for aadhar verification"
+                        android:textColorHint="@color/black"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="14sp"/>
+
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="2dp"
+                          android:text="Aadhar"
+                          android:textColorHint="@color/grey"
+                          android:fontFamily="sans-serif"
+                          android:textSize="11sp"/>
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="2dp"
+                          android:text="-8"
+                          android:layout_alignParentRight="true"
+                          android:textColor="#CD0000"
+                          android:layout_marginRight="10dp"
+                          android:fontFamily="sans-serif"
+                          android:textSize="11sp"/>
+
+                  </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/number_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:hint="14 June 10.27 AM"
+                            android:textColorHint="#8F8F8F"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

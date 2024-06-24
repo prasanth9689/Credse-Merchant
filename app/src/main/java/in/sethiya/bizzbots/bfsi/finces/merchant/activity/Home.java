@@ -9,16 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.graphics.Insets;
 import androidx.core.view.GravityCompat;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -31,6 +26,12 @@ import java.util.Locale;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.EnterAadhaarNoActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.AboutActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.BusinessAreaActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.MyCompanyActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.ProfileActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.SoleProprietorshipActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.WalletStatementActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityHomeBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.LocaleHelper;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.SessionHandler;
@@ -83,6 +84,12 @@ public class Home extends AppCompatActivity {
                 finish();
             }
         });
+
+        onClick();
+    }
+
+    private void onClick() {
+
     }
 
     private void loadHome() {
@@ -146,6 +153,36 @@ public class Home extends AppCompatActivity {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(LocaleHelper.onAttach(base));
+    }
+
+    public void onProfile(View view) {
+        closeDrawer(binding.drawerLayout);
+        startActivity(new Intent(context, ProfileActivity.class));
+    }
+
+    public void onSoloProp(View view) {
+        closeDrawer(binding.drawerLayout);
+        startActivity(new Intent(context, SoleProprietorshipActivity.class));
+    }
+
+    public void onAbout(View view) {
+        closeDrawer(binding.drawerLayout);
+        startActivity(new Intent(context, AboutActivity.class));
+    }
+
+    public void onMyCompany(View view) {
+        closeDrawer(binding.drawerLayout);
+        startActivity(new Intent(context, MyCompanyActivity.class));
+    }
+
+    public void onBusinessArea(View view) {
+        closeDrawer(binding.drawerLayout);
+        startActivity(new Intent(context, BusinessAreaActivity.class));
+    }
+
+    public void onWalletStatements(View view) {
+        closeDrawer(binding.drawerLayout);
+        startActivity(new Intent(context, WalletStatementActivity.class));
     }
 
     public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
