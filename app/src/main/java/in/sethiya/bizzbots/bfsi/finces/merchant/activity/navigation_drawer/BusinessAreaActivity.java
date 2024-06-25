@@ -2,6 +2,7 @@ package in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -77,6 +78,8 @@ public class BusinessAreaActivity extends AppCompatActivity {
         binding.recyclerViewSavings.setAdapter(adapter);
 
         loadInvestments();
+
+        binding.logout.setOnClickListener(v -> finish());
     }
 
     private void loadInvestments() {

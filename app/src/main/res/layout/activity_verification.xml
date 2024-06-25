@@ -15,7 +15,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Register"
+        android:text="@string/register"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:layout_marginTop="80dp"
-        android:text="Mobile Verification"
+        android:text="@string/mobile_verification"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Auto read OTP "
+            android:text="@string/auto_read_otp"
             android:fontFamily="sans-serif"
             android:textColor="@color/black"
             android:textSize="18sp"/>
@@ -88,7 +88,7 @@
                 android:layout_marginTop="5dp"
                 android:textColor="@color/grey"
                 android:textStyle="bold"
-                android:text="OTP Not received?"/>
+                android:text="@string/otp_not_received"/>
 
             <TextView
                 android:id="@+id/text_timer"
@@ -99,7 +99,7 @@
                 android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:text="30 Seconds"/>
+                android:text="@string/_30_seconds"/>
 
             <TextView
                 android:id="@+id/re_send"

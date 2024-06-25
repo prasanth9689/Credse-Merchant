@@ -46,5 +46,7 @@ public class MyReviewActivity extends AppCompatActivity {
                 startActivity(new Intent(context, RegisteredOffenceActivity.class));
             }
         });
+
+        binding.back.setOnClickListener(v -> finish());
     }
 }

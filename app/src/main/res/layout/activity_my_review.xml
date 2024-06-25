@@ -40,7 +40,7 @@
                     android:layout_marginStart="5dp"
                     android:layout_toEndOf="@+id/back"
                     android:fontFamily="sans-serif-medium"
-                    android:text="My Review"
+                    android:text="@string/my_review"
                     android:textColor="@color/black"
                     android:textSize="14sp"/>
 
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
                     android:gravity="start"
-                    android:text="All the details &amp; feedbacks provided here are only for your own organizations internal usage and for calculating Personality Score of customer which will be used publically"
+                    android:text="@string/all_the_details_amp_feedbacks_provided_here_are_only_for_your_own_organizations_internal_usage_and_for_calculating_personality_score_of_customer_which_will_be_used_publically"
                     android:textSize="13sp"
 
                     />
@@ -69,7 +69,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Personality Traits"
+                    android:text="@string/personality_traits"
                     android:textColor="@color/black" />
 
                 <RelativeLayout
@@ -81,7 +81,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Honesty" />
+                        android:text="@string/honesty" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -131,7 +131,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Kindness" />
+                        android:text="@string/kindness" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -181,7 +181,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Friendliness" />
+                        android:text="@string/friendliness" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -231,7 +231,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Smartness" />
+                        android:text="@string/smartness" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -281,7 +281,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sensibility" />
+                        android:text="@string/sensibility" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -327,7 +327,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Other Aspects"
+                    android:text="@string/other_aspects"
                     android:textColor="@color/black" />
 
                 <RelativeLayout
@@ -339,7 +339,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Financial Credibility" />
+                        android:text="@string/financial_credibility" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -389,7 +389,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Political Activeness" />
+                        android:text="@string/political_activeness" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -439,7 +439,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Religious Activenes" />
+                        android:text="@string/religious_activenes" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -485,7 +485,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Feedback"
+                    android:text="@string/feedback"
                     android:textColor="@color/black" />
 
                 <EditText
@@ -494,7 +494,7 @@
                     android:layout_height="80dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/edit_text_login"
-                    android:fontFamily="@font/ubuntu_light"
+                    android:fontFamily="sans-serif"
                     android:hint=""
                     android:inputType="phone"
                     android:paddingStart="10dp"
@@ -509,7 +509,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Offences"
+                    android:text="@string/offences"
                     android:textColor="@color/black" />
 
                 <LinearLayout
@@ -522,7 +522,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Registered Offence :"
+                        android:text="@string/registered_offence"
                         android:textColor="#6A6A6A" />
 
                     <TextView
@@ -536,7 +536,7 @@
                         android:id="@+id/registered_offence_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="View"
+                        android:text="@string/view"
                         android:layout_marginStart="10dp"
                         android:textColor="#0073CF"
                         android:fontFamily="sans-serif-medium"
@@ -554,7 +554,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Un-registered Offence :"
+                        android:text="@string/un_registered_offence"
                         android:textColor="#6A6A6A" />
 
                     <TextView
@@ -572,7 +572,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif"
                     android:gravity="start"
-                    android:text="Any offences submitted here will only be posted live after successful verification by Police Department."
+                    android:text="@string/any_offences_submitted_here_will_only_be_posted_live_after_successful_verification_by_police_department"
                     android:textSize="13sp" />
 
                 <TextView
@@ -580,7 +580,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Add Offences"
+                    android:text="@string/add_offences"
                     android:textColor="@color/black" />
 
                 <LinearLayout
@@ -598,9 +598,9 @@
                         android:paddingEnd="10dp"
                         android:textSize="12sp"
                         android:background="@drawable/bg_blue_gradient"
-                        android:fontFamily="@font/ubuntu_medium"
+                        android:fontFamily="sans-serif-medium"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:text="Registered"
+                        android:text="@string/registered"
                         android:textColor="@color/white" />
 
                     <Button
@@ -612,9 +612,9 @@
                         android:textSize="12sp"
                         android:layout_marginStart="10dp"
                         android:background="@drawable/bg_blue_gradient"
-                        android:fontFamily="@font/ubuntu_medium"
+                        android:fontFamily="sans-serif-medium"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:text="Un-Registered"
+                        android:text="@string/un_registered"
                         android:textColor="@color/white" />
 
                 </LinearLayout>
@@ -630,7 +630,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="District"
+                        android:text="@string/district"
                         android:textColor="@color/grey"/>
 
                     <EditText
@@ -639,7 +639,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/edit_text_login"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:hint=""
                         android:inputType="textPostalAddress"
                         android:paddingStart="10dp"
@@ -651,7 +651,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Police station"
+                        android:text="@string/police_station"
                         android:textColor="@color/grey"/>
 
                     <EditText
@@ -660,7 +660,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/edit_text_login"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:hint=""
                         android:inputType="textPostalAddress"
                         android:paddingStart="10dp"
@@ -672,7 +672,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="FIR"
+                        android:text="@string/fir"
                         android:textColor="@color/grey"/>
 
                     <EditText
@@ -680,7 +680,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/edit_text_login"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:hint=""
                         android:inputType="textPostalAddress"
                         android:paddingStart="10dp"
@@ -692,7 +692,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Type of offence"
+                        android:text="@string/type_of_offence"
                         android:textColor="@color/grey"/>
 
                     <EditText
@@ -700,7 +700,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/edit_text_login"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:hint=""
                         android:inputType="textPostalAddress"
                         android:paddingStart="10dp"
@@ -712,7 +712,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Date an Time offence"
+                        android:text="@string/date_an_time_offence"
                         android:textColor="@color/grey"/>
 
                     <EditText
@@ -720,7 +720,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/edit_text_login"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:hint=""
                         android:inputType="textPostalAddress"
                         android:paddingStart="10dp"
@@ -732,7 +732,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Place of offence"
+                        android:text="@string/place_of_offence"
                         android:textColor="@color/grey"/>
 
                     <EditText
@@ -740,7 +740,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/edit_text_login"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:hint=""
                         android:inputType="textPostalAddress"
                         android:paddingStart="10dp"
@@ -752,7 +752,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No off witness"
+                        android:text="@string/no_off_witness"
                         android:textColor="@color/grey"/>
 
                     <EditText
@@ -760,7 +760,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/edit_text_login"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:hint=""
                         android:inputType="textPostalAddress"
                         android:paddingStart="10dp"
@@ -772,7 +772,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Whether allegation proved"
+                        android:text="@string/whether_allegation_proved"
                         android:textColor="@color/grey"/>
 
                     <EditText
@@ -780,7 +780,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/edit_text_login"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:hint=""
                         android:inputType="textPostalAddress"
                         android:paddingStart="10dp"
@@ -801,7 +801,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Type of offence"
+                        android:text="@string/type_of_offence"
                         android:textColor="@color/grey"/>
 
                     <EditText
@@ -809,7 +809,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/edit_text_login"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:hint=""
                         android:inputType="textPostalAddress"
                         android:paddingStart="10dp"
@@ -821,7 +821,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Date an Time offence"
+                        android:text="@string/date_an_time_offence"
                         android:textColor="@color/grey"/>
 
                     <EditText
@@ -829,7 +829,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/edit_text_login"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:hint=""
                         android:inputType="textPostalAddress"
                         android:paddingStart="10dp"
@@ -841,7 +841,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Place of offence"
+                        android:text="@string/place_of_offence"
                         android:textColor="@color/grey"/>
 
                     <EditText
@@ -849,7 +849,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/edit_text_login"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:hint=""
                         android:inputType="textPostalAddress"
                         android:paddingStart="10dp"
@@ -861,7 +861,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No off witness"
+                        android:text="@string/no_off_witness"
                         android:textColor="@color/grey"/>
 
                     <EditText
@@ -869,7 +869,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/edit_text_login"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:hint=""
                         android:inputType="textPostalAddress"
                         android:paddingStart="10dp"
@@ -881,7 +881,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Whether allegation proved"
+                        android:text="@string/whether_allegation_proved"
                         android:textColor="@color/grey"/>
 
                     <EditText
@@ -889,7 +889,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/edit_text_login"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:hint=""
                         android:inputType="textPostalAddress"
                         android:paddingStart="10dp"
@@ -904,7 +904,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Overall Experience"
+                    android:text="@string/overall_experience"
                     android:textColor="@color/black" />
 
                 <LinearLayout
@@ -929,7 +929,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="Strongly \n Negative" />
+                            android:text="@string/strongly_n_negative" />
 
 
                     </LinearLayout>
@@ -949,7 +949,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Negative" />
+                            android:text="@string/negative" />
 
 
                     </LinearLayout>
@@ -969,7 +969,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Neutral" />
+                            android:text="@string/neutral" />
 
 
                     </LinearLayout>
@@ -989,7 +989,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Positive" />
+                            android:text="@string/positive" />
 
 
                     </LinearLayout>
@@ -1009,7 +1009,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Strongly \n Positive" />
+                            android:text="@string/strongly_n_positive" />
 
 
                     </LinearLayout>
@@ -1023,8 +1023,7 @@
                     android:layout_marginTop="20dp"
                     android:fontFamily="sans-serif"
                     android:gravity="start"
-                    android:text="Any attempt of misinterpretation of facts or willful dishonesty in data provisioning for any reasons will result to initiation of civil and criminal proceedings under Section 499 of IPC for defamation along with
-suspension of user account, deletion of all customer data and proceeding towards damage recovery.."
+                    android:text="@string/any_attempt_of_misinterpretation_of_facts_or_willful_dishonesty_in_data_provisioning_for_any_reasons_will_result_to_initiation_of_civil_and_criminal_proceedings_under_section_499_of_ipc_for_defamation_along_with_suspension_of_user_account_deletion_of_all_customer_data_and_proceeding_towards_damage_recovery"
                     android:textSize="13sp" />
 
             </LinearLayout>
@@ -1036,9 +1035,9 @@ suspension of user account, deletion of all customer data and proceeding towards
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/bg_blue_gradient"
-                android:fontFamily="@font/ubuntu_medium"
+                android:fontFamily="sans-serif-medium"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:text="SAVE"
+                android:text="@string/save"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="30dp"

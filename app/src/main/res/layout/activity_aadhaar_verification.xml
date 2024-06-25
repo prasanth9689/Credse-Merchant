@@ -31,7 +31,7 @@
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
-            android:text="Aadhar verification"
+            android:text="@string/aadhar_verification"
             android:textColor="@color/black"
             android:textSize="14sp"/>
 
@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:text="Enter OTP"
+            android:text="@string/enter_otp"
             android:fontFamily="sans-serif-medium"/>
 
 
@@ -59,7 +59,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
             android:gravity="center"
-            android:text="Enter the OTP received on Customer 's Aadhar registered mobile Number and click on SUBMIT button to validate customer's identity as per Aadhar Database"
+            android:text="@string/enter_the_otp_received_on_customer_s_aadhar_registered_mobile_number_and_click_on_submit_button_to_validate_customer_s_identity_as_per_aadhar_database"
             android:fontFamily="sans-serif-light"
             android:textSize="10sp"
             android:layout_marginTop="15dp"/>
@@ -71,7 +71,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/edit_text_login"
-            android:fontFamily="@font/ubuntu_light"
+            android:fontFamily="sans-serif"
             android:hint=""
             android:inputType="phone"
             android:paddingStart="10dp"
@@ -88,9 +88,11 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:background="@drawable/bg_blue_gradient"
-            android:fontFamily="@font/ubuntu_medium"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:foreground="?android:attr/selectableItemBackground"
-            android:text="Submit"
+            android:text="@string/submit"
             android:textColor="@color/white" />
 
         <TextView
@@ -98,8 +100,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:text="Re-send OTP in 10 seconds"
-            android:fontFamily="sans-serif-light"/>
+            android:fontFamily="sans-serif-light"
+            android:text="@string/re_send_otp_in_10_seconds" />
 
     </LinearLayout>
 

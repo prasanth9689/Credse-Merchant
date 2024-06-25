@@ -22,5 +22,6 @@ public class RegisteredOffenceActivity extends AppCompatActivity {
         binding = ActivityRegisteredOffenceBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.back.setOnClickListener(v -> finish());
     }
 }

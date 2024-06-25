@@ -14,16 +14,13 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Objects;
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.RegisterMobileActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityGetStartedBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.LocaleHelper;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.SessionHandler;
@@ -135,12 +132,13 @@ public class GetStartedActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         } else {
-            startActivity(new Intent(context, LoginActivity.class));
+            startActivity(new Intent(context, RegisterMobileActivity.class));
+            finish();
         }
     }
 
     private void loadHome() {
-        Intent intent = new Intent(getApplicationContext(), Home.class);
+        Intent intent = new Intent(getApplicationContext(), RegisterMobileActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();

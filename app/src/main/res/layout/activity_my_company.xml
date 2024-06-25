@@ -31,7 +31,7 @@
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
-            android:text="My company"
+            android:text="@string/my_company"
             android:textColor="@color/black"
             android:textSize="14sp"/>
 
@@ -54,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
-                android:text="PAN"/>
+                android:text="@string/pan"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -80,7 +80,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Legal Name"
+                android:text="@string/legal_name"
                 android:fontFamily="sans-serif"/>
 
             <TextView
@@ -107,7 +107,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DOB"
+                android:text="@string/dob"
                 android:fontFamily="sans-serif"/>
 
             <TextView
@@ -134,7 +134,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
-                android:text="Reg. Address" />
+                android:text="@string/reg_address" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -160,7 +160,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
+                android:text="@string/description"
                 android:fontFamily="sans-serif"/>
 
             <TextView

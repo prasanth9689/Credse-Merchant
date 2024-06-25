@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:fontFamily="@font/ubuntu_medium"
+        android:fontFamily="sans-serif-medium"
         android:padding="10dp"
         android:text="@string/permissions"
         android:textColor="@color/black"
@@ -55,7 +55,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:text="@string/storage"
                         android:textColor="@color/black"
                         android:layout_marginStart="10dp"/>
@@ -64,7 +64,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/ubuntu_light"
+                    android:fontFamily="sans-serif"
                     android:text="@string/get_start_storage_permission"
                     android:layout_marginStart="10dp"/>
             </LinearLayout>
@@ -100,7 +100,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:text="@string/camera"
                         android:textColor="@color/black"
                         android:layout_marginStart="10dp"/>
@@ -108,7 +108,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/ubuntu_light"
+                    android:fontFamily="sans-serif"
                     android:text="@string/get_start_camera_permission"
                     android:layout_marginStart="10dp"/>
             </LinearLayout>
@@ -144,7 +144,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/ubuntu_light"
+                        android:fontFamily="sans-serif"
                         android:text="@string/user_information"
                         android:textColor="@color/black"
                         android:layout_marginStart="10dp"/>
@@ -152,7 +152,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/ubuntu_light"
+                    android:fontFamily="sans-serif"
                     android:text="@string/get_start_user_info_permission"
                     android:layout_marginStart="10dp"/>
             </LinearLayout>
@@ -183,8 +183,10 @@
                 android:id="@+id/continue_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/ubuntu_light"
+                android:fontFamily="sans-serif"
                 android:text="@string/continue_"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 android:background="#008DFF"
                 android:textColor="#FFFFFF" />
 

@@ -24,12 +24,11 @@ public class AadhaarVerificationActivity extends AppCompatActivity {
         binding = ActivityAadhaarVerificationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(context, ContactDetailsActivity.class));
-                finish();
-            }
+        binding.submit.setOnClickListener(v -> {
+            startActivity(new Intent(context, ContactDetailsActivity.class));
+            finish();
         });
+
+        binding.back.setOnClickListener(v -> finish());
     }
 }

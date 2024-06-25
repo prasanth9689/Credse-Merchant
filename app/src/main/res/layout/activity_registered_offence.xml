@@ -31,7 +31,7 @@
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
-            android:text="Registered Offence Record"
+            android:text="@string/registered_offence_record"
             android:textColor="@color/black"
             android:textSize="14sp"/>
 
@@ -61,7 +61,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="@string/name"
                 android:textColor="@color/grey"
                 android:fontFamily="sans-serif"/>
 
@@ -83,7 +83,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Address"
+                android:text="@string/address"
                 android:textColor="@color/grey"
                 android:fontFamily="sans-serif"/>
 
@@ -107,7 +107,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="All Offences"
+                android:text="@string/all_offences"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:fontFamily="sans-serif-medium"
@@ -149,7 +149,7 @@
                         android:id="@+id/name_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:hint="Offence No 1: "
+                        android:hint="@string/offence_no_1"
                         android:textColorHint="@color/black"
                         android:fontFamily="sans-serif-medium"
                         android:textSize="14sp"/>
@@ -197,7 +197,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
-                    android:text="Allegation proved"
+                    android:text="@string/allegation_proved"
                     android:fontFamily="sans-serif"
                     android:textSize="11sp"
                     android:layout_alignParentBottom="true"

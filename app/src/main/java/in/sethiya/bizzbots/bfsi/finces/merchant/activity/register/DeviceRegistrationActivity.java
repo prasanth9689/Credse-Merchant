@@ -7,21 +7,22 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityVerificationBinding;
+import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityDeviceRegistrationBinding;
 
-public class VerificationActivity extends AppCompatActivity {
-    private ActivityVerificationBinding binding;
+public class DeviceRegistrationActivity extends AppCompatActivity {
+    private ActivityDeviceRegistrationBinding binding;
     private final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityVerificationBinding.inflate(getLayoutInflater());
+        binding = ActivityDeviceRegistrationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.textView4.setOnClickListener(v -> {
-            startActivity(new Intent(context, DeviceRegistrationActivity.class));
+        binding.submit.setOnClickListener(v -> {
+            startActivity(new Intent(context, LoginMainActivity.class));
             finish();
         });
+
     }
 }

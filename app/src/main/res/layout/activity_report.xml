@@ -31,7 +31,7 @@
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
-            android:text="My Review"
+            android:text="@string/report"
             android:textColor="@color/black"
             android:textSize="14sp"/>
 
@@ -63,7 +63,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="@string/name"
                 android:textColor="@color/grey"
                 android:fontFamily="sans-serif"/>
 
@@ -85,7 +85,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Address"
+                android:text="@string/address"
                 android:textColor="@color/grey"
                 android:fontFamily="sans-serif"/>
 
@@ -108,7 +108,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mobile"
+            android:text="@string/mobile"
             android:textColor="@color/grey"
             android:fontFamily="sans-serif"/>
 
@@ -136,7 +136,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Financial Credibility" />
+                android:text="@string/financial_credibility" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -163,7 +163,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Political Activeness" />
+                android:text="@string/political_activeness" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -190,7 +190,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Religious Activenes" />
+                android:text="@string/religious_activenes" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -213,7 +213,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Offences"
+            android:text="@string/offences"
             android:textColor="@color/black" />
 
         <RelativeLayout
@@ -225,7 +225,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Registered Offences" />
+                android:text="@string/registered_offences" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -252,7 +252,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Un Registered Offences" />
+                android:text="@string/un_registered_offences" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -277,7 +277,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Experience"
+            android:text="@string/experience"
             android:textColor="@color/black" />
 
         <LinearLayout
@@ -302,7 +302,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Strongly \n Negative" />
+                    android:text="@string/strongly_n_negative" />
 
 
             </LinearLayout>
@@ -322,7 +322,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Negative" />
+                    android:text="@string/negative" />
 
 
             </LinearLayout>
@@ -342,7 +342,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Neutral" />
+                    android:text="@string/neutral" />
 
 
             </LinearLayout>
@@ -362,7 +362,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Positive" />
+                    android:text="@string/positive" />
 
 
             </LinearLayout>
@@ -382,7 +382,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Strongly \n Positive" />
+                    android:text="@string/strongly_n_positive" />
 
 
             </LinearLayout>

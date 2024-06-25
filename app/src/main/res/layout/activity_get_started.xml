@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="20dp"
-            android:fontFamily="@font/ubuntu_medium"
+            android:fontFamily="sans-serif-medium"
             android:text="@string/grow_your_nbusiness_nwith_us"
             android:textColor="@color/black"
             android:textSize="40sp" />
@@ -31,6 +31,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-medium"
             android:background="#2196F3"
             android:text="@string/get_started"
             android:textColor="#FFFFFF" />

@@ -32,7 +32,7 @@
             android:layout_height="90dp"
             android:layout_marginTop="16dp"
             android:contentDescription="@string/profile_picture"
-            android:fontFamily="@font/ubuntu_light"
+            android:fontFamily="sans-serif"
             android:src="@drawable/avater"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -42,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif"
             android:layout_marginTop="5dp"
             android:text="@string/welcome"
             android:textColor="#2C2C2C" />
@@ -52,6 +53,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
             android:text="Prasanth"
+            android:fontFamily="sans-serif"
             android:textColor="#7D7F81"
             tools:ignore="HardcodedText" />
 
@@ -65,7 +67,7 @@
             android:layout_marginStart="5dp"
             android:textSize="13sp"
             android:textColor="@color/black"
-            android:fontFamily="@font/ubuntu_medium"
+            android:fontFamily="sans-serif-medium"
             android:textStyle="bold"
             android:text=""/>
 
@@ -101,9 +103,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
-            android:fontFamily="@font/ubuntu_light"
+            android:fontFamily="sans-serif"
             android:padding="12dp"
-            android:text="Profile"
+            android:text="@string/profile"
             android:textColor="@color/black" />
 
     </LinearLayout>
@@ -130,7 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
-            android:fontFamily="@font/ubuntu_light"
+            android:fontFamily="sans-serif"
             android:padding="12dp"
             android:text="@string/solo_proprietorship"
             android:textColor="@color/black" />
@@ -159,7 +161,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
-                android:fontFamily="@font/ubuntu_light"
+                android:fontFamily="sans-serif"
                 android:padding="12dp"
                 android:text="@string/about_the_app"
                 android:textColor="@color/black" />
@@ -187,7 +189,7 @@
 <!--                android:layout_width="wrap_content"-->
 <!--                android:layout_height="wrap_content"-->
 <!--                android:layout_marginStart="0dp"-->
-<!--                android:fontFamily="@font/ubuntu_light"-->
+<!--                android:fontFamily="sans-serif"-->
 <!--                android:padding="12dp"-->
 <!--                android:text="@string/our_products"-->
 <!--                android:textColor="@color/black" />-->
@@ -216,9 +218,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
-                android:fontFamily="@font/ubuntu_light"
+                android:fontFamily="sans-serif"
                 android:padding="12dp"
-                android:text="My company"
+                android:text="@string/my_company"
                 android:textColor="@color/black" />
 
 
@@ -245,7 +247,7 @@
 <!--                android:layout_width="wrap_content"-->
 <!--                android:layout_height="wrap_content"-->
 <!--                android:layout_marginStart="0dp"-->
-<!--                android:fontFamily="@font/ubuntu_light"-->
+<!--                android:fontFamily="sans-serif"-->
 <!--                android:padding="12dp"-->
 <!--                android:text="@string/company_gateway"-->
 <!--                android:textColor="@color/black" />-->
@@ -274,7 +276,7 @@
 <!--                android:layout_width="wrap_content"-->
 <!--                android:layout_height="wrap_content"-->
 <!--                android:layout_marginStart="0dp"-->
-<!--                android:fontFamily="@font/ubuntu_light"-->
+<!--                android:fontFamily="sans-serif"-->
 <!--                android:padding="12dp"-->
 <!--                android:text="@string/contacts"-->
 <!--                android:textColor="@color/black" />-->
@@ -304,7 +306,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
-                android:fontFamily="@font/ubuntu_light"
+                android:fontFamily="sans-serif"
                 android:padding="12dp"
                 android:text="@string/business_area"
                 android:textColor="@color/black" />
@@ -334,9 +336,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
-                android:fontFamily="@font/ubuntu_light"
+                android:fontFamily="sans-serif"
                 android:padding="12dp"
-                android:text="Wallet satements"
+                android:text="@string/wallet_satements"
                 android:textColor="@color/black" />
 
         </LinearLayout>
@@ -362,7 +364,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
-                android:fontFamily="@font/ubuntu_light"
+                android:fontFamily="sans-serif"
                 android:padding="12dp"
                 android:text="@string/settings"
                 android:textColor="@color/black" />
@@ -390,7 +392,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
-                android:fontFamily="@font/ubuntu_light"
+                android:fontFamily="sans-serif"
                 android:padding="12dp"
                 android:text="@string/logout"
                 android:textColor="@color/black" />
@@ -404,7 +406,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:fontFamily="@font/ubuntu_light"
+        android:fontFamily="sans-serif"
         android:text="@string/credse_bill_payments_private_limited"
         android:textColor="@color/black"
         android:textSize="10sp"

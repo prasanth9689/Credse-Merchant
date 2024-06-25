@@ -31,7 +31,7 @@
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
-            android:text="Sole Propritorship"
+            android:text="@string/sole_proprietorship"
             android:textColor="@color/black"
             android:textSize="14sp"/>
 
@@ -53,7 +53,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Meaning"
+                android:text="@string/meaning"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-medium"/>
 
@@ -61,13 +61,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Sole Proprietorship, as defined by the Govt. Of India, is a “one-man organization where a single individual owns, manages and controls the business”. There is no legal distinction between the owner and the business entity. The sole proprietor is not a legal entity. It simply refers to a person who owns the business."
+                android:text="@string/sole_proprietorship_as_defined_by_the_govt_of_india_is_a_one_man_organization_where_a_single_individual_owns_manages_and_controls_the_business_there_is_no_legal_distinction_between_the_owner_and_the_business_entity_the_sole_proprietor_is_not_a_legal_entity_it_simply_refers_to_a_person_who_owns_the_business"
                 android:fontFamily="sans-serif"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Business Incorporation"
+                android:text="@string/business_incorporation"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-medium"/>
 
@@ -75,13 +75,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="The Sole Proprietorship is a popular business form due to its simplicity, ease of setup, and nominal cost. A sole proprietor is not required to go through elaborate legal formalities. No agreement is to be made and registration of the firm is also not essential. However, the owner may be required to obtain a license specific to the line of business from the local administration."
+                android:text="@string/the_sole_proprietorship_is_a_popular_business_form_due_to_its_simplicity_ease_of_setup_and_nominal_cost_a_sole_proprietor_is_not_required_to_go_through_elaborate_legal_formalities_no_agreement_is_to_be_made_and_registration_of_the_firm_is_also_not_essential_however_the_owner_may_be_required_to_obtain_a_license_specific_to_the_line_of_business_from_the_local_administration"
                 android:fontFamily="sans-serif"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Government Registrations"
+                android:text="@string/government_registrations"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-medium"/>
 
@@ -89,62 +89,62 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="A Sole Proprietorship business like any other form of business has to necessarily register on various government departments and programs and follow all the rules and regulations regulations amended by the law on timely basis as and when they become eligible or meet the criteria of such laws. Further registration on such government programs enables the proprietor to avail various benefits and subsidies provided by government under such laws. \n \n Some of the Major Laws or Programs that every entrepreneur should be aware of are: "
+                android:text="@string/a_sole_proprietorship_business_like_any_other_form_of_business_has_to_necessarily_register_on_various_government_departments_and_programs_and_follow_all_the_rules_and_regulations_regulations_amended_by_the_law_on_timely_basis_as_and_when_they_become_eligible_or_meet_the_criteria_of_such_laws_further_registration_on_such_government_programs_enables_the_proprietor_to_avail_various_benefits_and_subsidies_provided_by_government_under_such_laws_n_n_some_of_the_major_laws_or_programs_that_every_entrepreneur_should_be_aware_of_are"
                 android:fontFamily="sans-serif"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="1, Income Tax Laws"
+                android:text="@string/_1_income_tax_laws"
                 android:fontFamily="sans-serif"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="2, Goods and Service Tax"
+                android:text="@string/_2_goods_and_service_tax"
                 android:fontFamily="sans-serif"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="3, Shop &amp; 1. Establishment Laws"
+                android:text="@string/_3_shop_amp_1_establishment_laws"
                 android:fontFamily="sans-serif"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="4, Professional Tax under Municipal Laws"
+                android:text="@string/_4_professional_tax_under_municipal_laws"
                 android:fontFamily="sans-serif"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="5, Legal Metrology Laws"
+                android:text="@string/_5_legal_metrology_laws"
                 android:fontFamily="sans-serif"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="6, Legal Metrology Laws"
+                android:text="@string/_6_legal_metrology_laws"
                 android:fontFamily="sans-serif"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="7, 1. SSI/MSME Laws &amp; Schemes"
+                android:text="@string/_7_1_ssi_msme_laws_amp_schemes"
                 android:fontFamily="sans-serif"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Legal &amp; Trade/Business Name"
+                android:text="@string/legal_amp_trade_business_name"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-medium"/>
 
@@ -153,28 +153,28 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif"
-                android:text="The Legal Name of any Sole Proprietorship Business is the name of its owner as given in the PAN Database. Sole proprietors can do business under their own names because creating a separate business or trade name isn’t necessary. A sole proprietor may however use a trade name or business name other than their or its legal name. They may have to legally trademark their business name if it differs from their own legal name if required.  " />
+                android:text="@string/the_legal_name_of_any_sole_proprietorship_business_is_the_name_of_its_owner_as_given_in_the_pan_database_sole_proprietors_can_do_business_under_their_own_names_because_creating_a_separate_business_or_trade_name_isn_t_necessary_a_sole_proprietor_may_however_use_a_trade_name_or_business_name_other_than_their_or_its_legal_name_they_may_have_to_legally_trademark_their_business_name_if_it_differs_from_their_own_legal_name_if_required" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:text="Investment &amp; Capital"
+                android:text="@string/investment_amp_capital"
                 android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="There are no minimum capital investment requirements for a sole proprietorship. As sole proprietorships are not considered business entities that are separate from its owner the funds received from lenders or Investors are treated as personal use requests, although the funds acquired from these sources are used for business purposes."
+                android:text="@string/there_are_no_minimum_capital_investment_requirements_for_a_sole_proprietorship_as_sole_proprietorships_are_not_considered_business_entities_that_are_separate_from_its_owner_the_funds_received_from_lenders_or_investors_are_treated_as_personal_use_requests_although_the_funds_acquired_from_these_sources_are_used_for_business_purposes"
                 android:fontFamily="sans-serif" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:text="Taxation"
+                android:text="@string/taxation"
                 android:textColor="@color/black" />
 
             <TextView
@@ -182,14 +182,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif"
-                android:text="Because a sole proprietorship is indistinguishable from its owner, sole proprietorship taxation is quite simple. The income earned by a sole proprietorship is income earned by its owner." />
+                android:text="@string/because_a_sole_proprietorship_is_indistinguishable_from_its_owner_sole_proprietorship_taxation_is_quite_simple_the_income_earned_by_a_sole_proprietorship_is_income_earned_by_its_owner" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:text="Work Conditions"
+                android:text="@string/work_conditions"
                 android:textColor="@color/black" />
 
             <TextView
@@ -197,13 +197,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif"
-                android:text="A sole trader does not necessarily work 'alone'—it is possible for the sole trader to employ other people" />
+                android:text="@string/a_sole_trader_does_not_necessarily_work_alone_it_is_possible_for_the_sole_trader_to_employ_other_people" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:text="Community"
+                android:text="@string/community"
                 android:textColor="@color/black" />
 
             <TextView
@@ -211,7 +211,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif"
-                android:text="There are various communities and association of people in this sector, who have come together to address various challenges faced by them and boost their contribution to the society and economy of the nation. \n \n Sole Proprietorship, as defined by the Govt. Of India, is a “one-man organisation where a single individual owns, manages and controls the business”. There is no legal distinction between the owner and the business entity. The sole proprietor is not a legal entity. It simply refers to a person who owns the business." />
+                android:text="@string/there_are_various_communities_and_association_of_people_in_this_sector_who_have_come_together_to_address_various_challenges_faced_by_them_and_boost_their_contribution_to_the_society_and_economy_of_the_nation_n_n_sole_proprietorship_as_defined_by_the_govt_of_india_is_a_one_man_organisation_where_a_single_individual_owns_manages_and_controls_the_business_there_is_no_legal_distinction_between_the_owner_and_the_business_entity_the_sole_proprietor_is_not_a_legal_entity_it_simply_refers_to_a_person_who_owns_the_business" />
 
         </LinearLayout>
 

@@ -6,57 +6,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".activity.register.AccessTokenActivity">
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Register"
-        android:textColor="@color/black"
-        android:textSize="34sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:layout_marginTop="80dp"
-        android:text="Device registration"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+    tools:context=".activity.SetupPasscodeActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
+        app:layout_constraintVertical_bias="0.5">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter access token"
             android:fontFamily="sans-serif"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:text="@string/enter_passcode"
+            android:textSize="18sp" />
 
 
         <EditText
@@ -66,27 +37,58 @@
             android:layout_centerHorizontal="false"
             android:layout_centerVertical="true"
             android:layout_marginTop="10dp"
+            android:autofillHints="password"
             android:background="@drawable/edit_text_login"
-            android:fontFamily="sans-serif-light"
+            android:fontFamily="sans-serif"
+            android:hint="    *    *    *    *"
+            android:inputType="numberDecimal"
             android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:singleLine="true"
             android:textCursorDrawable="@drawable/cursor_blue"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/submit"
+            android:id="@+id/get_otp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="50dp"
-            android:text="SUBMIT"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:fontFamily="sans-serif"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:background="@drawable/bg_blue_gradient"
-            android:textColor="@color/white"
-            />
+            android:fontFamily="sans-serif-medium"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/create_passcode"
+            android:textColor="@color/white" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/setup_passcode"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/into_your_account"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

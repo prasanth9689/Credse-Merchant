@@ -31,7 +31,7 @@
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
-            android:text="Aadhar verification"
+            android:text="@string/aadhar_verification"
             android:textColor="@color/black"
             android:textSize="14sp"/>
 
@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:text="Enter Aadhar Number"
+            android:text="@string/enter_aadhar_number"
             android:fontFamily="sans-serif-medium"/>
 
 
@@ -59,7 +59,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
             android:gravity="center"
-            android:text="Enter yours customer's 12 digit Aadhar number and Click on Send OTP to recive OTP on Customer's Aadhar Registered Mobile Number."
+            android:text="@string/enter_yours_customer_s_12_digit_aadhar_number_and_click_on_send_otp_to_recive_otp_on_customer_s_aadhar_registered_mobile_number"
             android:fontFamily="sans-serif-light"
             android:textSize="10sp"
             android:layout_marginTop="15dp"/>
@@ -71,7 +71,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/edit_text_login"
-            android:fontFamily="@font/ubuntu_light"
+            android:fontFamily="sans-serif"
             android:hint=""
             android:inputType="phone"
             android:paddingStart="10dp"
@@ -86,10 +86,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:background="@drawable/bg_blue_gradient"
-            android:fontFamily="@font/ubuntu_medium"
+            android:fontFamily="sans-serif-medium"
             android:foreground="?android:attr/selectableItemBackground"
-            android:text="Send OTP"
+            android:text="@string/send_otp"
             android:textColor="@color/white" />
 
     </LinearLayout>

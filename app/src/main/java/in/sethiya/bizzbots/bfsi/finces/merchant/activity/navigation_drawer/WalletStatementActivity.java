@@ -2,6 +2,7 @@ package in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,5 +23,6 @@ public class WalletStatementActivity extends AppCompatActivity {
         binding = ActivityWalletStatementBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.back.setOnClickListener(v -> finish());
     }
 }

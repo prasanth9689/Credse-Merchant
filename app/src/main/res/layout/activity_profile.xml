@@ -16,7 +16,7 @@
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="Profile"
+           android:text="@string/profile"
            android:textColor="@color/black"
            android:textSize="30sp"
            android:textStyle="bold"
@@ -45,7 +45,7 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:fontFamily="sans-serif"
-                   android:text="Name"/>
+                   android:text="@string/name"/>
 
                <TextView
                    android:layout_width="wrap_content"
@@ -71,7 +71,7 @@
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:text="C/O"
+                   android:text="@string/c_o"
                    android:fontFamily="sans-serif"/>
 
                <TextView
@@ -99,7 +99,7 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:fontFamily="sans-serif"
-                   android:text="Address" />
+                   android:text="@string/address" />
 
                <TextView
                    android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:text="DOB"
+                   android:text="@string/dob"
                    android:fontFamily="sans-serif"/>
 
                <TextView
@@ -151,7 +151,7 @@
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:text="Gender"
+                   android:text="@string/gender"
                    android:fontFamily="sans-serif"/>
 
                <TextView
@@ -177,7 +177,7 @@
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:text="Mobile" />
+                   android:text="@string/mobile" />
 
                <TextView
                    android:layout_width="wrap_content"
@@ -213,7 +213,7 @@
                <TextView
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:text="Email"
+                   android:text="@string/email"
                    android:fontFamily="sans-serif"/>
 
                <TextView
@@ -245,7 +245,7 @@
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:text="Update Login Passcode"
+               android:text="@string/update_login_passcode"
                android:layout_gravity="center_horizontal"
                android:layout_marginTop="60dp"
                android:textSize="18sp"

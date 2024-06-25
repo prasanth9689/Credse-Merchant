@@ -67,10 +67,10 @@
             android:name=".activity.main.EnterAadhaarNoActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.register.UserRegistrationActivity"
+            android:name=".activity.register.LoginMainActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.register.AccessTokenActivity"
+            android:name=".activity.register.DeviceRegistrationActivity"
             android:exported="false" />
         <activity
             android:name=".activity.register.VerificationActivity"
@@ -79,10 +79,11 @@
             android:name=".activity.Home"
             android:exported="false" />
         <activity
-            android:name=".activity.LoginActivity"
+            android:name=".activity.SetupPasscodeActivity"
             android:exported="false" />
         <activity
             android:name=".activity.ChooseLanguageActivity"
+            android:theme="@style/Base.Theme.CredseMerchant"
             android:exported="false" />
         <activity
             android:name=".activity.GetStartedActivity"

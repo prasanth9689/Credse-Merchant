@@ -31,7 +31,7 @@
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
-            android:text="Sole Propritorship"
+            android:text="@string/about_the_app"
             android:textColor="@color/black"
             android:textSize="14sp"/>
 
@@ -53,27 +53,27 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="       This App is a simple yet powerful tool for Individual Entrepreneurs or Sole Proprietors or Sole Traders who are willing or already pursuing their business as an Individual in the BFSI Industry to accelerate, automate and manage their business more efficiently and effectively."
+            android:text="@string/this_app_is_a_simple_yet_powerful_tool_for_individual_entrepreneurs_or_sole_proprietors_or_sole_traders_who_are_willing_or_already_pursuing_their_business_as_an_individual_in_the_bfsi_industry_to_accelerate_automate_and_manage_their_business_more_efficiently_and_effectively"
             android:fontFamily="sans-serif"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="       Here, we guide you from set-up to taxation, helping you with the various rules and regulations applicable to your business , necessary registrations and licenses to be obtained, managing and automating your entire business processes like invoicing, banking, collection, reporting, inventory management, accounting and taxation, along with customer relationship management thus transforming your active income to passive income."
+            android:text="@string/here_we_guide_you_from_set_up_to_taxation_helping_you_with_the_various_rules_and_regulations_applicable_to_your_business_necessary_registrations_and_licenses_to_be_obtained_managing_and_automating_your_entire_business_processes_like_invoicing_banking_collection_reporting_inventory_management_accounting_and_taxation_along_with_customer_relationship_management_thus_transforming_your_active_income_to_passive_income"
             android:fontFamily="sans-serif"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="       We also strive to provide a platform for the various business communities to engage with each other in a better and constructive way."
+            android:text="@string/we_also_strive_to_provide_a_platform_for_the_various_business_communities_to_engage_with_each_other_in_a_better_and_constructive_way"
             android:fontFamily="sans-serif"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Our Mission"
+            android:text="@string/our_mission"
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-medium"/>
@@ -82,20 +82,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="To unleash the power of technology into the hands of entrepreneurs."
+            android:text="@string/to_unleash_the_power_of_technology_into_the_hands_of_entrepreneurs"
             android:fontFamily="sans-serif"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Engineering or technology is all about using the power of science to make life better for people, to reduce cost, to improve comfort, to improve productivity, etc."
+            android:text="@string/engineering_or_technology_is_all_about_using_the_power_of_science_to_make_life_better_for_people_to_reduce_cost_to_improve_comfort_to_improve_productivity_etc"
             android:fontFamily="sans-serif"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="--- N. R. Narayana Murthy"
+            android:text="@string/n_r_narayana_murthy"
             android:layout_marginTop="10dp"
             android:layout_gravity="right"
             android:textColor="@color/black"
@@ -105,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Wishing you a happy ride with us, we look forward to a constructive and mutually beneficial relationship."
+            android:text="@string/wishing_you_a_happy_ride_with_us_we_look_forward_to_a_constructive_and_mutually_beneficial_relationship"
             android:fontFamily="sans-serif"/>
 
 

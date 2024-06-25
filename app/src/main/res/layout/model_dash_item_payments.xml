@@ -42,7 +42,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="#858585"
                 android:layout_marginTop="5dp"
-                android:fontFamily="@font/ubuntu_medium"
+                android:fontFamily="sans-serif-medium"
                 tools:text="Classification" />
 
             <!--            <TextView-->

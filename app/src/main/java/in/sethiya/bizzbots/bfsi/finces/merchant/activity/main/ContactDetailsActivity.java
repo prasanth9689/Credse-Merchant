@@ -38,5 +38,7 @@ public class ContactDetailsActivity extends AppCompatActivity {
             }
         });
 
+        binding.back.setOnClickListener(v -> finish());
+
     }
 }

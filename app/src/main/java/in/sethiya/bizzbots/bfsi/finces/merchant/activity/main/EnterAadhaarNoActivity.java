@@ -31,5 +31,7 @@ public class EnterAadhaarNoActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        binding.back.setOnClickListener(v -> finish());
     }
 }
