@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.PersonalDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityAadhaarVerificationBinding;
 
 public class AadhaarVerificationActivity extends AppCompatActivity {
@@ -25,8 +26,7 @@ public class AadhaarVerificationActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.submit.setOnClickListener(v -> {
-            startActivity(new Intent(context, ContactDetailsActivity.class));
-            finish();
+            startActivity(new Intent(context, PersonalDetailsActivity.class));
         });
 
         binding.back.setOnClickListener(v -> finish());
