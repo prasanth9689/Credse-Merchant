@@ -165,4 +165,23 @@
     <string name="un_registered_offences">अपंजीकृत अपराध</string>
     <string name="experience">अनुभव</string>
     <string name="mobile_verification">मोबाइल सत्यापन</string>
+    <string name="captured_image_view">कैप्चर किया गया छवि दृश्य</string>
+    <string name="flash_button">फ़्लैश बटन</string>
+    <string name="switch_camera_button">कैमरा बटन स्विच करें</string>
+    <string name="retry">पुन: प्रयास</string>
+    <string name="camera_button">कैमरा बटन</string>
+    <string name="back">पीछे</string>
+    <string name="event_name">घटना नाम</string>
+    <string name="personal_details">व्यक्तिगत विवरण</string>
+    <string name="title">शीर्षक</string>
+    <string name="first_name">पहला नाम</string>
+    <string name="surname">उपनाम</string>
+    <string name="father_name">पिता का नाम</string>
+    <string name="mother_name">माँ का नाम</string>
+    <string name="place_of_birth">जन्म स्थान</string>
+    <string name="citizenship">सिटिज़नशिप</string>
+    <string name="marital_status">वैवाहिक स्थिति</string>
+    <string name="doa">DOA</string>
+    <string name="spouse_name">जीवनसाथी का नाम</string>
+    <string name="error_empty_field_found">त्रुटि रिक्त फ़ील्ड मिली</string>
 </resources>

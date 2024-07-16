@@ -31,9 +31,9 @@
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
-            android:text="Personal details"
+            android:text="@string/personal_details"
             android:textColor="@color/black"
-            android:textSize="14sp"/>
+            android:textSize="20sp"/>
 
     </RelativeLayout>
 
@@ -103,20 +103,21 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Title"
+                        android:text="@string/title"
                         android:textColor="@color/black" />
 
                     <EditText
+                        android:id="@+id/title"
                         android:layout_width="90dp"
                         android:layout_height="40dp"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/bg_btn_common"
-                        android:fontFamily="@font/ubuntu"
+                        android:fontFamily="sans-serif"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:importantForAutofill="no"
                         tools:ignore="LabelFor"
-                        android:inputType="textMultiLine" />
+                        android:inputType="text" />
 
                 </LinearLayout>
 
@@ -132,20 +133,21 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="sans-serif-medium"
-                        android:text="First Name"
+                        android:text="@string/first_name"
                         android:textColor="@color/black" />
 
                     <EditText
+                        android:id="@+id/first_name"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/bg_btn_common"
-                        android:fontFamily="@font/ubuntu"
+                        android:fontFamily="sans-serif"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:importantForAutofill="no"
                         tools:ignore="LabelFor"
-                        android:inputType="textMultiLine" />
+                        android:inputType="text" />
 
                 </LinearLayout>
 
@@ -156,35 +158,37 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Surname"
+                android:text="@string/surname"
                 android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/surname"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/bg_btn_common"
-                android:fontFamily="@font/ubuntu"
+                android:fontFamily="sans-serif"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:importantForAutofill="no"
                 tools:ignore="LabelFor"
-                android:inputType="textMultiLine" />
+                android:inputType="text" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Father Name"
+                android:text="@string/father_name"
                 android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/father_name"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/bg_btn_common"
-                android:fontFamily="@font/ubuntu"
+                android:fontFamily="sans-serif"
                 android:importantForAutofill="no"
                 android:inputType="textMultiLine"
                 android:paddingStart="10dp"
@@ -196,20 +200,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Mother Name"
+                android:text="@string/mother_name"
                 android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/mother_name"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/bg_btn_common"
-                android:fontFamily="@font/ubuntu"
+                android:fontFamily="sans-serif"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:importantForAutofill="no"
                 tools:ignore="LabelFor"
-                android:inputType="textMultiLine" />
+                android:inputType="text" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -217,29 +222,50 @@
 
                 <LinearLayout
                     android:id="@+id/gender_con"
-                    android:layout_width="wrap_content"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="Gender"
-                        android:textColor="@color/black" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                    <EditText
-                        android:layout_width="150dp"
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/gender"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/txt_company_not_valid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="More Fonts..."
+                            android:text="@string/not_valid"
+                            android:textColor="#ff0130"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            tools:ignore="SmallSp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:layout_marginTop="5dp"
                         android:background="@drawable/bg_btn_common"
-                        android:fontFamily="@font/ubuntu"
-                        android:importantForAutofill="no"
-                        android:inputType="textMultiLine"
-                        android:paddingStart="10dp"
-                        android:paddingEnd="10dp"
-                        tools:ignore="LabelFor" />
+                        android:layout_marginTop="5dp">
+
+                        <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
+                            android:id="@+id/spinner_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -255,20 +281,21 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="sans-serif-medium"
-                        android:text="DOB"
+                        android:text="@string/dob"
                         android:textColor="@color/black" />
 
                     <EditText
+                        android:id="@+id/dob"
                         android:layout_width="180dp"
                         android:layout_height="40dp"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/bg_btn_common"
-                        android:fontFamily="@font/ubuntu"
+                        android:fontFamily="sans-serif"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:importantForAutofill="no"
                         tools:ignore="LabelFor"
-                        android:inputType="textMultiLine" />
+                        android:inputType="text" />
 
                 </LinearLayout>
 
@@ -279,27 +306,28 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Place of Birth"
+                android:text="@string/place_of_birth"
                 android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/pl_of_birth"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/bg_btn_common"
-                android:fontFamily="@font/ubuntu"
+                android:fontFamily="sans-serif"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:importantForAutofill="no"
                 tools:ignore="LabelFor"
-                android:inputType="textMultiLine" />
+                android:inputType="text" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Citizenship"
+                android:text="@string/citizenship"
                 android:textColor="@color/black" />
 
             <RelativeLayout
@@ -309,7 +337,7 @@
                 android:layout_marginTop="5dp">
 
                 <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
-                    android:id="@+id/spinner_plant"
+                    android:id="@+id/spinner_citizenship"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"/>
@@ -322,7 +350,7 @@
 
                 <LinearLayout
                     android:id="@+id/marital_con"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -331,20 +359,22 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Marital Status"
+                        android:text="@string/marital_status"
                         android:textColor="@color/black" />
 
-                    <EditText
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:layout_marginTop="5dp"
                         android:background="@drawable/bg_btn_common"
-                        android:fontFamily="@font/ubuntu"
-                        android:importantForAutofill="no"
-                        android:inputType="textMultiLine"
-                        android:paddingStart="10dp"
-                        android:paddingEnd="10dp"
-                        tools:ignore="LabelFor" />
+                        android:layout_marginTop="5dp">
+
+                        <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
+                            android:id="@+id/m_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -360,20 +390,21 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="sans-serif-medium"
-                        android:text="DOA"
+                        android:text="@string/doa"
                         android:textColor="@color/black" />
 
                     <EditText
+                        android:id="@+id/doa"
                         android:layout_width="150dp"
                         android:layout_height="40dp"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/bg_btn_common"
-                        android:fontFamily="@font/ubuntu"
+                        android:fontFamily="sans-serif"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:importantForAutofill="no"
                         tools:ignore="LabelFor"
-                        android:inputType="textMultiLine" />
+                        android:inputType="text" />
 
                 </LinearLayout>
 
@@ -384,17 +415,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Spouse Name"
+                android:text="@string/spouse_name"
                 android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/spouse"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/bg_btn_common"
-                android:fontFamily="@font/ubuntu"
+                android:fontFamily="sans-serif"
                 android:importantForAutofill="no"
-                android:inputType="textMultiLine"
+                android:inputType="text"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 tools:ignore="LabelFor" />
@@ -412,8 +444,8 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
                     android:textSize="10sp"
-                    android:fontFamily="@font/ubuntu"
-                    android:text="Error empty field found"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/error_empty_field_found"
                     android:textStyle="bold"
                     android:textColor="#ff0130"
                     tools:ignore="SmallSp"
@@ -422,14 +454,14 @@
             </RelativeLayout>
 
             <Button
-                android:id="@+id/button_save"
+                android:id="@+id/save"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/save"
                 android:layout_marginTop="0dp"
                 android:background="@drawable/bg_blue_radius"
                 android:textColor="@color/white"
-                android:fontFamily="@font/ubuntu"
+                android:fontFamily="sans-serif"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"

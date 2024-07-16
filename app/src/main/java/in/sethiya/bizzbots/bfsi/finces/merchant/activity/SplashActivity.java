@@ -15,6 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.databinding.DataBindingUtil;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.ContactsDetailsActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.PersonalDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.MyReviewActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.RegisterMobileActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivitySplashBinding;
@@ -35,45 +37,47 @@ public class SplashActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+                       startActivity(new Intent(context, PersonalDetailsActivity.class));
 
-        sp = getSharedPreferences(SHARED_PREFE_ID, MODE_PRIVATE);
-        String status = sp.getString(KEY_PREFE_GET_STARTED, "");
-
-        SessionHandler session = new SessionHandler(getApplicationContext());
-
-        Handler handler = new Handler();
-        handler.postDelayed(() -> {
-
-            String LANG_ID = sp.getString(KEY_PREFE_LANG, String.valueOf(3));
-            if (LANG_ID.equals("1")){
-                if (status.equals("true")){
-                    if (session.isLoggedIn()) {
-                        Intent intent = new Intent(context, Home.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        startActivity(new Intent(context, Home.class));
-                        finish();
-                    }
-                }else {
-                    Intent intent = new Intent(context, GetStartedActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
-                    finish();
-                }
-            }else{
-                Intent intent = new Intent(context, ChooseLanguageActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-                finish();
-            }
-        },1500);
+//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+//            return insets;
+//        });
+//
+//        sp = getSharedPreferences(SHARED_PREFE_ID, MODE_PRIVATE);
+//        String status = sp.getString(KEY_PREFE_GET_STARTED, "");
+//
+//        SessionHandler session = new SessionHandler(getApplicationContext());
+//
+//        Handler handler = new Handler();
+//        handler.postDelayed(() -> {
+//
+//            String LANG_ID = sp.getString(KEY_PREFE_LANG, String.valueOf(3));
+//            if (LANG_ID.equals("1")){
+//                if (status.equals("true")){
+//                    if (session.isLoggedIn()) {
+//                        Intent intent = new Intent(context, Home.class);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                        startActivity(intent);
+//                        finish();
+//                    } else {
+//                        startActivity(new Intent(context, Home.class));
+//                        finish();
+//                    }
+//                }else {
+//                    Intent intent = new Intent(context, GetStartedActivity.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    startActivity(intent);
+//                    finish();
+//                }
+//            }else{
+//                Intent intent = new Intent(context, ChooseLanguageActivity.class);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                startActivity(intent);
+//                finish();
+//            }
+//        },1500);
 
 //        handler.postDelayed(new Runnable() {
 //            @Override
