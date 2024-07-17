@@ -191,6 +191,7 @@
     <string name="spouse_name">Spouse Name</string>
     <string name="error_empty_field_found">Error empty field found</string>
     <string name="not_valid">Not valid</string>
+    <string name="living_type">Living Type</string>
 
 
     <array name="title_array">

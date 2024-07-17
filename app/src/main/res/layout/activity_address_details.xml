@@ -1,10 +1,662 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".activity.contacts.AddressDetailsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="20dp"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/back"
+            android:fontFamily="sans-serif-medium"
+            android:text="Address Details"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Living Type"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txt_living_ty_not_valid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/not_valid"
+                android:textColor="#ff0130"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_btn_common"
+            android:layout_marginTop="5dp">
+
+            <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
+                android:id="@+id/spinner_living_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="House Type"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txt_house_type_not_valid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/not_valid"
+                android:textColor="#ff0130"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_btn_common"
+            android:layout_marginTop="5dp">
+
+            <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
+                android:id="@+id/spinner_house_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Name of Home"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/ed_name_of_home"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_common"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:inputType="text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_radius_con"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="20dp"
+                android:text="Apartment Details"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="House No"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/ed_apart_house_no"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_btn_common"
+                android:fontFamily="sans-serif"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor"
+                android:inputType="text" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Level Floor"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_lvl_floor_not_valid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/not_valid"
+                    android:textColor="#ff0130"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_btn_common"
+                android:layout_marginTop="5dp">
+
+                <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
+                    android:id="@+id/spinner_apart_level_floor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Block No"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/ed_apart_block_no"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_btn_common"
+                android:fontFamily="sans-serif"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Apartment Name"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/ed_apartment_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_btn_common"
+                android:fontFamily="sans-serif"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor"
+                android:inputType="text"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_radius_con"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Raw House Details"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Raw House"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/ed_raw_house_no"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_btn_common"
+                android:fontFamily="sans-serif"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Property Name"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/ed_property_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_btn_common"
+                android:fontFamily="sans-serif"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor"
+                android:layout_marginBottom="5dp"
+                android:inputType="text" />
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Door No"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/ed_door_no"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_common"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Plot No"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/ed_plot_no"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_common"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Street Name"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/ed_street_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_common"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Colony Name"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/ed_colony_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_common"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Landmark"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/ed_landmarl"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_common"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Area/Locality"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/ed_area_name_loca"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_common"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:inputType="text" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Sub District/Talk"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/ed_sub_district"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_common"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="District"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/ed_district"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_common"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="State"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/ed_state"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_common"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:inputType="text" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Property Type"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txt_property_type_not_valid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/not_valid"
+                android:textColor="#ff0130"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_btn_common"
+            android:layout_marginTop="5dp">
+
+            <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
+                android:id="@+id/spinner_property_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Select location on Map"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/ed_map"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_common"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:inputType="text" />
+
+        <RadioButton
+            android:id="@+id/rd_etp_working"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu"
+            android:text="Is Permanent Adress" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Default communication address"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/default_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu"
+                android:text="Current" />
+
+            <RadioButton
+                android:id="@+id/default_permanent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/ubuntu"
+                android:text="Permanent Address" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/txt_error_found"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="10sp"
+                android:fontFamily="sans-serif"
+                android:text="@string/error_empty_field_found"
+                android:textStyle="bold"
+                android:textColor="#ff0130"
+                tools:ignore="SmallSp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_blue_radius"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            tools:ignore="UnusedAttribute" />
+
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -501,7 +501,6 @@
                 android:focusable="true"
                 tools:ignore="UnusedAttribute" />
 
-
         </LinearLayout>
     </ScrollView>
 

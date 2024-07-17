@@ -482,7 +482,7 @@ public class PersonalDetailsActivity extends AppCompatActivity {
             return false;
         }
         if("".equals(mDOA)) {
-            binding.doa.setError("Enter DOA");
+            Utils.showMessageInSnackbar(context, "Select DOA");
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
