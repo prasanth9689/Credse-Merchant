@@ -192,6 +192,14 @@
     <string name="error_empty_field_found">Error empty field found</string>
     <string name="not_valid">Not valid</string>
 
+
+    <array name="title_array">
+        <item>Select</item>
+        <item>Mr</item>
+        <item>Mrs</item>
+    </array>
+
+
     <array name="marital_status">
         <item>Select</item>
         <item>Married</item>
