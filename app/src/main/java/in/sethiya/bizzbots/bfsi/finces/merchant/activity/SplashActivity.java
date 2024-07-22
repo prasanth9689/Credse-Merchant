@@ -15,7 +15,9 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.databinding.DataBindingUtil;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.AddressDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.ContactsDetailsActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.IdentityDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.PersonalDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.MyReviewActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.RegisterMobileActivity;
@@ -37,7 +39,7 @@ public class SplashActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
 
-                       startActivity(new Intent(context, PersonalDetailsActivity.class));
+                       startActivity(new Intent(context, AddressDetailsActivity.class));
 
 //        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
 //            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

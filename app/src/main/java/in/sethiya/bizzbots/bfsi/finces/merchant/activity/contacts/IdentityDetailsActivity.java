@@ -1,5 +1,6 @@
 package in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -9,18 +10,16 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
+import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityIdentityDetailsBinding;
 
 public class IdentityDetailsActivity extends AppCompatActivity {
-
+    private ActivityIdentityDetailsBinding binding;
+    private final Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_identity_details);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        binding = ActivityIdentityDetailsBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
     }
 }

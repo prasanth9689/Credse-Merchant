@@ -194,6 +194,50 @@
     <string name="living_type">Living Type</string>
 
 
+<!--    <array name="floor_array">-->
+<!--        <item>Select</item>-->
+<!--        <item>1</item>-->
+<!--        <item>2</item>-->
+<!--        <item>3</item>-->
+<!--        <item>4</item>-->
+<!--        <item>5</item>-->
+<!--        <item>6</item>-->
+<!--        <item>7</item>-->
+<!--    </array>-->
+
+
+    <array name="floor_array">
+        <item>Select</item>
+        <item>Floor 1 </item>
+        <item>Floor2 </item>
+        <item>Floor 3 </item>
+    </array>
+
+
+    <array name="living_type_array">
+        <item>Select</item>
+        <item>Single</item>
+        <item>Family</item>
+        <item>Hostel</item>
+    </array>
+
+    <array name="house_type_array">
+        <item>Select</item>
+        <item>Individual</item>
+        <item>Row</item>
+        <item>Apartment</item>
+    </array>
+
+    <array name="property_type_array">
+        <item>Select</item>
+        <item>Owned</item>
+        <item>Rented</item>
+        <item>Leased</item>
+        <item>Ancestral</item>
+        <item>Company Provided</item>
+    </array>
+
+
     <array name="title_array">
         <item>Select</item>
         <item>Mr</item>

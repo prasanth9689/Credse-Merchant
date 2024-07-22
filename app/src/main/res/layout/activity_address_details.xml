@@ -75,7 +75,6 @@
                 android:fontFamily="sans-serif"
                 android:text="@string/not_valid"
                 android:textColor="#ff0130"
-                android:textStyle="bold"
                 android:visibility="gone"
                 tools:ignore="SmallSp" />
         </RelativeLayout>
@@ -114,7 +113,6 @@
                 android:fontFamily="sans-serif"
                 android:text="@string/not_valid"
                 android:textColor="#ff0130"
-                android:textStyle="bold"
                 android:visibility="gone"
                 tools:ignore="SmallSp" />
         </RelativeLayout>
@@ -145,6 +143,9 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textCursorDrawable="@drawable/cursor_block"
             android:background="@drawable/bg_btn_common"
             android:fontFamily="sans-serif"
             android:importantForAutofill="no"
@@ -187,6 +188,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/bg_btn_common"
                 android:fontFamily="sans-serif"
+                android:textCursorDrawable="@drawable/cursor_block"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:importantForAutofill="no"
@@ -214,7 +216,6 @@
                     android:fontFamily="sans-serif"
                     android:text="@string/not_valid"
                     android:textColor="#ff0130"
-                    android:textStyle="bold"
                     android:visibility="gone"
                     tools:ignore="SmallSp" />
             </RelativeLayout>
@@ -246,12 +247,13 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/bg_btn_common"
+                android:textCursorDrawable="@drawable/cursor_block"
                 android:fontFamily="sans-serif"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:importantForAutofill="no"
                 tools:ignore="LabelFor"
-                android:inputType="text" />
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -268,6 +270,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/bg_btn_common"
                 android:fontFamily="sans-serif"
+                android:textCursorDrawable="@drawable/cursor_block"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:importantForAutofill="no"
@@ -309,12 +312,13 @@
                 android:textColor="@color/black" />
 
             <EditText
-                android:id="@+id/ed_raw_house_no"
+                android:id="@+id/ed_raw_house"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/bg_btn_common"
                 android:fontFamily="sans-serif"
+                android:textCursorDrawable="@drawable/cursor_block"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:importantForAutofill="no"
@@ -330,19 +334,19 @@
                 android:textColor="@color/black" />
 
             <EditText
-                android:id="@+id/ed_property_name"
+                android:id="@+id/ed_raw_property_name"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/bg_btn_common"
                 android:fontFamily="sans-serif"
+                android:textCursorDrawable="@drawable/cursor_block"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:importantForAutofill="no"
                 tools:ignore="LabelFor"
                 android:layout_marginBottom="5dp"
                 android:inputType="text" />
-
 
         </LinearLayout>
 
@@ -363,6 +367,9 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textCursorDrawable="@drawable/cursor_block"
             android:background="@drawable/bg_btn_common"
             android:fontFamily="sans-serif"
             android:importantForAutofill="no"
@@ -382,6 +389,9 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+
+            android:textCursorDrawable="@drawable/cursor_block"            android:paddingEnd="10dp"
             android:background="@drawable/bg_btn_common"
             android:fontFamily="sans-serif"
             android:importantForAutofill="no"
@@ -401,6 +411,9 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:textCursorDrawable="@drawable/cursor_block"
+            android:paddingEnd="10dp"
             android:background="@drawable/bg_btn_common"
             android:fontFamily="sans-serif"
             android:importantForAutofill="no"
@@ -420,7 +433,10 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:background="@drawable/bg_btn_common"
+            android:textCursorDrawable="@drawable/cursor_block"
             android:fontFamily="sans-serif"
             android:importantForAutofill="no"
             tools:ignore="LabelFor"
@@ -439,7 +455,10 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:background="@drawable/bg_btn_common"
+            android:textCursorDrawable="@drawable/cursor_block"
             android:fontFamily="sans-serif"
             android:importantForAutofill="no"
             tools:ignore="LabelFor"
@@ -458,7 +477,10 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:background="@drawable/bg_btn_common"
+            android:textCursorDrawable="@drawable/cursor_block"
             android:fontFamily="sans-serif"
             android:importantForAutofill="no"
             tools:ignore="LabelFor"
@@ -478,51 +500,94 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:background="@drawable/bg_btn_common"
+            android:textCursorDrawable="@drawable/cursor_block"
             android:fontFamily="sans-serif"
             android:importantForAutofill="no"
             tools:ignore="LabelFor"
             android:inputType="text" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="District"
-            android:textColor="@color/black" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/ed_district"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="State"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txt_state_not_valid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/not_valid"
+                android:textColor="#ff0130"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="5dp"
             android:background="@drawable/bg_btn_common"
-            android:fontFamily="sans-serif"
-            android:importantForAutofill="no"
-            tools:ignore="LabelFor"
-            android:inputType="text" />
+            android:layout_marginTop="5dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="State"
-            android:textColor="@color/black" />
+            <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
+                android:id="@+id/spinner_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"/>
 
-        <EditText
-            android:id="@+id/ed_state"
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="District"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txt_district_not_valid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/not_valid"
+                android:textColor="#ff0130"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="5dp"
             android:background="@drawable/bg_btn_common"
-            android:fontFamily="sans-serif"
-            android:importantForAutofill="no"
-            tools:ignore="LabelFor"
-            android:inputType="text" />
+            android:layout_marginTop="5dp">
 
+            <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
+                android:id="@+id/spinner_district"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"/>
 
+        </RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -548,6 +613,7 @@
                 android:visibility="gone"
                 tools:ignore="SmallSp" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -570,16 +636,33 @@
             android:text="Select location on Map"
             android:textColor="@color/black" />
 
-        <EditText
-            android:id="@+id/ed_map"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/bg_btn_common"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
             android:fontFamily="sans-serif"
-            android:importantForAutofill="no"
-            tools:ignore="LabelFor"
-            android:inputType="text" />
+            android:textSize="10sp"
+            android:text="Address : Nandanam extension, Chamiers road, Near nandanam metro station 3rd cross, 600 035"
+            android:textColor="@color/grey" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:elevation="0dp"
+            app:cardCornerRadius="10dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ed_map"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+
+                android:background="@drawable/map" />
+
+        </androidx.cardview.widget.CardView>
 
         <RadioButton
             android:id="@+id/rd_etp_working"
