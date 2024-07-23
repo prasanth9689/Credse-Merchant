@@ -32,7 +32,7 @@
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
-            android:text="Address Details"
+            android:text="@string/address_details"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Living Type"
+                android:text="@string/living_type"
                 android:textColor="@color/black" />
 
             <TextView
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="House Type"
+                android:text="@string/house_type"
                 android:textColor="@color/black" />
 
             <TextView
@@ -135,7 +135,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Name of Home"
+            android:text="@string/name_of_home"
             android:textColor="@color/black" />
 
         <EditText
@@ -170,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:textSize="20dp"
-                android:text="Apartment Details"
+                android:text="@string/apartment_details"
                 android:textColor="@color/black" />
 
             <TextView
@@ -178,7 +178,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="House No"
+                android:text="@string/house_no"
                 android:textColor="@color/black" />
 
             <EditText
@@ -204,7 +204,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Level Floor"
+                    android:text="@string/level_floor"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -238,7 +238,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Block No"
+                android:text="@string/block_no"
                 android:textColor="@color/black" />
 
             <EditText
@@ -260,7 +260,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Apartment Name"
+                android:text="@string/apartment_name"
                 android:textColor="@color/black" />
 
             <EditText
@@ -299,7 +299,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:text="Raw House Details"
+                android:text="@string/raw_house_details"
                 android:textColor="@color/black"
                 android:textSize="20dp"/>
 
@@ -308,7 +308,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Raw House"
+                android:text="@string/raw_house"
                 android:textColor="@color/black" />
 
             <EditText
@@ -330,7 +330,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Property Name"
+                android:text="@string/property_name"
                 android:textColor="@color/black" />
 
             <EditText
@@ -359,7 +359,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Door No"
+            android:text="@string/door_no"
             android:textColor="@color/black" />
 
         <EditText
@@ -381,7 +381,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Plot No"
+            android:text="@string/plot_no"
             android:textColor="@color/black" />
 
         <EditText
@@ -403,7 +403,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Street Name"
+            android:text="@string/street_name"
             android:textColor="@color/black" />
 
         <EditText
@@ -425,7 +425,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Colony Name"
+            android:text="@string/colony_name"
             android:textColor="@color/black" />
 
         <EditText
@@ -447,7 +447,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Landmark"
+            android:text="@string/landmark"
             android:textColor="@color/black" />
 
         <EditText
@@ -469,7 +469,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Area/Locality"
+            android:text="@string/area_locality"
             android:textColor="@color/black" />
 
         <EditText
@@ -492,7 +492,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Sub District/Talk"
+            android:text="@string/sub_district_talk"
             android:textColor="@color/black" />
 
         <EditText
@@ -518,7 +518,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="State"
+                android:text="@string/state"
                 android:textColor="@color/black" />
 
             <TextView
@@ -558,7 +558,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="District"
+                android:text="@string/district"
                 android:textColor="@color/black" />
 
             <TextView
@@ -597,7 +597,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Property Type"
+                android:text="@string/property_type"
                 android:textColor="@color/black" />
 
             <TextView
@@ -633,7 +633,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Select location on Map"
+            android:text="@string/select_location_on_map"
             android:textColor="@color/black" />
 
         <TextView
@@ -668,8 +668,8 @@
             android:id="@+id/rd_etp_working"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/ubuntu"
-            android:text="Is Permanent Adress" />
+            android:fontFamily="sans-serif"
+            android:text="@string/is_permanent_adress" />
 
 
         <TextView
@@ -677,7 +677,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Default communication address"
+            android:text="@string/default_communication_address"
             android:textColor="@color/black" />
 
         <LinearLayout
@@ -689,16 +689,16 @@
                 android:id="@+id/default_current"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/ubuntu"
-                android:text="Current" />
+                android:fontFamily="sans-serif"
+                android:text="@string/current" />
 
             <RadioButton
                 android:id="@+id/default_permanent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:fontFamily="@font/ubuntu"
-                android:text="Permanent Address" />
+                android:fontFamily="sans-serif"
+                android:text="@string/permanent_address" />
 
         </LinearLayout>
 

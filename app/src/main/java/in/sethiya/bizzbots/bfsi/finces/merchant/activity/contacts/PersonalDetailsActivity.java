@@ -181,7 +181,7 @@ public class PersonalDetailsActivity extends AppCompatActivity {
             }
 
               Intent intent = new Intent(context, CameraX.class);
-              intent.putExtra("event_name", "Profile picture");
+              intent.putExtra("event_name", getString(R.string.profile_picture));
               intent.putExtra("camera_id", "1");
               startActivity(intent);
 
@@ -191,7 +191,7 @@ public class PersonalDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, CameraX.class);
-                intent.putExtra("event_name", "Profile picture");
+                intent.putExtra("event_name", getString(R.string.profile_picture));
                 intent.putExtra("camera_id", "1");
                 startActivity(intent);
             }
@@ -418,53 +418,53 @@ public class PersonalDetailsActivity extends AppCompatActivity {
         mSpouseName = binding.spouse.getText().toString();
 
         if (bitmap == null){
-            Utils.showMessageInSnackbar(context, "Please take a picture");
+            Utils.showMessageInSnackbar(context, getString(R.string.take_a_picture));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if ("Select".equals(mTitle)){
-            Utils.showMessageInSnackbar(context, "Please select title");
+            Utils.showMessageInSnackbar(context, getString(R.string.select_title));
             binding.title.requestFocus();
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if ("".equals(mFirstName)){
-            binding.firstName.setError("Enter First Name");
+            binding.firstName.setError(getString(R.string.enter_first_name));
             binding.firstName.requestFocus();
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if("".equals(mSurName)){
-            binding.surname.setError("Enter Surname");
+            binding.surname.setError(getString(R.string.enter_surname));
             binding.surname.requestFocus();
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if("".equals(mFatherName)) {
-            binding.fatherName.setError("Enter Father Name");
+            binding.fatherName.setError(getString(R.string.enter_father_name));
             binding.fatherName.requestFocus();
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if("".equals(mMotherName)) {
-            binding.motherName.setError("Enter Mother Name");
+            binding.motherName.setError(getString(R.string.enter_mother_name));
             binding.motherName.requestFocus();
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if("Select".equals(mGender)) {
             binding.spinnerGender.requestFocus();
-            Utils.showMessageInSnackbar(context, "Please select gender");
+            Utils.showMessageInSnackbar(context, getString(R.string.select_gender));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if("".equals(mDOB)) {
-            Utils.showMessageInSnackbar(context, "Select Date of birth");
+            Utils.showMessageInSnackbar(context, getString(R.string.select_date_of_birth));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if("".equals(mPlaceOfBirth)) {
-            binding.plOfBirth.setError("Enter Place of Birth");
+            binding.plOfBirth.setError(getString(R.string.enter_place_of_birth));
             binding.plOfBirth.requestFocus();
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
@@ -478,16 +478,16 @@ public class PersonalDetailsActivity extends AppCompatActivity {
         if("Select".equals(mMaritalStatus)){
             binding.mStatus.getSelectedView().requestFocus();
             binding.txtErrorFound.setVisibility(View.VISIBLE);
-            Utils.showMessageInSnackbar(context, "Select marital status");
+            Utils.showMessageInSnackbar(context, getString(R.string.select_marital_status));
             return false;
         }
         if("".equals(mDOA)) {
-            Utils.showMessageInSnackbar(context, "Select DOA");
+            Utils.showMessageInSnackbar(context, getString(R.string.select_doa));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if("".equals(mSpouseName)) {
-            binding.spouse.setError("Enter Spouse Name");
+            binding.spouse.setError(getString(R.string.enter_spouse_name));
             binding.spouse.requestFocus();
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
@@ -519,7 +519,6 @@ public class PersonalDetailsActivity extends AppCompatActivity {
                     .apply(RequestOptions.circleCropTransform())
                     .placeholder(R.drawable.placeholder_person)
                     .into(binding.profileImage);
-
         }
     }
 }

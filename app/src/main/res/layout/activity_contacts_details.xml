@@ -30,7 +30,7 @@
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
-            android:text="Contact Details"
+            android:text="@string/contact_details"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -48,7 +48,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:orientation="vertical">
@@ -63,7 +63,7 @@
                android:layout_height="wrap_content"
                android:layout_marginTop="10dp"
                android:fontFamily="sans-serif-medium"
-               android:text="Personal Mobile No"
+               android:text="@string/personal_mobile_no"
                android:textColor="@color/black" />
 
            <EditText
@@ -72,6 +72,7 @@
                android:layout_height="40dp"
                android:layout_marginTop="5dp"
                android:background="@drawable/bg_btn_common"
+               android:textCursorDrawable="@drawable/cursor_block"
                android:fontFamily="sans-serif"
                android:paddingStart="10dp"
                android:paddingEnd="10dp"
@@ -83,15 +84,15 @@
                android:id="@+id/rd_etp_working"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:fontFamily="@font/ubuntu"
+               android:fontFamily="sans-serif"
                android:layout_marginTop="5dp"
-               android:text="Whatsapp" />
+               android:text="@string/whatsapp" />
 
            <Button
                android:id="@+id/verify"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="Verify"
+               android:text="@string/verify"
                android:layout_marginTop="10dp"
                android:layout_marginBottom="10dp"
                android:background="@drawable/bg_blue_radius"
@@ -107,7 +108,7 @@
                android:layout_height="wrap_content"
                android:layout_marginTop="10dp"
                android:fontFamily="sans-serif-medium"
-               android:text="Residential Landline"
+               android:text="@string/residential_landline"
                android:textColor="@color/black" />
 
            <EditText
@@ -116,6 +117,7 @@
                android:layout_height="40dp"
                android:layout_marginTop="5dp"
                android:background="@drawable/bg_btn_common"
+               android:textCursorDrawable="@drawable/cursor_block"
                android:fontFamily="sans-serif"
                android:paddingStart="10dp"
                android:paddingEnd="10dp"
@@ -128,7 +130,7 @@
                android:layout_height="wrap_content"
                android:layout_marginTop="10dp"
                android:fontFamily="sans-serif-medium"
-               android:text="Personal Email Id"
+               android:text="@string/personal_email_id"
                android:textColor="@color/black" />
 
            <EditText
@@ -137,12 +139,13 @@
                android:layout_height="40dp"
                android:layout_marginTop="5dp"
                android:background="@drawable/bg_btn_common"
+               android:textCursorDrawable="@drawable/cursor_block"
                android:fontFamily="sans-serif"
                android:paddingStart="10dp"
                android:paddingEnd="10dp"
                android:importantForAutofill="no"
                tools:ignore="LabelFor"
-               android:inputType="text" />
+               android:inputType="textEmailAddress" />
 
            <RelativeLayout
                android:layout_width="match_parent"
@@ -153,7 +156,7 @@
                    android:layout_height="wrap_content"
                    android:layout_marginTop="10dp"
                    android:fontFamily="sans-serif-medium"
-                   android:text="Preferred Language Of Communication"
+                   android:text="@string/preferred_language_of_communication"
                    android:textColor="@color/black" />
 
                <TextView
@@ -188,7 +191,7 @@
                android:layout_height="wrap_content"
                android:layout_marginTop="10dp"
                android:fontFamily="sans-serif-medium"
-               android:text="Preferred Mode Of Communication"
+               android:text="@string/preferred_mode_of_communication"
                android:textColor="@color/black" />
 
            <LinearLayout
@@ -200,32 +203,32 @@
                    android:id="@+id/sms"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:fontFamily="@font/ubuntu"
-                   android:text="SMS" />
+                   android:fontFamily="sans-serif"
+                   android:text="@string/sms" />
 
                <RadioButton
                    android:id="@+id/whatsapp"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="10dp"
-                   android:fontFamily="@font/ubuntu"
-                   android:text="Whatsapp" />
+                   android:fontFamily="sans-serif"
+                   android:text="@string/whatsapp" />
 
                <RadioButton
                    android:id="@+id/email"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="10dp"
-                   android:fontFamily="@font/ubuntu"
-                   android:text="Email" />
+                   android:fontFamily="sans-serif"
+                   android:text="@string/email" />
 
                <RadioButton
                    android:id="@+id/call"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="10dp"
-                   android:fontFamily="@font/ubuntu"
-                   android:text="Call" />
+                   android:fontFamily="sans-serif"
+                   android:text="@string/call" />
 
            </LinearLayout>
 
@@ -233,7 +236,7 @@
                android:id="@+id/save"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="Verify"
+               android:text="@string/verify"
                android:layout_marginTop="10dp"
                android:layout_marginBottom="10dp"
                android:background="@drawable/bg_blue_radius"

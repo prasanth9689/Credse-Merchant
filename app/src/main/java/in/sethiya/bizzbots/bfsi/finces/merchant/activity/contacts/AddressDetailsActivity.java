@@ -1,7 +1,6 @@
 package in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts;
 
 import static android.view.View.GONE;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
@@ -10,12 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.Utils;
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityAddressDetailsBinding;
@@ -406,131 +400,120 @@ public class AddressDetailsActivity extends AppCompatActivity {
         mAreaName = binding.edAreaNameLoca.getText().toString().trim();
         mSubDistrict = binding.edSubDistrict.getText().toString().trim();
 
-//
 //        mState = binding.spinnerState.getSelectedItem().toString();
 //        mDistrict = binding.spinnerDistrict.getSelectedItem().toString();
 
-
-        /*
-           Tested ok ===================================================================================
-
-
         if("Select".equals(mLivingType)){
-            Utils.showMessageInSnackbar(context, "Select living type");
+            Utils.showMessageInSnackbar(context, getString(R.string.select_living_type));
             binding.txtLivingTyNotValid.setVisibility(View.VISIBLE);
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if("Select".equals(mHouseType)){
-            Utils.showMessageInSnackbar(context, "Select house type");
+            Utils.showMessageInSnackbar(context, getString(R.string.select_house_type));
             binding.txtHouseTypeNotValid.setVisibility(View.VISIBLE);
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
           if(mNameOfHome.isEmpty()){
            binding.edNameOfHome.requestFocus();
-           binding.edNameOfHome.setError("Enter name of home");
+           binding.edNameOfHome.setError(getString(R.string.enter_name_of_home));
            binding.txtErrorFound.setVisibility(View.VISIBLE);
            return false;
         }
         if (mApartHouseNo.isEmpty()){
             binding.edApartHouseNo.requestFocus();
-            binding.edApartHouseNo.setError("Enter apartment house no");
+            binding.edApartHouseNo.setError(getString(R.string.enter_apartment_house_no));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if ("Select".equals(mApartLevelFloor)){
-            Utils.showMessageInSnackbar(context, "Select floor");
+            Utils.showMessageInSnackbar(context, getString(R.string.select_floor));
             binding.txtLvlFloorNotValid.setVisibility(View.VISIBLE);
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if (mApartBlockNo.isEmpty()){
             binding.edApartBlockNo.requestFocus();
-            binding.edApartBlockNo.setError("Enter block no");
+            binding.edApartBlockNo.setError(getString(R.string.enter_block_no));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if (mApartName.isEmpty()){
             binding.edApartmentName.requestFocus();
-            binding.edApartmentName.setError("Enter apartment name");
+            binding.edApartmentName.setError(getString(R.string.enter_apartment_name));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if (mRawHouse.isEmpty()){
             binding.edRawHouse.requestFocus();
-            binding.edRawHouse.setError("Enter raw hose");
+            binding.edRawHouse.setError(getString(R.string.enter_raw_hose));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if (mRawPropertyName.isEmpty()){
             binding.edRawPropertyName.requestFocus();
-            binding.edRawPropertyName.setError("Enter raw property name");
+            binding.edRawPropertyName.setError(getString(R.string.enter_raw_property_name));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if (mDoorNo.isEmpty()){
             binding.edDoorNo.requestFocus();
-            binding.edDoorNo.setError("Enter door no");
+            binding.edDoorNo.setError(getString(R.string.enter_door_no));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
          if (mPlotNo.isEmpty()){
             binding.edPlotNo.requestFocus();
-            binding.edPlotNo.setError("Enter plot no");
+            binding.edPlotNo.setError(getString(R.string.enter_plot_no));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         if (mStreetName.isEmpty()){
             binding.edStreetName.requestFocus();
-            binding.edStreetName.setError("Enter street no");
+            binding.edStreetName.setError(getString(R.string.enter_street_no));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
          if (mColonyName.isEmpty()){
             binding.edColonyName.requestFocus();
-            binding.edColonyName.setError("Enter colony name");
+            binding.edColonyName.setError(getString(R.string.enter_colony_name));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
-
          if (mLandmark.isEmpty()){
             binding.edLandmarl.requestFocus();
-            binding.edLandmarl.setError("Enter landmark");
+            binding.edLandmarl.setError(getString(R.string.enter_landmark));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
          if (mAreaName.isEmpty()){
             binding.edAreaNameLoca.requestFocus();
-            binding.edAreaNameLoca.setError("Enter area name");
+            binding.edAreaNameLoca.setError(getString(R.string.enter_area_name));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
-         */
-        if (mSubDistrict.isEmpty()){
+         if (mSubDistrict.isEmpty()){
             binding.edSubDistrict.requestFocus();
-            binding.edSubDistrict.setError("Enter sub district");
+            binding.edSubDistrict.setError(getString(R.string.enter_sub_district));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*
-          Tested over ================================================================================
-         */
-
-
+//        if("Select".equals(mState)){
+//            Utils.showMessageInSnackbar(context, getString(R.string.select_state));
+//            binding.txtErrorFound.setVisibility(View.VISIBLE);
+//            return false;
+//        }
+//        if("Select".equals(mDistrict)){
+//            Utils.showMessageInSnackbar(context, getString(R.string.select_district));
+//            binding.txtErrorFound.setVisibility(View.VISIBLE);
+//            return false;
+//        }
+        if (mIsCommunicationAddr.isEmpty()){
+            Utils.showMessageInSnackbar(context, getString(R.string.select_default_communication_address));
+            binding.txtErrorFound.setVisibility(View.VISIBLE);
+            return false;
+        }
         return true;
     }
 }
