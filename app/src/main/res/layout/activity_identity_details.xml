@@ -31,7 +31,7 @@
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
-            android:text="Identity Details"
+            android:text="@string/identity_details"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -53,28 +53,6 @@
         android:layout_marginEnd="20dp"
         android:orientation="vertical">
 
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Aadhar Number"
-            android:textColor="@color/black" />
-
-        <EditText
-
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/bg_btn_common"
-            android:fontFamily="sans-serif"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:importantForAutofill="no"
-            tools:ignore="LabelFor"
-            android:inputType="text" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -93,16 +71,18 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
-                    android:text="Aadhar"
+                    android:text="@string/aadhar"
                     android:textColor="@color/black" />
 
                 <EditText
+                    android:id="@+id/ed_aadhar_no"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/bg_btn_common"
+                    android:textCursorDrawable="@drawable/cursor_block"
                     android:fontFamily="sans-serif"
-                    android:hint="Enter Aadhar No"
+                    android:hint="@string/enter_aadhar_no"
                     android:paddingStart="10dp"
                     android:importantForAutofill="no"
                     android:inputType="text"
@@ -136,9 +116,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:text="Front side "
+                            android:text="@string/front_side"
                             android:layout_centerVertical="true"
-                            android:fontFamily="@font/ubuntu_medium"
+                            android:fontFamily="sans-serif-medium"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -152,23 +132,40 @@
                 </RelativeLayout>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/image_view_farmer_image_layout"
+                    android:id="@+id/card_aadhar_front"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_alignParentEnd="true"
                     app:cardBackgroundColor="@color/white"
                     android:layout_marginTop="5dp"
                     app:cardCornerRadius="8dp"
                     android:visibility="visible">
 
+                    <Button
+                        android:id="@+id/re_take_aadhar_front"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="@string/re_take"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:visibility="gone"/>
+
                     <ImageView
-                        android:id="@+id/image_farmer_image"
+                        android:id="@+id/image_aadhar_front"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/splash_gradient"
-                        />
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_gradient" />
+
+                    <TextView
+                        android:id="@+id/txt_aadhar_cap_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/capture_image"
+                        android:textColor="@color/white"/>
 
                 </androidx.cardview.widget.CardView>
 
@@ -199,9 +196,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:text="Back side "
+                            android:text="@string/back_side"
                             android:layout_centerVertical="true"
-                            android:fontFamily="@font/ubuntu_medium"
+                            android:fontFamily="sans-serif-medium"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -214,21 +211,40 @@
 
                 </RelativeLayout>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card_aadhar_back"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_alignParentEnd="true"
                     app:cardBackgroundColor="@color/white"
                     android:layout_marginTop="5dp"
                     app:cardCornerRadius="8dp"
                     android:visibility="visible">
 
+                    <Button
+                        android:id="@+id/re_take_aadhar_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="@string/re_take"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:visibility="gone"/>
+
                     <ImageView
+                        android:id="@+id/image_aadhar_back"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/splash_gradient"
-                        />
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_gradient" />
+
+                    <TextView
+                        android:id="@+id/txt_aadhar_cap_bk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/capture_image"
+                        android:textColor="@color/white"/>
 
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -253,17 +269,19 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
-                    android:text="PAN Card"
+                    android:text="@string/pan_card"
                     android:textColor="@color/black" />
 
                 <EditText
+                    android:id="@+id/ed_pan_card"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/bg_btn_common"
+                    android:textCursorDrawable="@drawable/cursor_block"
                     android:fontFamily="sans-serif"
                     android:paddingStart="10dp"
-                    android:hint="Enter Pan No"
+                    android:hint="@string/enter_pan_no"
                     android:paddingEnd="10dp"
                     android:importantForAutofill="no"
                     tools:ignore="LabelFor"
@@ -297,9 +315,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:text="Front side "
+                            android:text="@string/front_side"
                             android:layout_centerVertical="true"
-                            android:fontFamily="@font/ubuntu_medium"
+                            android:fontFamily="sans-serif-medium"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -311,6 +329,44 @@
                     </RelativeLayout>
 
                 </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_pan_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="8dp"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/re_take_pan_front"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="@string/re_take"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/image_pan_front"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_gradient" />
+
+                    <TextView
+                        android:id="@+id/txt_pan_cap_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/capture_image"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -339,9 +395,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:text="Back side "
+                            android:text="@string/back_side"
                             android:layout_centerVertical="true"
-                            android:fontFamily="@font/ubuntu_medium"
+                            android:fontFamily="sans-serif-medium"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -353,6 +409,44 @@
                     </RelativeLayout>
 
                 </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_pan_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="8dp"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/re_take_pan_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="@string/re_take"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/image_pan_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_gradient" />
+
+                    <TextView
+                        android:id="@+id/txt_pan_cap_bk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/capture_image"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
@@ -376,18 +470,19 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
-                    android:text="Voter Card"
+                    android:text="@string/voter_card"
                     android:textColor="@color/black" />
 
                 <EditText
-
+                    android:id="@+id/ed_voter_id"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/bg_btn_common"
+                    android:textCursorDrawable="@drawable/cursor_block"
                     android:fontFamily="sans-serif"
                     android:paddingStart="10dp"
-                    android:hint="Enter Voter Id No"
+                    android:hint="@string/enter_voter_id_no"
                     android:paddingEnd="10dp"
                     android:importantForAutofill="no"
                     tools:ignore="LabelFor"
@@ -421,9 +516,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:text="Front side "
+                            android:text="@string/front_side"
                             android:layout_centerVertical="true"
-                            android:fontFamily="@font/ubuntu_medium"
+                            android:fontFamily="sans-serif-medium"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -435,15 +530,51 @@
 
                     </RelativeLayout>
 
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_voter_front"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_marginTop="5dp"
+                        app:cardCornerRadius="8dp"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/re_take_voter_front"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="@string/re_take"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text_login"
+                            android:visibility="gone"/>
+
+                        <ImageView
+                            android:id="@+id/image_voter_front"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/splash_gradient" />
+
+                        <TextView
+                            android:id="@+id/txt_voter_cap_fr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:text="@string/capture_image"
+                            android:textColor="@color/white"/>
+
+                    </androidx.cardview.widget.CardView>
+
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-
                     <TextView
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -465,13 +596,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:text="Back side "
+                            android:text="@string/back_side"
                             android:layout_centerVertical="true"
-                            android:fontFamily="@font/ubuntu_medium"
+                            android:fontFamily="sans-serif-medium"
                             android:textColor="@color/black" />
 
                         <ImageView
-
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:layout_alignParentRight="true"
@@ -480,6 +610,44 @@
                     </RelativeLayout>
 
                 </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_voter_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="8dp"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/re_take_voter_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="@string/re_take"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/image_voter_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_gradient" />
+
+                    <TextView
+                        android:id="@+id/txt_voter_cap_bk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/capture_image"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
@@ -503,18 +671,19 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
-                    android:text="Passport"
+                    android:text="@string/passport"
                     android:textColor="@color/black" />
 
                 <EditText
-
+                    android:id="@+id/ed_passport"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/bg_btn_common"
+                    android:textCursorDrawable="@drawable/cursor_block"
                     android:fontFamily="sans-serif"
                     android:paddingStart="10dp"
-                    android:hint="Enter Passport No"
+                    android:hint="@string/enter_passport_no"
                     android:paddingEnd="10dp"
                     android:importantForAutofill="no"
                     tools:ignore="LabelFor"
@@ -525,9 +694,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
 
-
                     <TextView
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -548,9 +715,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:text="Front side "
+                            android:text="@string/front_side"
                             android:layout_centerVertical="true"
-                            android:fontFamily="@font/ubuntu_medium"
+                            android:fontFamily="sans-serif-medium"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -564,13 +731,49 @@
 
                 </RelativeLayout>
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_passport_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="8dp"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/re_take_passport_front"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="@string/re_take"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/image_passport_front"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_gradient" />
+
+                    <TextView
+                        android:id="@+id/txt_passport_cap_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/capture_image"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-
                     <TextView
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -592,13 +795,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:text="Back side "
+                            android:text="@string/back_side"
                             android:layout_centerVertical="true"
-                            android:fontFamily="@font/ubuntu_medium"
+                            android:fontFamily="sans-serif-medium"
                             android:textColor="@color/black" />
 
                         <ImageView
-
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:layout_alignParentRight="true"
@@ -607,6 +809,44 @@
                     </RelativeLayout>
 
                 </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_passport_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="8dp"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/re_take_passport_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="@string/re_take"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/image_passport_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_gradient" />
+
+                    <TextView
+                        android:id="@+id/txt_passport_cap_bk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/capture_image"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
@@ -631,18 +871,19 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
-                    android:text="Driving License"
+                    android:text="@string/driving_license"
                     android:textColor="@color/black" />
 
                 <EditText
-
+                    android:id="@+id/ed_driving_license"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/bg_btn_common"
+                    android:textCursorDrawable="@drawable/cursor_block"
                     android:fontFamily="sans-serif"
                     android:paddingStart="10dp"
-                    android:hint="Enter License No"
+                    android:hint="@string/enter_license_no"
                     android:paddingEnd="10dp"
                     android:importantForAutofill="no"
                     tools:ignore="LabelFor"
@@ -653,9 +894,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
 
-
                     <TextView
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -676,9 +915,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:text="Front side "
+                            android:text="@string/front_side"
                             android:layout_centerVertical="true"
-                            android:fontFamily="@font/ubuntu_medium"
+                            android:fontFamily="sans-serif-medium"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -692,13 +931,49 @@
 
                 </RelativeLayout>
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_driving_license_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="8dp"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/re_take_driving_license_front"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="@string/re_take"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/image_driving_license_front"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_gradient" />
+
+                    <TextView
+                        android:id="@+id/txt_driving_license_cap_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/capture_image"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-
                     <TextView
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -720,9 +995,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:text="Back side "
+                            android:text="@string/back_side"
                             android:layout_centerVertical="true"
-                            android:fontFamily="@font/ubuntu_medium"
+                            android:fontFamily="sans-serif-medium"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -735,6 +1010,44 @@
                     </RelativeLayout>
 
                 </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_driving_license_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="8dp"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/re_take_driving_license_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="@string/re_take"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/image_driving_license_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_gradient" />
+
+                    <TextView
+                        android:id="@+id/txt_driving_license_cap_bk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/capture_image"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
@@ -758,18 +1071,19 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
-                    android:text="Ration Card"
+                    android:text="@string/ration_card"
                     android:textColor="@color/black" />
 
                 <EditText
-
+                    android:id="@+id/ed_ration_card"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/bg_btn_common"
+                    android:textCursorDrawable="@drawable/cursor_block"
                     android:fontFamily="sans-serif"
                     android:paddingStart="10dp"
-                    android:hint="Enter Ration Card No"
+                    android:hint="@string/enter_ration_card_no"
                     android:paddingEnd="10dp"
                     android:importantForAutofill="no"
                     tools:ignore="LabelFor"
@@ -780,9 +1094,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
 
-
                     <TextView
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -803,29 +1115,64 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:text="Front side "
+                            android:text="@string/front_side"
                             android:layout_centerVertical="true"
-                            android:fontFamily="@font/ubuntu_medium"
+                            android:fontFamily="sans-serif-medium"
                             android:textColor="@color/black" />
 
                         <ImageView
-
                             android:layout_width="35dp"
                             android:layout_height="35dp"
-                            android:layout_alignParentRight="true"
-                            android:src="@drawable/apple_camera"/>
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/apple_camera" />
 
                     </RelativeLayout>
 
                 </RelativeLayout>
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_rd_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="8dp"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/re_take_rd_front"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="@string/re_take"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/image_rd_front"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_gradient" />
+
+                    <TextView
+                        android:id="@+id/txt_rd_cap_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/capture_image"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-
                     <TextView
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -847,9 +1194,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:text="Back side "
+                            android:text="@string/back_side"
                             android:layout_centerVertical="true"
-                            android:fontFamily="@font/ubuntu_medium"
+                            android:fontFamily="sans-serif-medium"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -862,6 +1209,44 @@
                     </RelativeLayout>
 
                 </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_rd_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginTop="5dp"
+                    app:cardCornerRadius="8dp"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/re_take_rd_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="@string/re_take"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/image_rd_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_gradient" />
+
+                    <TextView
+                        android:id="@+id/txt_rd_cap_bk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/capture_image"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 

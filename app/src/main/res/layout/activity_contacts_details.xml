@@ -78,7 +78,7 @@
                android:paddingEnd="10dp"
                android:importantForAutofill="no"
                tools:ignore="LabelFor"
-               android:inputType="text" />
+               android:inputType="phone" />
 
            <RadioButton
                android:id="@+id/rd_etp_working"
@@ -87,6 +87,22 @@
                android:fontFamily="sans-serif"
                android:layout_marginTop="5dp"
                android:text="@string/whatsapp" />
+
+           <EditText
+               android:id="@+id/ed_otp_verify"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:layout_marginTop="5dp"
+               android:background="@drawable/bg_btn_common"
+               android:textCursorDrawable="@drawable/cursor_block"
+               android:hint="@string/enter_otp"
+               android:fontFamily="sans-serif"
+               android:paddingStart="10dp"
+               android:paddingEnd="10dp"
+               android:importantForAutofill="no"
+               tools:ignore="LabelFor"
+               android:inputType="numberDecimal"
+               android:visibility="gone"/>
 
            <Button
                android:id="@+id/verify"
@@ -123,7 +139,7 @@
                android:paddingEnd="10dp"
                android:importantForAutofill="no"
                tools:ignore="LabelFor"
-               android:inputType="text" />
+               android:inputType="phone" />
 
            <TextView
                android:layout_width="wrap_content"
@@ -179,7 +195,7 @@
                android:layout_marginTop="5dp">
 
                <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
-                   android:id="@+id/spinner_living_type"
+                   android:id="@+id/spinner_pref_lang"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:layout_centerVertical="true"/>
@@ -199,33 +215,37 @@
                android:layout_height="wrap_content"
                android:orientation="horizontal">
 
-               <RadioButton
+               <CheckBox
                    android:id="@+id/sms"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:fontFamily="sans-serif"
+                   android:buttonTint="@color/black"
                    android:text="@string/sms" />
 
-               <RadioButton
+               <CheckBox
                    android:id="@+id/whatsapp"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="10dp"
+                   android:buttonTint="@color/black"
                    android:fontFamily="sans-serif"
                    android:text="@string/whatsapp" />
 
-               <RadioButton
+               <CheckBox
                    android:id="@+id/email"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="10dp"
+                   android:buttonTint="@color/black"
                    android:fontFamily="sans-serif"
                    android:text="@string/email" />
 
-               <RadioButton
+               <CheckBox
                    android:id="@+id/call"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
+                   android:buttonTint="@color/black"
                    android:layout_marginStart="10dp"
                    android:fontFamily="sans-serif"
                    android:text="@string/call" />
@@ -236,7 +256,7 @@
                android:id="@+id/save"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="@string/verify"
+               android:text="@string/save"
                android:layout_marginTop="10dp"
                android:layout_marginBottom="10dp"
                android:background="@drawable/bg_blue_radius"

@@ -39,6 +39,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityCameraXBinding;
+import in.sethiya.bizzbots.bfsi.finces.merchant.helper.Utils;
 
 public class CameraX extends AppCompatActivity {
     private ActivityCameraXBinding binding;
@@ -49,6 +50,22 @@ public class CameraX extends AppCompatActivity {
     private Bitmap bitmap;
     public static final String APP_DATA = "/credse";
     int cameraFacing = CameraSelector.LENS_FACING_FRONT;
+    private static final String PROFILE_FILE_NAME = "PROFILE_123.jpg";
+    private static final String AADHAR_FRONT_FILE_NAME = "AADFR_123.jpg";
+    private static final String AADHAR_BACK_FILE_NAME = "AADBK_123.jpg";
+    private static final String PAN_FRONT_FILE_NAME = "PANFR_123.jpg";
+    private static final String PAN_BACK_FILE_NAME = "PANBK_123.jpg";
+
+    private static final String VOTER_FRONT_FILE_NAME = "VOTERFR_123.jpg";
+    private static final String VOTER_BACK_FILE_NAME = "VOTERBK_123.jpg";
+    private static final String PASSPORT_FRONT_FILE_NAME = "PASSPORTFR_123.jpg";
+    private static final String PASSPORT_BACK_FILE_NAME = "PASSPORTBK_123.jpg";
+
+    private static final String DRIVING_LICENSE_FRONT_FILE_NAME = "DRVFR_123.jpg";
+    private static final String DRIVING_LICENSE_BACK_FILE_NAME = "DRVBK_123.jpg";
+    private static final String RATION_FRONT_FILE_NAME = "RATIONFR_123.jpg";
+    private static final String RATION_BACK_FILE_NAME = "RATIONBK_123.jpg";
+
     private final ActivityResultLauncher<String> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), new ActivityResultCallback<Boolean>() {
         @Override
         public void onActivityResult(Boolean result) {
@@ -172,8 +189,73 @@ public class CameraX extends AppCompatActivity {
         String cameraEventId = getIntent().getStringExtra("camera_id");
 
         switch (Integer.parseInt(cameraEventId)){
+            case 13:
+                imageName = RATION_BACK_FILE_NAME;
+                file = new File(DIR, imageName);
+                break;
+
+            case 12:
+                imageName = RATION_FRONT_FILE_NAME;
+                file = new File(DIR, imageName);
+                break;
+
+            case 11:
+                imageName = DRIVING_LICENSE_BACK_FILE_NAME;
+                file = new File(DIR, imageName);
+                break;
+
+            case 10:
+                imageName = DRIVING_LICENSE_FRONT_FILE_NAME ;
+                file = new File(DIR, imageName);
+                break;
+
+            case 9:
+                imageName = PASSPORT_BACK_FILE_NAME;
+                file = new File(DIR, imageName);
+                break;
+
+            case 8:
+                imageName = PASSPORT_FRONT_FILE_NAME;
+                file = new File(DIR, imageName);
+                break;
+
+            case 7:
+                imageName = VOTER_BACK_FILE_NAME;
+                file = new File(DIR, imageName);
+                break;
+
+            case 6:
+                imageName = VOTER_FRONT_FILE_NAME;
+                file = new File(DIR, imageName);
+                break;
+
+            case 5:
+                imageName = PAN_BACK_FILE_NAME;
+                file = new File(DIR, imageName);
+                break;
+
+            case 4:
+                imageName = PAN_FRONT_FILE_NAME;
+                file = new File(DIR, imageName);
+                break;
+
+            case 3:
+                imageName = AADHAR_BACK_FILE_NAME;
+                file = new File(DIR, imageName);
+                break;
+
+                case 2:
+                imageName = AADHAR_FRONT_FILE_NAME;
+                file = new File(DIR, imageName);
+                break;
+
             case 1:
-                profilePicture();
+                imageName = PROFILE_FILE_NAME;
+                file = new File(DIR, imageName);
+                break;
+
+            default:
+                Utils.showMessageInSnackbar(context, "Empty camera id!");
                 break;
         }
 
@@ -214,11 +296,6 @@ public class CameraX extends AppCompatActivity {
                 startCamera(cameraFacing);
             }
         });
-    }
-
-    private void profilePicture() {
-        imageName = "PROFILE_123" + ".jpg";
-        file = new File(DIR, imageName);
     }
 
     public static Bitmap rotateBitmap(Bitmap bitmap, int orientation) {

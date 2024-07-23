@@ -256,8 +256,56 @@
     <string name="personal_email_id">Personal Email Id</string>
     <string name="preferred_language_of_communication">Preferred Language Of Communication</string>
     <string name="preferred_mode_of_communication">Preferred Mode Of Communication</string>
-    <string name="sms">SMS</string>
+    <string name="sms" translatable="false">SMS</string>
     <string name="call">Call</string>
+    <string name="select_preferred_communication_mode">Select preferred communication mode</string>
+    <string name="select_preferred_language">Select preferred language</string>
+    <string name="enter_email_id">Enter email id</string>
+    <string name="enter_residential_landline_number">Enter Residential landline number</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+    <string name="identity_details">Identity Details</string>
+    <string name="aadhar_number">Aadhar Number</string>
+    <string name="front_side">Front side</string>
+    <string name="back_side">Back side</string>
+    <string name="pan_card">PAN Card</string>
+    <string name="voter_card">Voter Card</string>
+    <string name="enter_voter_id_no">Enter Voter Id No</string>
+    <string name="passport">Passport</string>
+    <string name="driving_license">Driving License</string>
+    <string name="enter_license_no">Enter License No</string>
+    <string name="ration_card">Ration Card</string>
+    <string name="enter_aadhar_no">Enter Aadhar No</string>
+    <string name="enter_pan_no">Enter Pan No</string>
+    <string name="enter_passport_no">Enter Passport No</string>
+    <string name="enter_ration_card_no">Enter Ration Card No</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="capture_aadhar_front">Capture Aadhar Front</string>
+    <string name="capture_aadhar_back">Capture Aadhar Back</string>
+    <string name="capture_pan_front">Capture PAN Front</string>
+    <string name="capture_pan_back">Capture PAN Back</string>
+    <string name="re_take">RE TAKE</string>
+    <string name="capture_driving_license_back">Capture Driving License Back</string>
+    <string name="capture_driving_license_front">Capture Driving License Front</string>
+    <string name="enter_driving_license_no">Enter Driving License No</string>
+    <string name="capture_passport_back">Capture Passport Back</string>
+    <string name="capture_passport_front">Capture Passport Front</string>
+    <string name="capture_voter_id_back">Capture Voter Id Back</string>
+    <string name="capture_voter_id_front">Capture Voter Id Front</string>
+    <string name="enter_voter_id">Enter Voter Id</string>
+    <string name="capture_ration_card_front">Capture Ration Card Front</string>
+    <string name="capture_ration_card_back">Capture Ration Card Back</string>
+    <string name="aadhaar_front">Aadhaar Front</string>
+    <string name="aadhaar_back">Aadhaar Back</string>
+    <string name="pan_front">PAN Front</string>
+    <string name="pan_back">PAN Back</string>
+    <string name="voter_id_front">Voter Id Front</string>
+    <string name="voter_id_back">Voter Id Back</string>
+    <string name="passport_front">Passport Front</string>
+    <string name="passport_back">Passport Back</string>
+    <string name="driving_license_front">Driving License Front</string>
+    <string name="driving_license_back">Driving License Back</string>
+    <string name="ration_card_front">Ration Card Front</string>
+    <string name="ration_card_back">Ration Card Back</string>
 
 
     <!--    <array name="floor_array">-->
@@ -279,6 +327,12 @@
         <item>Floor 3 </item>
     </array>
 
+    <array name="language_array">
+        <item>Select</item>
+        <item>English</item>
+        <item>Hindi</item>
+        <item>Tamil</item>
+    </array>
 
     <array name="living_type_array">
         <item>Select</item>
