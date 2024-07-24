@@ -65,6 +65,7 @@ public class CameraX extends AppCompatActivity {
     private static final String DRIVING_LICENSE_BACK_FILE_NAME = "DRVBK_123.jpg";
     private static final String RATION_FRONT_FILE_NAME = "RATIONFR_123.jpg";
     private static final String RATION_BACK_FILE_NAME = "RATIONBK_123.jpg";
+    private static final String EDUCATION_FILE_NAME = "EDUPROOF_123.jpg";
 
     private final ActivityResultLauncher<String> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), new ActivityResultCallback<Boolean>() {
         @Override
@@ -189,6 +190,11 @@ public class CameraX extends AppCompatActivity {
         String cameraEventId = getIntent().getStringExtra("camera_id");
 
         switch (Integer.parseInt(cameraEventId)){
+            case 14:
+                imageName = EDUCATION_FILE_NAME;
+                file = new File(DIR, imageName);
+                break;
+
             case 13:
                 imageName = RATION_BACK_FILE_NAME;
                 file = new File(DIR, imageName);

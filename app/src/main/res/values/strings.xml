@@ -306,6 +306,12 @@
     <string name="driving_license_back">Driving License Back</string>
     <string name="ration_card_front">Ration Card Front</string>
     <string name="ration_card_back">Ration Card Back</string>
+    <string name="education_amp_occupation_details"><![CDATA[Education & Occupation Details]]></string>
+    <string name="education">Education</string>
+    <string name="education_proof">Education Proof</string>
+    <string name="upload_or_capture">Upload or Capture</string>
+    <string name="occupation">Occupation</string>
+    <string name="capture_education_proof">Capture Education Proof</string>
 
 
     <!--    <array name="floor_array">-->
@@ -319,6 +325,27 @@
 <!--        <item>7</item>-->
 <!--    </array>-->
 
+    <array name="occupation_array">
+        <item>Select</item>
+        <item>Salaried</item>
+        <item>Self Employed</item>
+        <item>Home Maker</item>
+        <item>Retired</item>
+        <item>Student</item>
+        <item>Others</item>
+    </array>
+
+    <array name="education_array">
+        <item>Select</item>
+        <item>Lower Primary ( Upto 5th )</item>
+        <item>Higher Primary ( Upto 8th )</item>
+        <item>Lower Secondary ( Upto 10th )</item>
+        <item>Higher Secondary ( Upto 12th )</item>
+        <item>Diploma</item>
+        <item>UG - undergraduate</item>
+        <item>PG - Postgraduate</item>
+        <item>Doctorate</item>
+    </array>
 
     <array name="floor_array">
         <item>Select</item>

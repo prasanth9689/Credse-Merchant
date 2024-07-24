@@ -30,7 +30,7 @@
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
-            android:text="Education &amp; Occupation Details"
+            android:text="@string/education_amp_occupation_details"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Education"
+                android:text="@string/education"
                 android:textColor="@color/black" />
 
             <TextView
@@ -84,7 +84,7 @@
             android:layout_marginTop="5dp">
 
             <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
-                android:id="@+id/spinner_citizenship"
+                android:id="@+id/spinner_education"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"/>
@@ -109,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
-                    android:text="Education Proof"
+                    android:text="@string/education_proof"
                     android:textColor="@color/black" />
 
                 <RelativeLayout
@@ -139,7 +139,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
-                            android:text="Upload or Capture"
+                            android:text="@string/upload_or_capture"
                             android:layout_centerVertical="true"
                             android:fontFamily="@font/ubuntu_medium"
                             android:textColor="@color/black" />
@@ -155,23 +155,40 @@
                 </RelativeLayout>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/image_view_farmer_image_layout"
+                    android:id="@+id/card_education_proof"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_alignParentEnd="true"
-                    app:cardBackgroundColor="@color/white"
                     android:layout_marginTop="5dp"
                     app:cardCornerRadius="8dp"
                     android:visibility="visible">
 
+                    <Button
+                        android:id="@+id/re_take_edu_proof"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="@string/re_take"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edit_text_login"
+                        android:visibility="gone"/>
+
                     <ImageView
-                        android:id="@+id/image_farmer_image"
+                        android:id="@+id/image_education_proof"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/splash_gradient"
-                        />
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/splash_gradient" />
+
+                    <TextView
+                        android:id="@+id/txt_education_proof"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:text="@string/capture_image"
+                        android:textColor="@color/white"/>
 
                 </androidx.cardview.widget.CardView>
 
@@ -188,7 +205,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Occupation"
+                android:text="@string/occupation"
                 android:textColor="@color/black" />
 
             <TextView
@@ -218,15 +235,6 @@
 
         </RelativeLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Please Specify (If Other Occupation)
-"
-            android:textColor="@color/black" />
-
         <EditText
             android:id="@+id/ed_other_occupation"
             android:layout_width="match_parent"
@@ -236,11 +244,12 @@
             android:textCursorDrawable="@drawable/cursor_block"
             android:fontFamily="sans-serif"
             android:paddingStart="10dp"
-            android:hint="Type"
+            android:hint="Type Occupation"
             android:paddingEnd="10dp"
             android:importantForAutofill="no"
             tools:ignore="LabelFor"
-            android:inputType="text" />
+            android:inputType="text"
+            android:visibility="gone"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -511,7 +520,7 @@
                     android:text="Recycling" />
 
                 <CheckBox
-                    android:id="@+id/checkbox_others"
+                    android:id="@+id/checkbox_others_business"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/black"
@@ -716,7 +725,7 @@
                     android:orientation="horizontal">
 
                     <CheckBox
-                        android:id="@+id/checkbox_others"
+                        android:id="@+id/checkbox_others_profession"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/black"
@@ -779,6 +788,328 @@
 
             </LinearLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_radius_con"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Gross annual income range"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="From"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_an_income_frm_not_valid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/not_valid"
+                    android:textColor="#ff0130"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_btn_common"
+                android:layout_marginTop="5dp">
+
+                <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
+                    android:id="@+id/spinner_an_income_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="To"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_an_income_to_not_valid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/not_valid"
+                    android:textColor="#ff0130"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_btn_common"
+                android:layout_marginTop="5dp">
+
+                <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
+                    android:id="@+id/spinner_an_income_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_radius_con"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Sources of income"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbox_src_income_business"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Business" />
+
+
+                <CheckBox
+                    android:id="@+id/checkbox_src_income_salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Salary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbox_src_income_interest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Interest" />
+
+
+                <CheckBox
+                    android:id="@+id/checkbox_src_income_royality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Royality" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbox_src_income_investments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Investments" />
+
+
+                <CheckBox
+                    android:id="@+id/checkbox_src_income_pension"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Pension" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbox_src_income_others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Others" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Income proof"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_income_proof_not_valid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/not_valid"
+                    android:textColor="#ff0130"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_btn_common"
+                android:layout_marginTop="5dp">
+
+                <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
+                    android:id="@+id/spinner_income_proof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Others please specify"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/ed_income_proof_other_specify"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_btn_common"
+                android:textCursorDrawable="@drawable/cursor_block"
+                android:fontFamily="sans-serif"
+                android:paddingStart="10dp"
+                android:hint="Type"
+                android:paddingEnd="10dp"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor"
+                android:inputType="text" />
+        </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload proof"
+                android:paddingStart="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_upload"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_blue_radius"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            tools:ignore="UnusedAttribute" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
