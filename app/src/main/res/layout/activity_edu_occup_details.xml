@@ -252,11 +252,13 @@
             android:visibility="gone"/>
 
         <LinearLayout
+            android:id="@+id/salaried_employed_with_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_radius_con"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -264,115 +266,140 @@
             android:padding="10dp"
             android:orientation="vertical">
 
-
-            <RelativeLayout
+            <LinearLayout
+                android:id="@+id/salaried_employed_with_spinner_selection_container"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Salaried Employed with"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_employed_with_not_valid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/not_valid"
+                        android:textColor="#ff0130"
+                        android:visibility="gone"
+                        tools:ignore="SmallSp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_btn_common"
+                    android:layout_marginTop="5dp">
+
+                    <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
+                        android:id="@+id/salaried_employed_with_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/salaried_employed_with_other_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="Employed with - (If Salaried show this) def hide
-"
+                    android:text="If others please specify"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/black" />
+                <EditText
+                    android:id="@+id/salaried_employed_with_other_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_btn_common"
+                    android:textCursorDrawable="@drawable/cursor_block"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="10dp"
+                    android:hint="Type"
+                    android:paddingEnd="10dp"
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/salaried_employed_with_company_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Company"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/ubuntu_medium"
                     android:textColor="@color/black" />
 
-                <TextView
-                    android:id="@+id/txt_employed_with_not_valid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/not_valid"
-                    android:textColor="#ff0130"
-                    android:visibility="gone"
-                    tools:ignore="SmallSp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/bg_btn_common"
-                android:layout_marginTop="5dp">
-
-                <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
-                    android:id="@+id/spinner_employed_with"
+                <EditText
+                    android:id="@+id/salaried_employed_with_company_ed"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"/>
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_btn_common"
+                    android:textCursorDrawable="@drawable/cursor_block"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="10dp"
+                    android:hint="Type"
+                    android:paddingEnd="10dp"
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor"
+                    android:inputType="text" />
 
-            </RelativeLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="If others please specify"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/ubuntu_medium"
-                android:textColor="@color/black" />
-
-            <EditText
-                android:id="@+id/ed_emp_with_other_specify"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/bg_btn_common"
-                android:textCursorDrawable="@drawable/cursor_block"
-                android:fontFamily="sans-serif"
-                android:paddingStart="10dp"
-                android:hint="Type"
-                android:paddingEnd="10dp"
-                android:importantForAutofill="no"
-                tools:ignore="LabelFor"
-                android:inputType="text" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="Company"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/ubuntu_medium"
-                android:textColor="@color/black" />
-
-            <EditText
-                android:id="@+id/ed_company_name"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/bg_btn_common"
-                android:textCursorDrawable="@drawable/cursor_block"
-                android:fontFamily="sans-serif"
-                android:paddingStart="10dp"
-                android:hint="Type"
-                android:paddingEnd="10dp"
-                android:importantForAutofill="no"
-                tools:ignore="LabelFor"
-                android:inputType="text" />
+            </LinearLayout>
 
         </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/self_employed_selection_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_radius_con"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:orientation="vertical">
-
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -397,7 +424,7 @@
                     android:orientation="horizontal">
 
                     <CheckBox
-                        android:id="@+id/checkbox_business"
+                        android:id="@+id/checkbox_self_emp_business"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
@@ -406,7 +433,7 @@
                         android:text="Business" />
 
                     <CheckBox
-                        android:id="@+id/checkbox_professional"
+                        android:id="@+id/checkbox_self_emp_professional"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:buttonTint="@color/black"
@@ -420,6 +447,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/self_employed_business_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -528,60 +556,76 @@
                     android:fontFamily="sans-serif"
                     android:text="Others" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="If others please specify"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:textColor="@color/black" />
-
-                <EditText
-                    android:id="@+id/ed_emp_with_other_specify_business"
+                <LinearLayout
+                    android:id="@+id/self_emp_business_other_container"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/bg_btn_common"
-                    android:textCursorDrawable="@drawable/cursor_block"
-                    android:fontFamily="sans-serif"
-                    android:paddingStart="10dp"
-                    android:hint="Type"
-                    android:paddingEnd="10dp"
-                    android:importantForAutofill="no"
-                    tools:ignore="LabelFor"
-                    android:inputType="text" />
-
-                <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="Description of business"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:textColor="@color/black" />
+                    android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/ed_description_business"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="If others please specify"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/ed_emp_with_other_specify_business"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_btn_common"
+                        android:textCursorDrawable="@drawable/cursor_block"
+                        android:fontFamily="sans-serif"
+                        android:paddingStart="10dp"
+                        android:hint="Type"
+                        android:paddingEnd="10dp"
+                        android:importantForAutofill="no"
+                        tools:ignore="LabelFor"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/self_emp_business_description_container"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/bg_btn_common"
-                    android:textCursorDrawable="@drawable/cursor_block"
-                    android:fontFamily="sans-serif"
-                    android:paddingStart="10dp"
-                    android:hint="Type"
-                    android:paddingEnd="10dp"
-                    android:importantForAutofill="no"
-                    tools:ignore="LabelFor"
-                    android:inputType="text" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Description of business"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:textColor="@color/black" />
+                    <EditText
+                        android:id="@+id/ed_description_business"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_btn_common"
+                        android:textCursorDrawable="@drawable/cursor_block"
+                        android:fontFamily="sans-serif"
+                        android:paddingStart="10dp"
+                        android:hint="Type"
+                        android:paddingEnd="10dp"
+                        android:importantForAutofill="no"
+                        tools:ignore="LabelFor"
+                        android:inputType="text" />
+
+                </LinearLayout>
 
         </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/self_employed_profession_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -735,56 +779,71 @@
 
                 </LinearLayout>
 
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="If others please specify"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:textColor="@color/black" />
-
-                <EditText
-                    android:id="@+id/ed_emp_with_other_specify_profession"
+                <LinearLayout
+                    android:id="@+id/self_emp_profession_other_container"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/bg_btn_common"
-                    android:textCursorDrawable="@drawable/cursor_block"
-                    android:fontFamily="sans-serif"
-                    android:paddingStart="10dp"
-                    android:hint="Type"
-                    android:paddingEnd="10dp"
-                    android:importantForAutofill="no"
-                    tools:ignore="LabelFor"
-                    android:inputType="text" />
-
-                <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="Description of business"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:textColor="@color/black" />
+                    android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/ed_description_services"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="If others please specify"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/ed_emp_with_other_specify_profession"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_btn_common"
+                        android:textCursorDrawable="@drawable/cursor_block"
+                        android:fontFamily="sans-serif"
+                        android:paddingStart="10dp"
+                        android:hint="Type"
+                        android:paddingEnd="10dp"
+                        android:importantForAutofill="no"
+                        tools:ignore="LabelFor"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/self_emp_profession_description_container"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/bg_btn_common"
-                    android:textCursorDrawable="@drawable/cursor_block"
-                    android:fontFamily="sans-serif"
-                    android:paddingStart="10dp"
-                    android:hint="Type"
-                    android:paddingEnd="10dp"
-                    android:importantForAutofill="no"
-                    tools:ignore="LabelFor"
-                    android:inputType="text" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Description of profession"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/ed_description_services"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_btn_common"
+                        android:textCursorDrawable="@drawable/cursor_block"
+                        android:fontFamily="sans-serif"
+                        android:paddingStart="10dp"
+                        android:hint="Type"
+                        android:paddingEnd="10dp"
+                        android:importantForAutofill="no"
+                        tools:ignore="LabelFor"
+                        android:inputType="text" />
+
+                </LinearLayout>
 
             </LinearLayout>
         </LinearLayout>
@@ -1017,72 +1076,130 @@
                     android:text="Others" />
             </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
+                android:id="@+id/income_proof_selection_container"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Income proof"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_income_proof_not_valid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/not_valid"
+                        android:textColor="#ff0130"
+                        android:visibility="gone"
+                        tools:ignore="SmallSp" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_btn_common"
+                    android:layout_marginTop="5dp">
+
+                    <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
+                        android:id="@+id/spinner_income_proof"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/income_src_other_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="Income proof"
+                    android:text="Others please specify"
                     android:layout_centerVertical="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/ubuntu_medium"
                     android:textColor="@color/black" />
+                <EditText
+                    android:id="@+id/ed_income_proof_other_specify"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_btn_common"
+                    android:textCursorDrawable="@drawable/cursor_block"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="10dp"
+                    android:hint="Type"
+                    android:paddingEnd="10dp"
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/income_src_other_container2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/txt_income_proof_not_valid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
+                    android:textStyle="bold"
+                    android:text="Others please specify"
+                    android:layout_centerVertical="true"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/not_valid"
-                    android:textColor="#ff0130"
-                    android:visibility="gone"
-                    tools:ignore="SmallSp" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/bg_btn_common"
-                android:layout_marginTop="5dp">
-
-                <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
-                    android:id="@+id/spinner_income_proof"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/black" />
+                <EditText
+                    android:id="@+id/ed_income_proof_other_specify2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"/>
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_btn_common"
+                    android:textCursorDrawable="@drawable/cursor_block"
+                    android:fontFamily="sans-serif"
+                    android:paddingStart="10dp"
+                    android:hint="Type income proof"
+                    android:paddingEnd="10dp"
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor"
+                    android:inputType="text" />
 
-            </RelativeLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="Others please specify"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/ubuntu_medium"
-                android:textColor="@color/black" />
-
-            <EditText
-                android:id="@+id/ed_income_proof_other_specify"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/bg_btn_common"
-                android:textCursorDrawable="@drawable/cursor_block"
-                android:fontFamily="sans-serif"
                 android:paddingStart="10dp"
-                android:hint="Type"
                 android:paddingEnd="10dp"
-                android:importantForAutofill="no"
-                tools:ignore="LabelFor"
-                android:inputType="text" />
-        </LinearLayout>
+                android:layout_marginBottom="5dp"
+                android:text="Supported farmats PDF, JPG"/>
 
             <Button
                 android:layout_width="match_parent"

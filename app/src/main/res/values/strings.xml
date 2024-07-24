@@ -313,17 +313,64 @@
     <string name="occupation">Occupation</string>
     <string name="capture_education_proof">Capture Education Proof</string>
 
+    <array name="income_proof_array">
+        <item>Select</item>
+        <item>Salary Slip</item>
+        <item>ITR Form</item>
+        <item>ITR Acknowledgement</item>
+        <item>Bank Statement</item>
+        <item>Income Certificate</item>
+        <item>PF Statement</item>
+        <item>Other</item>
+    </array>
 
-    <!--    <array name="floor_array">-->
-<!--        <item>Select</item>-->
-<!--        <item>1</item>-->
-<!--        <item>2</item>-->
-<!--        <item>3</item>-->
-<!--        <item>4</item>-->
-<!--        <item>5</item>-->
-<!--        <item>6</item>-->
-<!--        <item>7</item>-->
-<!--    </array>-->
+    <array name="income_from_array">
+        <item>Select</item>
+        <item> 1 lacs </item>
+        <item> 2 lacs </item>
+        <item> 3 lacs </item>
+        <item> 4 lacs </item>
+        <item> 5 lacs </item>
+        <item> 6 lacs </item>
+        <item> 7 lacs </item>
+        <item> 8 lacs </item>
+        <item> 9 lacs </item>
+        <item> 10 lacs </item>
+    </array>
+
+    <array name="income_to_array">
+        <item>Select</item>
+        <item> 1 lacs </item>
+        <item> 2 lacs </item>
+        <item> 3 lacs </item>
+        <item> 4 lacs </item>
+        <item> 5 lacs </item>
+        <item> 6 lacs </item>
+        <item> 7 lacs </item>
+        <item> 8 lacs </item>
+        <item> 9 lacs </item>
+        <item> 10 lacs </item>
+        <item> 11 lacs </item>
+        <item> 12 lacs </item>
+        <item> 13 lacs </item>
+        <item> 14 lacs </item>
+        <item> 15 lacs </item>
+    </array>
+
+
+    <array name="employed_with">
+        <item>Select</item>
+        <item> Proprietorship </item>
+        <item> HUF </item>
+        <item> Partnership </item>
+        <item> LLP </item>
+        <item> OPC </item>
+        <item> Pvt Ltd </item>
+        <item> Public Ltd </item>
+        <item> Government </item>
+        <item> Others </item>
+    </array>
+
 
     <array name="occupation_array">
         <item>Select</item>
