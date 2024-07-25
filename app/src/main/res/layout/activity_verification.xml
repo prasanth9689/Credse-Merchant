@@ -84,22 +84,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
                 android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
                 android:textColor="@color/grey"
                 android:textStyle="bold"
-                android:text="@string/otp_not_received"/>
+                android:text="OTP Not received?"/>
 
             <TextView
                 android:id="@+id/text_timer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:text="@string/_30_seconds"/>
+                android:text=""/>
 
             <TextView
                 android:id="@+id/re_send"
@@ -108,6 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:text="Re-send OTP"/>

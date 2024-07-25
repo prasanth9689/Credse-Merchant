@@ -141,7 +141,7 @@
                             android:textStyle="bold"
                             android:text="@string/upload_or_capture"
                             android:layout_centerVertical="true"
-                            android:fontFamily="@font/ubuntu_medium"
+                            android:fontFamily="sans-serif-medium"
                             android:textColor="@color/black" />
 
                         <ImageView
@@ -281,10 +281,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="Salaried Employed with"
+                        android:text="@string/salaried_employed_with"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/ubuntu_medium"
+                        android:fontFamily="sans-serif-medium"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -326,10 +326,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="If others please specify"
+                    android:text="@string/please_specify"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/ubuntu_medium"
+                    android:fontFamily="sans-serif-medium"
                     android:textColor="@color/black" />
                 <EditText
                     android:id="@+id/salaried_employed_with_other_ed"
@@ -359,10 +359,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="Company"
+                    android:text="@string/company"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/ubuntu_medium"
+                    android:fontFamily="sans-serif-medium"
                     android:textColor="@color/black" />
 
                 <EditText
@@ -409,10 +409,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="Self Employed - (If Self Employed show this) def hide"
+                        android:text="@string/self_employed"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/ubuntu_medium"
+                        android:fontFamily="sans-serif-medium"
                         android:textColor="@color/black" />
 
                 </RelativeLayout>
@@ -430,7 +430,7 @@
                         android:layout_marginStart="10dp"
                         android:buttonTint="@color/black"
                         android:fontFamily="sans-serif"
-                        android:text="Business" />
+                        android:text="@string/business" />
 
                     <CheckBox
                         android:id="@+id/checkbox_self_emp_professional"
@@ -439,7 +439,7 @@
                         android:buttonTint="@color/black"
                         android:layout_marginStart="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Professional" />
+                        android:text="@string/profession" />
 
                 </LinearLayout>
 
@@ -469,10 +469,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="Nature of Business - (If Business is selected show this) def hide"
+                        android:text="@string/business"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/ubuntu_medium"
+                        android:fontFamily="sans-serif-medium"
                         android:textColor="@color/black" />
 
                 </RelativeLayout>
@@ -490,7 +490,7 @@
                         android:layout_marginStart="10dp"
                         android:buttonTint="@color/black"
                         android:fontFamily="sans-serif"
-                        android:text="Manufacture" />
+                        android:text="@string/manufacture" />
 
                     <CheckBox
                         android:id="@+id/checkbox_trade"
@@ -499,7 +499,7 @@
                         android:buttonTint="@color/black"
                         android:layout_marginStart="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Trade" />
+                        android:text="@string/trade" />
 
                 </LinearLayout>
 
@@ -516,7 +516,7 @@
                         android:layout_marginStart="10dp"
                         android:buttonTint="@color/black"
                         android:fontFamily="sans-serif"
-                        android:text="Retail" />
+                        android:text="@string/retail" />
 
                     <CheckBox
                         android:id="@+id/checkbox_service"
@@ -525,7 +525,7 @@
                         android:buttonTint="@color/black"
                         android:layout_marginStart="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Service" />
+                        android:text="@string/service" />
 
                     <CheckBox
                         android:id="@+id/checkbox_rd"
@@ -534,7 +534,7 @@
                         android:buttonTint="@color/black"
                         android:layout_marginStart="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="R&amp;D" />
+                        android:text="@string/r_amp_d" />
 
                 </LinearLayout>
 
@@ -545,7 +545,7 @@
                     android:layout_marginStart="10dp"
                     android:buttonTint="@color/black"
                     android:fontFamily="sans-serif"
-                    android:text="Recycling" />
+                    android:text="@string/recycling" />
 
                 <CheckBox
                     android:id="@+id/checkbox_others_business"
@@ -554,7 +554,7 @@
                     android:buttonTint="@color/black"
                     android:layout_marginStart="10dp"
                     android:fontFamily="sans-serif"
-                    android:text="Others" />
+                    android:text="@string/others" />
 
                 <LinearLayout
                     android:id="@+id/self_emp_business_other_container"
@@ -566,10 +566,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="If others please specify"
+                        android:text="@string/please_specify"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/ubuntu_medium"
+                        android:fontFamily="sans-serif-medium"
                         android:textColor="@color/black" />
 
                     <EditText
@@ -581,7 +581,7 @@
                         android:textCursorDrawable="@drawable/cursor_block"
                         android:fontFamily="sans-serif"
                         android:paddingStart="10dp"
-                        android:hint="Type"
+                        android:hint="@string/type"
                         android:paddingEnd="10dp"
                         android:importantForAutofill="no"
                         tools:ignore="LabelFor"
@@ -599,10 +599,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="Description of business"
+                        android:text="@string/description_of_business"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/ubuntu_medium"
+                        android:fontFamily="sans-serif-medium"
                         android:textColor="@color/black" />
                     <EditText
                         android:id="@+id/ed_description_business"
@@ -613,7 +613,7 @@
                         android:textCursorDrawable="@drawable/cursor_block"
                         android:fontFamily="sans-serif"
                         android:paddingStart="10dp"
-                        android:hint="Type"
+                        android:hint="@string/type"
                         android:paddingEnd="10dp"
                         android:importantForAutofill="no"
                         tools:ignore="LabelFor"
@@ -647,10 +647,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="Type of Profession- (If Profession show this) def hide"
+                        android:text="@string/type_of_profession"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/ubuntu_medium"
+                        android:fontFamily="sans-serif-medium"
                         android:textColor="@color/black" />
 
                 </RelativeLayout>
@@ -668,7 +668,7 @@
                         android:layout_marginStart="10dp"
                         android:buttonTint="@color/black"
                         android:fontFamily="sans-serif"
-                        android:text="CA/CS" />
+                        android:text="@string/ca_cs" />
 
                     <CheckBox
                         android:id="@+id/checkbox_doctor"
@@ -677,7 +677,7 @@
                         android:buttonTint="@color/black"
                         android:layout_marginStart="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Doctor" />
+                        android:text="@string/doctor" />
 
                 </LinearLayout>
 
@@ -694,7 +694,7 @@
                         android:buttonTint="@color/black"
                         android:layout_marginStart="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Advocate" />
+                        android:text="@string/advocate" />
 
 
                     <CheckBox
@@ -704,7 +704,7 @@
                         android:buttonTint="@color/black"
                         android:layout_marginStart="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Architect" />
+                        android:text="@string/architect" />
 
                 </LinearLayout>
 
@@ -721,7 +721,7 @@
                         android:buttonTint="@color/black"
                         android:layout_marginStart="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Plumber" />
+                        android:text="@string/plumber" />
 
 
                     <CheckBox
@@ -731,7 +731,7 @@
                         android:buttonTint="@color/black"
                         android:layout_marginStart="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Electrician" />
+                        android:text="@string/electrician" />
 
                 </LinearLayout>
 
@@ -748,7 +748,7 @@
                         android:buttonTint="@color/black"
                         android:layout_marginStart="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Carpenter" />
+                        android:text="@string/carpenter" />
 
 
                     <CheckBox
@@ -758,7 +758,7 @@
                         android:buttonTint="@color/black"
                         android:layout_marginStart="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Tailor" />
+                        android:text="@string/tailor" />
 
                 </LinearLayout>
 
@@ -775,7 +775,7 @@
                         android:buttonTint="@color/black"
                         android:layout_marginStart="10dp"
                         android:fontFamily="sans-serif"
-                        android:text="Others" />
+                        android:text="@string/other" />
 
                 </LinearLayout>
 
@@ -789,10 +789,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="If others please specify"
+                        android:text="@string/please_specify"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/ubuntu_medium"
+                        android:fontFamily="sans-serif-medium"
                         android:textColor="@color/black" />
 
                     <EditText
@@ -804,7 +804,7 @@
                         android:textCursorDrawable="@drawable/cursor_block"
                         android:fontFamily="sans-serif"
                         android:paddingStart="10dp"
-                        android:hint="Type"
+                        android:hint="@string/type"
                         android:paddingEnd="10dp"
                         android:importantForAutofill="no"
                         tools:ignore="LabelFor"
@@ -822,10 +822,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="Description of profession"
+                        android:text="@string/description_of_profession"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/ubuntu_medium"
+                        android:fontFamily="sans-serif-medium"
                         android:textColor="@color/black" />
 
                     <EditText
@@ -837,7 +837,7 @@
                         android:textCursorDrawable="@drawable/cursor_block"
                         android:fontFamily="sans-serif"
                         android:paddingStart="10dp"
-                        android:hint="Type"
+                        android:hint="@string/type"
                         android:paddingEnd="10dp"
                         android:importantForAutofill="no"
                         tools:ignore="LabelFor"
@@ -866,7 +866,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Gross annual income range"
+                android:text="@string/gross_annual_income_range"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
 
@@ -878,10 +878,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="From"
+                    android:text="@string/from"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/ubuntu_medium"
+                    android:fontFamily="sans-serif-medium"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -920,10 +920,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="To"
+                    android:text="@string/to"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/ubuntu_medium"
+                    android:fontFamily="sans-serif-medium"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -975,7 +975,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Sources of income"
+                android:text="@string/sources_of_income"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
 
@@ -992,7 +992,7 @@
                     android:buttonTint="@color/black"
                     android:layout_marginStart="10dp"
                     android:fontFamily="sans-serif"
-                    android:text="Business" />
+                    android:text="@string/business" />
 
 
                 <CheckBox
@@ -1002,7 +1002,7 @@
                     android:buttonTint="@color/black"
                     android:layout_marginStart="10dp"
                     android:fontFamily="sans-serif"
-                    android:text="Salary" />
+                    android:text="@string/salary" />
 
             </LinearLayout>
 
@@ -1019,7 +1019,7 @@
                     android:buttonTint="@color/black"
                     android:layout_marginStart="10dp"
                     android:fontFamily="sans-serif"
-                    android:text="Interest" />
+                    android:text="@string/interest" />
 
 
                 <CheckBox
@@ -1029,7 +1029,7 @@
                     android:buttonTint="@color/black"
                     android:layout_marginStart="10dp"
                     android:fontFamily="sans-serif"
-                    android:text="Royality" />
+                    android:text="@string/royalty" />
 
             </LinearLayout>
 
@@ -1046,7 +1046,7 @@
                     android:buttonTint="@color/black"
                     android:layout_marginStart="10dp"
                     android:fontFamily="sans-serif"
-                    android:text="Investments" />
+                    android:text="@string/investments" />
 
 
                 <CheckBox
@@ -1056,7 +1056,7 @@
                     android:buttonTint="@color/black"
                     android:layout_marginStart="10dp"
                     android:fontFamily="sans-serif"
-                    android:text="Pension" />
+                    android:text="@string/pension" />
 
             </LinearLayout>
 
@@ -1073,7 +1073,7 @@
                     android:buttonTint="@color/black"
                     android:layout_marginStart="10dp"
                     android:fontFamily="sans-serif"
-                    android:text="Others" />
+                    android:text="@string/other" />
             </LinearLayout>
 
             <LinearLayout
@@ -1090,10 +1090,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="Income proof"
+                        android:text="@string/income_proof"
                         android:layout_centerVertical="true"
                         android:layout_marginTop="15dp"
-                        android:fontFamily="@font/ubuntu_medium"
+                        android:fontFamily="sans-serif-medium"
                         android:textColor="@color/black" />
 
                     <TextView
@@ -1135,10 +1135,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="Others please specify"
+                    android:text="@string/please_specify"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/ubuntu_medium"
+                    android:fontFamily="sans-serif-medium"
                     android:textColor="@color/black" />
                 <EditText
                     android:id="@+id/ed_income_proof_other_specify"
@@ -1149,7 +1149,7 @@
                     android:textCursorDrawable="@drawable/cursor_block"
                     android:fontFamily="sans-serif"
                     android:paddingStart="10dp"
-                    android:hint="Type"
+                    android:hint="@string/type"
                     android:paddingEnd="10dp"
                     android:importantForAutofill="no"
                     tools:ignore="LabelFor"
@@ -1167,10 +1167,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:text="Others please specify"
+                    android:text="@string/please_specify"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/ubuntu_medium"
+                    android:fontFamily="sans-serif-medium"
                     android:textColor="@color/black" />
                 <EditText
                     android:id="@+id/ed_income_proof_other_specify2"
@@ -1181,16 +1181,13 @@
                     android:textCursorDrawable="@drawable/cursor_block"
                     android:fontFamily="sans-serif"
                     android:paddingStart="10dp"
-                    android:hint="Type income proof"
+                    android:hint="@string/type_income_proof"
                     android:paddingEnd="10dp"
                     android:importantForAutofill="no"
                     tools:ignore="LabelFor"
                     android:inputType="text" />
 
             </LinearLayout>
-
-
-
         </LinearLayout>
 
             <TextView
@@ -1199,12 +1196,12 @@
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:layout_marginBottom="5dp"
-                android:text="Supported farmats PDF, JPG"/>
+                android:text="@string/supported_formats_pdf_jpg"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Upload proof"
+                android:text="@string/upload_proof"
                 android:paddingStart="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"

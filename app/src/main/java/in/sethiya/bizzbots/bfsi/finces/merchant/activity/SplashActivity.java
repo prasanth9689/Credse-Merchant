@@ -21,6 +21,8 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.EduOccupDetail
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.IdentityDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.PersonalDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.MyReviewActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.DeviceRegistrationActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.LoginMainActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.RegisterMobileActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivitySplashBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.SessionHandler;
@@ -40,7 +42,8 @@ public class SplashActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
 
-                       startActivity(new Intent(context, EduOccupDetailsActivity.class));
+        startActivity(new Intent(context, LoginMainActivity.class));
+        finish();
 
 //        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
 //            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -81,17 +84,5 @@ public class SplashActivity extends AppCompatActivity {
 //                finish();
 //            }
 //        },1500);
-
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-////                startActivity(new Intent(context, RegisterMobileActivity.class));
-////                finish();
-//
-//                startActivity(new Intent(context, Home.class));
-//                finish();
-//            }
-//        },3000);
-
     }
 }

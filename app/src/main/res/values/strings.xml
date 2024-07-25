@@ -54,7 +54,7 @@
     <string name="re_send_otp_in_10_seconds">Re-send OTP in 10 seconds</string>
     <string name="register">Register</string>
     <string name="mobile_registration">Mobile Registration</string>
-    <string name="enter_mobile_no">Enter mobile no</string>
+    <string name="enter_mobile_no">Enter Mobile No</string>
     <string name="auto_read_otp">Auto read OTP</string>
     <string name="otp_not_received">OTP Not received?</string>
     <string name="_30_seconds">30 Seconds</string>
@@ -312,6 +312,45 @@
     <string name="upload_or_capture">Upload or Capture</string>
     <string name="occupation">Occupation</string>
     <string name="capture_education_proof">Capture Education Proof</string>
+    <string name="salaried_employed_with">Salaried Employed with</string>
+    <string name="please_specify">Please specify</string>
+    <string name="self_employed">Self Employed</string>
+    <string name="business">Business</string>
+    <string name="profession">Profession</string>
+    <string name="manufacture">Manufacture</string>
+    <string name="trade">Trade</string>
+    <string name="retail">Retail</string>
+    <string name="service">Service</string>
+    <string name="r_amp_d" translatable="false"><![CDATA[R&D]]></string>
+    <string name="recycling">Recycling</string>
+    <string name="others">Others</string>
+    <string name="type">Type</string>
+    <string name="description_of_business">Description of business</string>
+    <string name="type_of_profession">Type of Profession</string>
+    <string name="ca_cs" translatable="false">CA/CS</string>
+    <string name="doctor">Doctor</string>
+    <string name="advocate">Advocate</string>
+    <string name="architect">Architect</string>
+    <string name="plumber">Plumber</string>
+    <string name="electrician">Electrician</string>
+    <string name="carpenter">Carpenter</string>
+    <string name="tailor">Tailor</string>
+    <string name="other">Other</string>
+    <string name="description_of_profession">Description of profession</string>
+    <string name="gross_annual_income_range">Gross annual income range</string>
+    <string name="from" translatable="false">From</string>
+    <string name="to" translatable="false">To</string>
+    <string name="sources_of_income">Sources of income</string>
+    <string name="salary">Salary</string>
+    <string name="interest">Interest</string>
+    <string name="royalty">Royalty</string>
+    <string name="investments">Investments</string>
+    <string name="pension">Pension</string>
+    <string name="income_proof">Income proof</string>
+    <string name="type_income_proof">Type income proof</string>
+    <string name="supported_formats_pdf_jpg">Supported formats PDF, JPG</string>
+    <string name="upload_proof">Upload proof</string>
+    <string name="mobile_no_must_10_digits">Mobile no must 10 digits</string>
 
     <array name="income_proof_array">
         <item>Select</item>
