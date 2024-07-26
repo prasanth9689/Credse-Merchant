@@ -60,7 +60,7 @@
 
 
         <EditText
-            android:id="@+id/mobile"
+            android:id="@+id/ed_access_token"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_centerHorizontal="false"
@@ -70,7 +70,7 @@
             android:fontFamily="sans-serif-light"
             android:paddingStart="10dp"
             android:singleLine="true"
-            android:textCursorDrawable="@drawable/cursor_blue"
+            android:textCursorDrawable="@drawable/cursor_block"
             android:textStyle="bold" />
 
         <Button
