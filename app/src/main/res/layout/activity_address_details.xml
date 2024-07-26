@@ -26,6 +26,7 @@
             android:foreground="?android:attr/selectableItemBackground" />
 
         <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -535,19 +536,19 @@
                 tools:ignore="SmallSp" />
         </RelativeLayout>
 
-        <RelativeLayout
+        <EditText
+            android:id="@+id/ed_state"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:background="@drawable/bg_btn_common"
-            android:layout_marginTop="5dp">
-
-            <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
-                android:id="@+id/spinner_state"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"/>
-
-        </RelativeLayout>
+            android:textCursorDrawable="@drawable/cursor_block"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:inputType="text" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -575,19 +576,19 @@
                 tools:ignore="SmallSp" />
         </RelativeLayout>
 
-        <RelativeLayout
+        <EditText
+            android:id="@+id/ed_district"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:background="@drawable/bg_btn_common"
-            android:layout_marginTop="5dp">
-
-            <in.sethiya.bizzbots.bfsi.finces.merchant.common.CustomSpinner
-                android:id="@+id/spinner_district"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"/>
-
-        </RelativeLayout>
+            android:textCursorDrawable="@drawable/cursor_block"
+            android:fontFamily="sans-serif"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:inputType="text" />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -741,5 +742,89 @@
 
     </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/selection_con"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:visibility="gone">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--add  several shimmer placeholder layout -->
+                <include layout="@layout/m_selection_shimmer" />
+                <include layout="@layout/m_selection_shimmer" />
+                <include layout="@layout/m_selection_shimmer" />
+                <include layout="@layout/m_selection_shimmer" />
+                <include layout="@layout/m_selection_shimmer" />
+                <include layout="@layout/m_selection_shimmer" />
+                <include layout="@layout/m_selection_shimmer" />
+                <include layout="@layout/m_selection_shimmer" />
+                <include layout="@layout/m_selection_shimmer" />
+                <include layout="@layout/m_selection_shimmer" />
+                <include layout="@layout/m_selection_shimmer" />
+                <include layout="@layout/m_selection_shimmer" />
+                <include layout="@layout/m_selection_shimmer" />
+                <include layout="@layout/m_selection_shimmer" />
+
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/state_not_select_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="50dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:src="@drawable/india_map1"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please select state"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/ubuntu"
+                android:textSize="25sp"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

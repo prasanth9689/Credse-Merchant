@@ -1,6 +1,7 @@
 package in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -52,12 +53,9 @@ public class ContactsDetailsActivity extends AppCompatActivity {
     }
 
     private void onClick() {
-        binding.save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (validateInputs()) {
-                    saveNow();
-                }
+        binding.save.setOnClickListener(view -> {
+            if (validateInputs()) {
+                saveNow();
             }
         });
 
@@ -76,12 +74,7 @@ public class ContactsDetailsActivity extends AppCompatActivity {
             }
         });
 
-        binding.verify.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                binding.edOtpVerify.setVisibility(View.VISIBLE);
-            }
-        });
+        binding.verify.setOnClickListener(view -> binding.edOtpVerify.setVisibility(View.VISIBLE));
 
         binding.sms.setOnClickListener(v -> {
             CheckBox checkBox = (CheckBox) v;
@@ -123,13 +116,16 @@ public class ContactsDetailsActivity extends AppCompatActivity {
             }
         });
 
+        binding.back.setOnClickListener(view -> finish());
+
     }
 
     private void saveNow() {
         Set<String> s = new LinkedHashSet<>(list);
         String arrayList = s.toString();
-      //  serviceIntent.putExtra("milk_supply_company", arrayList);
         Toast.makeText(context, "Valid", Toast.LENGTH_SHORT).show();
+
+        startActivity(new Intent(context, IdentityDetailsActivity.class));
     }
 
     private boolean validateInputs() {

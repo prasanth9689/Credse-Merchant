@@ -312,6 +312,20 @@
     <string name="upload_or_capture">Upload or Capture</string>
     <string name="occupation">Occupation</string>
     <string name="capture_education_proof">Capture Education Proof</string>
+    <string name="select_religion_practice">Select Religion Practice</string>
+
+    <array name="rl_pract_array">
+        <item>Select</item>
+        <item>Hinduism</item>
+        <item>Islam</item>
+        <item>Christianity</item>
+        <item>Buddhism</item>
+        <item>Jainism</item>
+        <item>Sikhism</item>
+        <item>Atheism (No Religion)</item>
+        <item>Other</item>
+    </array>
+
 
     <array name="income_proof_array">
         <item>Select</item>
