@@ -2,7 +2,6 @@
 <resources>
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimary2">#2196F3</color>
-    <color name="shimmer_placeholder">#dddddd</color>
     <color name="colorPrimary3">#D1D1D1</color>
     <color name="colorAccent">#2BBD18</color>
     <color name="black">#FF000000</color>

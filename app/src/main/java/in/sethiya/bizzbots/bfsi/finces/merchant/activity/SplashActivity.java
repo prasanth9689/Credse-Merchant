@@ -40,14 +40,14 @@ public class SplashActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
 
-                       startActivity(new Intent(context, AddressDetailsActivity.class));
+                       startActivity(new Intent(context, EduOccupDetailsActivity.class));
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
+//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+//            return insets;
+//        });
+//
 //        sp = getSharedPreferences(SHARED_PREFE_ID, MODE_PRIVATE);
 //        String status = sp.getString(KEY_PREFE_GET_STARTED, "");
 //
@@ -81,5 +81,17 @@ public class SplashActivity extends AppCompatActivity {
 //                finish();
 //            }
 //        },1500);
+
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+////                startActivity(new Intent(context, RegisterMobileActivity.class));
+////                finish();
+//
+//                startActivity(new Intent(context, Home.class));
+//                finish();
+//            }
+//        },3000);
+
     }
 }
