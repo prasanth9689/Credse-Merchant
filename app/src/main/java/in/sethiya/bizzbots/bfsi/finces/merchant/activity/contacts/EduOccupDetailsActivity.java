@@ -23,6 +23,7 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.CameraX;
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.ImageViewActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityEduOccupDetailsBinding;
+import in.sethiya.bizzbots.bfsi.finces.merchant.helper.Utils;
 
 public class EduOccupDetailsActivity extends AppCompatActivity {
     private ActivityEduOccupDetailsBinding binding;
@@ -68,6 +69,15 @@ public class EduOccupDetailsActivity extends AppCompatActivity {
     }
 
     private void onClick() {
+        binding.save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (validateInputs()) {
+                    saveNow();
+                }
+            }
+        });
+
         binding.cardEducationProof.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -676,6 +686,32 @@ public class EduOccupDetailsActivity extends AppCompatActivity {
 
             }
         });
+
+        binding.back.setOnClickListener(view -> finish());
+    }
+
+    private void saveNow() {
+        Toast.makeText(context, "Valid", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(context, RelCommDetailsActivity.class));
+    }
+
+    private boolean validateInputs() {
+        String mEducation = binding.spinnerEducation.getSelectedItem().toString();
+        String mOccupation = binding.spinnerOccupation.getSelectedItem().toString();
+
+        if("Select".equals(mEducation)){
+            Utils.showMessageInSnackbar(context, "Select education");
+            return false;
+        }
+        if (bitmap == null){
+            Utils.showMessageInSnackbar(context, "Capture education proof");
+            return false;
+        }
+        if ("Select".equals(mOccupation)){
+            Utils.showMessageInSnackbar(context, "Select occupation");
+            return false;
+        }
+        return true;
     }
 
     private void captureEvent() {

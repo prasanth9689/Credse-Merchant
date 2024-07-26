@@ -59,50 +59,35 @@ public class IdentityDetailsActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         onClick();
-
     }
 
     private void onClick() {
-        binding.save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (validateInputs()) {
-                    saveNow();
-                }
+        binding.save.setOnClickListener(view -> {
+            if (validateInputs()) {
+                saveNow();
             }
         });
 
         // Ration card back
-        binding.cardRdBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bitmap bitmap1 = BitmapFactory.decodeFile(file12.getAbsolutePath());
-                if (bitmap1 != null){
-                    imageView(RATION_BACK_FILE_NAME, getString(R.string.ration_card_back));
-                    return;
-                }
-                captureEvent(12);
+        binding.cardRdBack.setOnClickListener(view -> {
+            Bitmap bitmap1 = BitmapFactory.decodeFile(file12.getAbsolutePath());
+            if (bitmap1 != null){
+                imageView(RATION_BACK_FILE_NAME, getString(R.string.ration_card_back));
+                return;
             }
+            captureEvent(12);
         });
 
-        binding.reTakeRdBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                captureEvent(12);
-            }
-        });
+        binding.reTakeRdBack.setOnClickListener(view -> captureEvent(12));
 
         // Ration card front
-        binding.cardRdFront.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bitmap bitmap1 = BitmapFactory.decodeFile(file11.getAbsolutePath());
-                if (bitmap1 != null){
-                    imageView(RATION_FRONT_FILE_NAME, getString(R.string.ration_card_front));
-                    return;
-                }
-                captureEvent(11);
+        binding.cardRdFront.setOnClickListener(view -> {
+            Bitmap bitmap1 = BitmapFactory.decodeFile(file11.getAbsolutePath());
+            if (bitmap1 != null){
+                imageView(RATION_FRONT_FILE_NAME, getString(R.string.ration_card_front));
+                return;
             }
+            captureEvent(11);
         });
 
         binding.reTakeRdFront.setOnClickListener(new View.OnClickListener() {
@@ -113,144 +98,88 @@ public class IdentityDetailsActivity extends AppCompatActivity {
         });
 
         // Driving License back side
-        binding.cardDrivingLicenseBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bitmap bitmap1 = BitmapFactory.decodeFile(file10.getAbsolutePath());
-                if (bitmap1 != null){
-                    imageView(DRIVING_LICENSE_BACK_FILE_NAME, getString(R.string.driving_license_back));
-                    return;
-                }
-                captureEvent(10);
+        binding.cardDrivingLicenseBack.setOnClickListener(view -> {
+            Bitmap bitmap1 = BitmapFactory.decodeFile(file10.getAbsolutePath());
+            if (bitmap1 != null){
+                imageView(DRIVING_LICENSE_BACK_FILE_NAME, getString(R.string.driving_license_back));
+                return;
             }
+            captureEvent(10);
         });
 
-        binding.reTakeDrivingLicenseBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                captureEvent(10);
-            }
-        });
+        binding.reTakeDrivingLicenseBack.setOnClickListener(view -> captureEvent(10));
 
         // Driving License front side
-        binding.cardDrivingLicenseFront.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bitmap bitmap1 = BitmapFactory.decodeFile(file9.getAbsolutePath());
-                if (bitmap1 != null){
-                    imageView(DRIVING_LICENSE_FRONT_FILE_NAME, getString(R.string.driving_license_front));
-                    return;
-                }
-                captureEvent(9);
+        binding.cardDrivingLicenseFront.setOnClickListener(view -> {
+            Bitmap bitmap1 = BitmapFactory.decodeFile(file9.getAbsolutePath());
+            if (bitmap1 != null){
+                imageView(DRIVING_LICENSE_FRONT_FILE_NAME, getString(R.string.driving_license_front));
+                return;
             }
+            captureEvent(9);
         });
 
-        binding.reTakeDrivingLicenseFront.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                captureEvent(9);
-            }
-        });
+        binding.reTakeDrivingLicenseFront.setOnClickListener(view -> captureEvent(9));
 
         // Passport back side
-        binding.cardPassportBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bitmap bitmap1 = BitmapFactory.decodeFile(file8.getAbsolutePath());
-                if (bitmap1 != null){
-                    imageView(PASSPORT_BACK_FILE_NAME, getString(R.string.passport_back));
-                    return;
-                }
-                captureEvent(8);
+        binding.cardPassportBack.setOnClickListener(view -> {
+            Bitmap bitmap1 = BitmapFactory.decodeFile(file8.getAbsolutePath());
+            if (bitmap1 != null){
+                imageView(PASSPORT_BACK_FILE_NAME, getString(R.string.passport_back));
+                return;
             }
+            captureEvent(8);
         });
 
-        binding.reTakePassportBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                captureEvent(8);
-            }
-        });
+        binding.reTakePassportBack.setOnClickListener(view -> captureEvent(8));
 
         // Passport front side
-        binding.cardPassportFront.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bitmap bitmap1 = BitmapFactory.decodeFile(file7.getAbsolutePath());
-                if (bitmap1 != null){
-                    imageView(PASSPORT_FRONT_FILE_NAME, getString(R.string.passport_front));
-                    return;
-                }
-                captureEvent(7);
+        binding.cardPassportFront.setOnClickListener(view -> {
+            Bitmap bitmap1 = BitmapFactory.decodeFile(file7.getAbsolutePath());
+            if (bitmap1 != null){
+                imageView(PASSPORT_FRONT_FILE_NAME, getString(R.string.passport_front));
+                return;
             }
+            captureEvent(7);
         });
 
-        binding.reTakePassportFront.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                captureEvent(7);
-            }
-        });
+        binding.reTakePassportFront.setOnClickListener(view -> captureEvent(7));
 
         // Voter back side
-        binding.cardVoterBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bitmap bitmap1 = BitmapFactory.decodeFile(file6.getAbsolutePath());
-                if (bitmap1 != null){
-                    imageView(VOTER_BACK_FILE_NAME, getString(R.string.voter_id_back));
-                    return;
-                }
-                captureEvent(6);
+        binding.cardVoterBack.setOnClickListener(view -> {
+            Bitmap bitmap1 = BitmapFactory.decodeFile(file6.getAbsolutePath());
+            if (bitmap1 != null){
+                imageView(VOTER_BACK_FILE_NAME, getString(R.string.voter_id_back));
+                return;
             }
+            captureEvent(6);
         });
 
-        binding.reTakeVoterBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                captureEvent(6);
-            }
-        });
+        binding.reTakeVoterBack.setOnClickListener(view -> captureEvent(6));
 
         // Voter front side
-        binding.cardVoterFront.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bitmap bitmap1 = BitmapFactory.decodeFile(file5.getAbsolutePath());
-                if (bitmap1 != null){
-                    imageView(VOTER_FRONT_FILE_NAME, getString(R.string.voter_id_front));
-                    return;
-                }
-                captureEvent(5);
+        binding.cardVoterFront.setOnClickListener(view -> {
+            Bitmap bitmap1 = BitmapFactory.decodeFile(file5.getAbsolutePath());
+            if (bitmap1 != null){
+                imageView(VOTER_FRONT_FILE_NAME, getString(R.string.voter_id_front));
+                return;
             }
+            captureEvent(5);
         });
 
-        binding.reTakeVoterFront.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                captureEvent(5);
-            }
-        });
+        binding.reTakeVoterFront.setOnClickListener(view -> captureEvent(5));
 
         // Pan back side
-        binding.cardPanBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Bitmap bitmap1 = BitmapFactory.decodeFile(file4.getAbsolutePath());
-                if (bitmap1 != null){
-                    imageView(PAN_BACK_FILE_NAME, getString(R.string.pan_back));
-                    return;
-                }
-                captureEvent(4);
+        binding.cardPanBack.setOnClickListener(view -> {
+            Bitmap bitmap1 = BitmapFactory.decodeFile(file4.getAbsolutePath());
+            if (bitmap1 != null){
+                imageView(PAN_BACK_FILE_NAME, getString(R.string.pan_back));
+                return;
             }
+            captureEvent(4);
         });
 
-        binding.reTakePanBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                captureEvent(4);
-            }
-        });
+        binding.reTakePanBack.setOnClickListener(view -> captureEvent(4));
 
         // Pan front side
         binding.cardPanFront.setOnClickListener(view -> {
@@ -262,12 +191,7 @@ public class IdentityDetailsActivity extends AppCompatActivity {
             captureEvent(3);
         });
 
-        binding.reTakePanFront.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                captureEvent(3);
-            }
-        });
+        binding.reTakePanFront.setOnClickListener(view -> captureEvent(3));
 
         // Adhar back side
         binding.cardAadharBack.setOnClickListener(view -> {
@@ -280,12 +204,7 @@ public class IdentityDetailsActivity extends AppCompatActivity {
             captureEvent(2);
         });
 
-        binding.reTakeAadharBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                captureEvent(2);
-            }
-        });
+        binding.reTakeAadharBack.setOnClickListener(view -> captureEvent(2));
 
         // Adhar front side
         binding.cardAadharFront.setOnClickListener(view -> {
@@ -298,12 +217,9 @@ public class IdentityDetailsActivity extends AppCompatActivity {
             captureEvent(1);
         });
 
-        binding.reTakeAadharFront.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                captureEvent(1);
-            }
-        });
+        binding.reTakeAadharFront.setOnClickListener(view -> captureEvent(1));
+
+        binding.back.setOnClickListener(view -> finish());
 
     }
 
@@ -397,7 +313,8 @@ public class IdentityDetailsActivity extends AppCompatActivity {
     }
 
     private void saveNow() {
-        Toast.makeText(context, "Saved", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Valid", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(context, EduOccupDetailsActivity.class));
     }
 
     private boolean validateInputs() {

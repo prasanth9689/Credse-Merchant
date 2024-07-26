@@ -1,7 +1,11 @@
 package in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts;
 
 import static android.view.View.GONE;
+import static in.sethiya.bizzbots.bfsi.finces.merchant.AppConstants.MAS_GET_DISTRICTS;
+import static in.sethiya.bizzbots.bfsi.finces.merchant.AppConstants.MAS_GET_STATES;
+
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -9,21 +13,46 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
-import in.sethiya.bizzbots.bfsi.finces.merchant.helper.Utils;
-import in.sethiya.bizzbots.bfsi.finces.merchant.R;
-import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityAddressDetailsBinding;
 
-public class AddressDetailsActivity extends AppCompatActivity {
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import in.sethiya.bizzbots.bfsi.finces.merchant.R;
+import in.sethiya.bizzbots.bfsi.finces.merchant.adapter.SelectionAdapter;
+import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityAddressDetailsBinding;
+import in.sethiya.bizzbots.bfsi.finces.merchant.helper.Utils;
+import in.sethiya.bizzbots.bfsi.finces.merchant.model.States;
+import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIClient;
+import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIInterface;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class AddressDetailsActivity extends AppCompatActivity implements SelectionAdapter.OnClickInterface {
     private ActivityAddressDetailsBinding binding;
     private final Context context = this;
     private String mLivingType, mHouseType, mNameOfHome;
     private String mApartHouseNo, mApartLevelFloor, mApartBlockNo, mApartName;
     private String mRawHouse;
     private String mHoseNo;
+    private int mSelect = 0;
     private String mRawPropertyName, mDoorNo, mPlotNo, mStreetName;
     private String mColonyName, mLandmark, mAreaName, mSubDistrict;
     private String mState, mDistrict, mPropertyType, mIsPermanentAddr = "", mIsCommunicationAddr = "";
+    private APIInterface apiInterface;
+    private List<States> selectionsLists;
+    private String mSelectedName;
+    private String mSelectedCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +60,39 @@ public class AddressDetailsActivity extends AppCompatActivity {
         binding = ActivityAddressDetailsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        apiInterface = APIClient.getClient().create(APIInterface.class);
+        selectionsLists = new ArrayList<>();
+
+        binding.edState.setFocusable(false);
+         binding.edDistrict.setFocusable(false);
+
         onClick();
         initSpinnerArray();
+    }
 
-     //   intiTesting();
+    @Override
+    public void onClickInterface(Intent intent) {
+        String requestId = intent.getStringExtra("request_id");
+
+        int mRequestId = Integer.parseInt(requestId);
+
+        if (mRequestId == 0) {
+            mSelectedName = intent.getStringExtra("selection_name");
+            mSelectedCode = intent.getStringExtra("selection_code");
+            binding.edState.setText(mSelectedName);
+        }
+
+        if (mRequestId == 1) {
+            mSelectedName = intent.getStringExtra("selection_name");
+            binding.edDistrict.setText(mSelectedName);
+        }
+
+        if (mSelect == 1){
+            binding.scrollView1.setVisibility(View.VISIBLE);
+            binding.title.setText("Agent creation");
+            binding.selectionCon.setVisibility(View.GONE);
+            mSelect = 0;
+        }
     }
 
     private void intiTesting() {
@@ -78,12 +136,9 @@ public class AddressDetailsActivity extends AppCompatActivity {
     }
 
     private void onClick() {
-        binding.save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (validateInputs()) {
-                    saveNow();
-                }
+        binding.save.setOnClickListener(view -> {
+            if (validateInputs()) {
+                saveNow();
             }
         });
 
@@ -363,45 +418,125 @@ public class AddressDetailsActivity extends AppCompatActivity {
         });
 
 
-        binding.back.setOnClickListener(new View.OnClickListener() {
+        binding.back.setOnClickListener(v -> finish());
+
+        binding.edState.setOnClickListener(v -> {
+            binding.title.setText("Select State");
+            loadStates();
+            binding.scrollView1.setVisibility(View.GONE);
+            binding.selectionCon.setVisibility(View.VISIBLE);
+            mSelect = 1;
+        });
+
+        binding.edState.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View v) {
-                finish();
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                binding.txtErrorFound.setVisibility(View.GONE);
+                binding.edState.setError(null);
+                if (mSelectedCode != null && !mSelectedCode.isEmpty()){
+                    loadDistricts(mSelectedCode);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+
+        binding.edDistrict.setOnClickListener(v -> {
+            binding.title.setText("Select District");
+            //   loadDistricts(mSelectedCode);
+            binding.scrollView1.setVisibility(View.GONE);
+            binding.selectionCon.setVisibility(View.VISIBLE);
+            mSelect = 1;
+
+            String mState = binding.edState.getText().toString();
+
+            if (mState.isEmpty()){
+                binding.shimmerLayout.setVisibility(View.GONE);
+                binding.stateNotSelectError.setVisibility(View.VISIBLE);
             }
         });
     }
 
+    private void loadDistricts(String mSelectedStateCode) {
+        if (selectionsLists != null && !selectionsLists.isEmpty()){
+            selectionsLists.clear();
+        }
+
+        Call<ResponseBody> call =
+                apiInterface.getDistricts(MAS_GET_DISTRICTS, mSelectedStateCode);
+
+       call.enqueue(new Callback<ResponseBody>() {
+           @Override
+           public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+               if (response.isSuccessful()){
+                   binding.shimmerLayout.setVisibility(View.GONE);
+                   String districtList = "";
+                   try {
+                       districtList = response.body().string();
+                       JSONObject jsonObject = new JSONObject(districtList);
+                       boolean mRecords = jsonObject.getBoolean("status");
+
+                       if (mRecords){
+                           JSONArray jsonArrayData = jsonObject.getJSONArray("data");
+                           for (int i = 0; i < jsonArrayData.length(); i++) {
+                               States states = new States();
+                               JSONObject object = jsonArrayData.getJSONObject(i);
+                               states.setSelectionCode(object.getString("Dist_code"));
+                               states.setSelectionName(object.getString("Dist_name"));
+                               selectionsLists.add(states);
+                           }
+                           LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
+                           linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+                           binding.recyclerView.setLayoutManager(linearLayoutManager);
+                           binding.recyclerView.setHasFixedSize(true);
+                           binding.recyclerView.setItemViewCacheSize(20);
+                           SelectionAdapter selectionAdapter = new SelectionAdapter(1, selectionsLists, context);
+                           binding.recyclerView.setAdapter(selectionAdapter);
+                           selectionAdapter.notifyDataSetChanged();
+                       }
+                   } catch (IOException | JSONException e) {
+                       // throw new RuntimeException(e);
+                       binding.shimmerLayout.setVisibility(View.GONE);
+                       Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
+                   }
+               }
+           }
+
+           @Override
+           public void onFailure(Call<ResponseBody> call, Throwable t) {
+
+           }
+       });
+    }
+
     private void saveNow() {
+        startActivity(new Intent(context, ContactsDetailsActivity.class));
         Toast.makeText(context, "Valid", Toast.LENGTH_SHORT).show();
     }
 
     private boolean validateInputs() {
-
         mLivingType = binding.spinnerLivingType.getSelectedItem().toString();
         mHouseType = binding.spinnerHouseType.getSelectedItem().toString();
         mNameOfHome = binding.edNameOfHome.getText().toString().trim();
         mApartHouseNo = binding.edApartHouseNo.getText().toString().trim();
-
-
         mApartLevelFloor = binding.spinnerApartLevelFloor.getSelectedItem().toString();
         mApartBlockNo = binding.edApartBlockNo.getText().toString().trim();
         mApartName = binding.edApartmentName.getText().toString().trim();
         mRawHouse = binding.edRawHouse.getText().toString().trim();
-
-
         mRawPropertyName = binding.edRawPropertyName.getText().toString().trim();
         mDoorNo = binding.edDoorNo.getText().toString().trim();
         mPlotNo = binding.edPlotNo.getText().toString().trim();
         mStreetName = binding.edStreetName.getText().toString().trim();
-
-
         mColonyName = binding.edColonyName.getText().toString().trim();
         mLandmark = binding.edLandmarl.getText().toString().trim();
         mAreaName = binding.edAreaNameLoca.getText().toString().trim();
         mSubDistrict = binding.edSubDistrict.getText().toString().trim();
-
-//        mState = binding.spinnerState.getSelectedItem().toString();
-//        mDistrict = binding.spinnerDistrict.getSelectedItem().toString();
 
         if("Select".equals(mLivingType)){
             Utils.showMessageInSnackbar(context, getString(R.string.select_living_type));
@@ -499,21 +634,72 @@ public class AddressDetailsActivity extends AppCompatActivity {
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
-//        if("Select".equals(mState)){
-//            Utils.showMessageInSnackbar(context, getString(R.string.select_state));
-//            binding.txtErrorFound.setVisibility(View.VISIBLE);
-//            return false;
-//        }
-//        if("Select".equals(mDistrict)){
-//            Utils.showMessageInSnackbar(context, getString(R.string.select_district));
-//            binding.txtErrorFound.setVisibility(View.VISIBLE);
-//            return false;
-//        }
         if (mIsCommunicationAddr.isEmpty()){
             Utils.showMessageInSnackbar(context, getString(R.string.select_default_communication_address));
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }
         return true;
+    }
+
+    private void loadStates() {
+        Call<ResponseBody> call =
+                apiInterface.getStates(MAS_GET_STATES);
+
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                if (response.isSuccessful()){
+                    binding.shimmerLayout.setVisibility(View.GONE);
+                    String stateList = "";
+
+                    try {
+                        stateList = response.body().string();
+                        JSONObject jsonObject = new JSONObject(stateList);
+                        boolean mRecords = jsonObject.getBoolean("status");
+
+                        if (mRecords){
+                            JSONArray jsonArrayData = jsonObject.getJSONArray("data");
+                            for (int i = 0; i < jsonArrayData.length(); i++) {
+                                States states = new States();
+                                JSONObject object = jsonArrayData.getJSONObject(i);
+                                states.setSelectionCode(object.getString("State_Code"));
+                                states.setSelectionName(object.getString("StateName"));
+                                selectionsLists.add(states);
+                            }
+                            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
+                            linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+                            binding.recyclerView.setLayoutManager(linearLayoutManager);
+                            binding.recyclerView.setHasFixedSize(true);
+                            binding.recyclerView.setItemViewCacheSize(20);
+                            SelectionAdapter selectionAdapter = new SelectionAdapter(0,selectionsLists, context);
+                            binding.recyclerView.setAdapter(selectionAdapter);
+                            selectionAdapter.notifyDataSetChanged();
+                        }
+                    } catch (IOException | JSONException e) {
+                        // throw new RuntimeException(e);
+                        Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(context, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+      //  super.onBackPressed();
+        if (mSelect == 1) {
+            binding.scrollView1.setVisibility(View.VISIBLE);
+            binding.title.setText("Agent creation");
+            binding.selectionCon.setVisibility(GONE);
+            mSelect = 0;
+            return;
+        }
+        finish();
     }
 }

@@ -51,7 +51,6 @@ public class PersonalDetailsActivity extends AppCompatActivity {
     private Calendar calendar;
     private int year, month, day;
     private File file;
-
     int datePickerId = 0;
 
     @Override
@@ -148,29 +147,19 @@ public class PersonalDetailsActivity extends AppCompatActivity {
     }
 
     private void onClick() {
-
-        binding.save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (validateInputs()) {
-                    saveNow();
-                }
+        binding.save.setOnClickListener(view -> {
+            if (validateInputs()) {
+                saveNow();
             }
         });
 
-        binding.dob.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setDate();
-            }
-        });
+        binding.back.setOnClickListener(view -> finish());
 
-        binding.doa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                datePickerId = 1;
-                setDate();
-            }
+        binding.dob.setOnClickListener(view -> setDate());
+
+        binding.doa.setOnClickListener(v -> {
+            datePickerId = 1;
+            setDate();
         });
 
         binding.profileImg.setOnClickListener(v -> {
@@ -401,6 +390,7 @@ public class PersonalDetailsActivity extends AppCompatActivity {
 
     private void saveNow() {
         Toast.makeText(context, "Valid", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(context, AddressDetailsActivity.class));
     }
 
     private boolean validateInputs() {
@@ -510,7 +500,6 @@ public class PersonalDetailsActivity extends AppCompatActivity {
         bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
 
         if (bitmap != null){
-
             binding.txtErrorFound.setVisibility(GONE);
 
             Glide
