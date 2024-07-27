@@ -31,6 +31,10 @@ public class EduOccupDetailsActivity extends AppCompatActivity {
     private static final String EDUCATION_FILE_NAME = "EDUPROOF_123.jpg";
     private File file;
     private Bitmap bitmap;
+    private int occupationSelectedId;
+    private int OCCUPATION_SALARY = 1;
+    private int OCCUPATION_SELF_EMPLOYED = 2;
+    private int OCCUPATION_OTHER = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,9 +76,11 @@ public class EduOccupDetailsActivity extends AppCompatActivity {
         binding.save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (validateInputs()) {
-                    saveNow();
-                }
+//                if (validateInputs()) {
+//                    saveNow();
+//                }
+
+                saveNow();
             }
         });
 
@@ -465,6 +471,7 @@ public class EduOccupDetailsActivity extends AppCompatActivity {
                        1 -  Salaried
                      */
                     case 1:
+                        occupationSelectedId = 1;
                         Toast.makeText(context, "Salaried", Toast.LENGTH_SHORT).show();
                         binding.salariedEmployedWithContainer.setVisibility(VISIBLE);
                         binding.salariedEmployedWithSpinnerSelectionContainer.setVisibility(VISIBLE);
@@ -477,6 +484,7 @@ public class EduOccupDetailsActivity extends AppCompatActivity {
                         break;
 
                     case 2:
+                        occupationSelectedId = 2;
                         binding.selfEmployedSelectionContainer.setVisibility(VISIBLE);
 
                         binding.salariedEmployedWithContainer.setVisibility(GONE);
@@ -710,6 +718,31 @@ public class EduOccupDetailsActivity extends AppCompatActivity {
         if ("Select".equals(mOccupation)){
             Utils.showMessageInSnackbar(context, "Select occupation");
             return false;
+        }
+        if (occupationSelectedId == 1){
+
+            String mValue = binding.salariedEmployedWithSpinner.getSelectedItem().toString();
+
+            if ("Others".equals(mValue)){
+
+               if (binding.salariedEmployedWithOtherEd.getText().toString().isEmpty()){
+                   binding.salariedEmployedWithOtherEd.requestFocus();
+                   Utils.showMessageInSnackbar(context, "Please specify others");
+                   return false;
+               }
+
+            }else {
+                if ("Select".equals(binding.salariedEmployedWithSpinner.getSelectedItem().toString())){
+                    Utils.showMessageInSnackbar(context, "Select employed with");
+                    return false;
+                }
+
+                if(binding.salariedEmployedWithCompanyEd.getText().toString().isEmpty()){
+                    binding.salariedEmployedWithCompanyEd.requestFocus();
+                    Utils.showMessageInSnackbar(context, "Enter company name");
+                    return false;
+                }
+            }
         }
         return true;
     }

@@ -1,6 +1,7 @@
 package in.sethiya.bizzbots.bfsi.finces.merchant;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -30,6 +31,7 @@ import android.widget.Toast;
 import com.google.common.util.concurrent.ListenableFuture;
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import androidx.activity.EdgeToEdge;
@@ -72,7 +74,7 @@ public class CameraX extends AppCompatActivity {
         public void onActivityResult(Boolean result) {
             if (result){
                 // startCamera(cameraFacing);
-                startCamera(1);
+                startCamera(0);
             }
         }
     });
@@ -94,6 +96,15 @@ public class CameraX extends AppCompatActivity {
 
         if (eventName != null){
             binding.eventName.setText(eventName);
+        }
+
+        String cameraFocusId = getIntent().getStringExtra("camera_focus_id");
+
+        if (cameraFocusId != null){
+            if (Integer.parseInt(cameraFocusId) == 1){
+                cameraFacing = CameraSelector.LENS_FACING_BACK;
+                startCamera(1);
+            }
         }
     }
 
@@ -133,7 +144,9 @@ public class CameraX extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(context, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             activityResultLauncher.launch(Manifest.permission.CAMERA);
         } else {
-            startCamera(cameraFacing);
+      //      startCamera(cameraFacing);
+
+            startCamera(0);
         }
     }
 

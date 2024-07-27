@@ -23,6 +23,7 @@ public class RelCommDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = ActivityRelCommDetailsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         initSpinner();

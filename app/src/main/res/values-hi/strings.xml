@@ -339,4 +339,16 @@
     <string name="type_income_proof">आय प्रमाण टाइप करें</string>
     <string name="supported_formats_pdf_jpg">समर्थित प्रारूप PDF, JPG</string>
     <string name="upload_proof">प्रमाण अपलोड करें</string>
+    <string name="mobile_no_must_10_digits">मोबाइल नंबर 10 अंक का होना चाहिए</string>
+    <string name="select_property">संपत्ति का चयन करें</string>
+    <string name="enter_6_digits_of_otp">ओटीपी के 6 अंक दर्ज करें</string>
+    <string name="enter_10_digits_of_landline_no">लैंडलाइन नंबर के 10 अंक दर्ज करें</string>
+    <string name="enter_12_digits_aadhar_no">12 अंकों का आधार नंबर दर्ज करें</string>
+    <string name="enter_10_digits_pan_no">10 अंकों का पैन नंबर दर्ज करें</string>
+    <string name="enter_12_digits_voter_if_no">यदि नहीं तो 12 अंकों का मतदाता दर्ज करें</string>
+    <string name="enter_8_digits_passport_no">8 अंकों का पासपोर्ट नंबर दर्ज करें</string>
+    <string name="enter_16_digits_of_driving_license_no">ड्राइविंग लाइसेंस नंबर के 16 अंक दर्ज करें</string>
+    <string name="enter_pass_code">पासकोड दर्ज करें</string>
+    <string name="enter_4_digits_pass_code">4 अंकों का पास कोड दर्ज करें</string>
+    <string name="enter_4_digits_aadhar_otp">4 अंकों का आधार ओटीपी दर्ज करें</string>
 </resources>

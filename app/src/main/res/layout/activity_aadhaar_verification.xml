@@ -66,13 +66,14 @@
 
 
         <EditText
-            android:id="@+id/mobile"
+            android:id="@+id/ed_aadhar_otp"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/edit_text_login"
             android:fontFamily="sans-serif"
             android:hint=""
+            android:maxLength="4"
             android:inputType="phone"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"

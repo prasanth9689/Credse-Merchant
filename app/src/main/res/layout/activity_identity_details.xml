@@ -83,9 +83,10 @@
                     android:textCursorDrawable="@drawable/cursor_block"
                     android:fontFamily="sans-serif"
                     android:hint="@string/enter_aadhar_no"
+                    android:maxLength="16"
                     android:paddingStart="10dp"
                     android:importantForAutofill="no"
-                    android:inputType="text"
+                    android:inputType="numberDecimal"
                     android:paddingEnd="10dp"
                     tools:ignore="LabelFor" />
 
@@ -279,13 +280,14 @@
                     android:layout_marginTop="5dp"
                     android:background="@drawable/bg_btn_common"
                     android:textCursorDrawable="@drawable/cursor_block"
+                    android:maxLength="10"
                     android:fontFamily="sans-serif"
                     android:paddingStart="10dp"
                     android:hint="@string/enter_pan_no"
                     android:paddingEnd="10dp"
                     android:importantForAutofill="no"
                     tools:ignore="LabelFor"
-                    android:inputType="text" />
+                    android:inputType="textPhonetic" />
 
 
                 <RelativeLayout
@@ -482,6 +484,7 @@
                     android:textCursorDrawable="@drawable/cursor_block"
                     android:fontFamily="sans-serif"
                     android:paddingStart="10dp"
+                    android:maxLength="12"
                     android:hint="@string/enter_voter_id_no"
                     android:paddingEnd="10dp"
                     android:importantForAutofill="no"
@@ -683,6 +686,7 @@
                     android:textCursorDrawable="@drawable/cursor_block"
                     android:fontFamily="sans-serif"
                     android:paddingStart="10dp"
+                    android:maxLength="8"
                     android:hint="@string/enter_passport_no"
                     android:paddingEnd="10dp"
                     android:importantForAutofill="no"
@@ -883,6 +887,7 @@
                     android:textCursorDrawable="@drawable/cursor_block"
                     android:fontFamily="sans-serif"
                     android:paddingStart="10dp"
+                    android:maxLength="16"
                     android:hint="@string/enter_license_no"
                     android:paddingEnd="10dp"
                     android:importantForAutofill="no"

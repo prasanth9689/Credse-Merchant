@@ -359,6 +359,10 @@
     <string name="enter_10_digits_pan_no">Enter 10 digits pan no</string>
     <string name="enter_12_digits_voter_if_no">Enter 12 digits voter if no</string>
     <string name="enter_8_digits_passport_no">Enter 8 digits passport no</string>
+    <string name="enter_16_digits_of_driving_license_no">Enter 16 digits of driving license no</string>
+    <string name="enter_pass_code">Enter Pass Code</string>
+    <string name="enter_4_digits_pass_code">Enter 4 Digits Pass Code</string>
+    <string name="enter_4_digits_aadhar_otp">Enter 4 digits aadhar OTP</string>
 
     <array name="property_type">
         <item>Select</item>

@@ -337,4 +337,16 @@
     <string name="type_income_proof">வருமானச் சான்று வகை</string>
     <string name="supported_formats_pdf_jpg">ஆதரிக்கப்படும் வடிவங்கள் PDF, JPG</string>
     <string name="upload_proof">ஆதாரத்தை பதிவேற்றவும்</string>
+    <string name="mobile_no_must_10_digits">மொபைல் எண் 10 இலக்கங்களைக் கொண்டிருக்க வேண்டும்</string>
+    <string name="select_property">சொத்தைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="enter_6_digits_of_otp">OTP இன் 6 இலக்கங்களை உள்ளிடவும்</string>
+    <string name="enter_10_digits_of_landline_no">லேண்ட்லைன் எண்ணின் 10 இலக்கங்களை உள்ளிடவும்</string>
+    <string name="enter_12_digits_aadhar_no">12 இலக்க ஆதார் எண்ணை உள்ளிடவும்</string>
+    <string name="enter_10_digits_pan_no">10 இலக்க பான் எண்ணை உள்ளிடவும்</string>
+    <string name="enter_12_digits_voter_if_no">இல்லை எனில் 12 இலக்க வாக்காளரை உள்ளிடவும்</string>
+    <string name="enter_8_digits_passport_no">8 இலக்க பாஸ்போர்ட் எண்ணை உள்ளிடவும்</string>
+    <string name="enter_16_digits_of_driving_license_no">ஓட்டுநர் உரிமத்தின் 16 இலக்கங்களை உள்ளிடவும்</string>
+    <string name="enter_pass_code">பாஸ் குறியீட்டை உள்ளிடவும்</string>
+    <string name="enter_4_digits_pass_code">4 இலக்க பாஸ் குறியீட்டை உள்ளிடவும்</string>
+    <string name="enter_4_digits_aadhar_otp">4 இலக்க ஆதார் OTP ஐ உள்ளிடவும்</string>
 </resources>

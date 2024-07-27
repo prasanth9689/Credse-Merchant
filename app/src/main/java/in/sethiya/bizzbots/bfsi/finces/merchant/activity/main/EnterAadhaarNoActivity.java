@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,11 +25,25 @@ public class EnterAadhaarNoActivity extends AppCompatActivity {
         binding = ActivityEnterAadhaarNoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+        binding.edAadharNo.requestFocus();
+
         binding.getOtp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String mAadharNo = binding.edAadharNo.getText().toString();
+                if (mAadharNo.isEmpty()) {
+                    binding.edAadharNo.setError(getString(R.string.enter_aadhar_no));
+                    binding.edAadharNo.requestFocus();
+                    return;
+                }
+                if (mAadharNo.length() < 12) {
+                    binding.edAadharNo.setError(getString(R.string.enter_12_digits_aadhar_no));
+                    binding.edAadharNo.requestFocus();
+                    return;
+                }
+
                 startActivity(new Intent(context, AadhaarVerificationActivity.class));
-                finish();
             }
         });
 

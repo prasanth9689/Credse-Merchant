@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -58,7 +59,133 @@ public class IdentityDetailsActivity extends AppCompatActivity {
         binding = ActivityIdentityDetailsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        deletePreviousData();
+
         onClick();
+    }
+
+    private void deletePreviousData() {
+
+        if (file1 != null){
+            if (file1.exists()) {
+                if (file1.delete()) {
+                    Log.i(TAG, "File deleted");
+                } else {
+                    Log.i(TAG, "File not deleted!");
+                }
+            }
+        }
+
+
+      if (file2 != null){
+          if (file2.exists()) {
+              if (file2.delete()) {
+                  Log.i(TAG, "File deleted");
+              } else {
+                  Log.i(TAG, "File not deleted!");
+              }
+          }
+      }
+
+      if (file3 != null) {
+          if (file3.exists()) {
+              if (file3.delete()) {
+                  Log.i(TAG, "File deleted");
+              } else {
+                  Log.i(TAG, "File not deleted!");
+              }
+          }
+      }
+
+       if (file4 != null){
+           if (file4.exists()) {
+               if (file4.delete()) {
+                   Log.i(TAG, "File deleted");
+               } else {
+                   Log.i(TAG, "File not deleted!");
+               }
+           }
+       }
+
+       if (file5 != null){
+           if (file5.exists()) {
+               if (file5.delete()) {
+                   Log.i(TAG, "File deleted");
+               } else {
+                   Log.i(TAG, "File not deleted!");
+               }
+           }
+       }
+
+        if (file6 != null){
+            if (file6.exists()) {
+                if (file6.delete()) {
+                    Log.i(TAG, "File deleted");
+                } else {
+                    Log.i(TAG, "File not deleted!");
+                }
+            }
+        }
+
+        if (file7 != null){
+            if (file7.exists()) {
+                if (file7.delete()) {
+                    Log.i(TAG, "File deleted");
+                } else {
+                    Log.i(TAG, "File not deleted!");
+                }
+            }
+        }
+
+        if (file8 != null){
+            if (file8.exists()) {
+                if (file8.delete()) {
+                    Log.i(TAG, "File deleted");
+                } else {
+                    Log.i(TAG, "File not deleted!");
+                }
+            }
+        }
+
+       if (file9 != null){
+           if (file9.exists()) {
+               if (file9.delete()) {
+                   Log.i(TAG, "File deleted");
+               } else {
+                   Log.i(TAG, "File not deleted!");
+               }
+           }
+       }
+
+       if (file10 != null){
+           if (file10.exists()) {
+               if (file10.delete()) {
+                   Log.i(TAG, "File deleted");
+               } else {
+                   Log.i(TAG, "File not deleted!");
+               }
+           }
+       }
+
+        if (file11 != null){
+            if (file11.exists()) {
+                if (file11.delete()) {
+                    Log.i(TAG, "File deleted");
+                } else {
+                    Log.i(TAG, "File not deleted!");
+                }
+            }
+
+        }
+       if (file12 != null){
+           if (file12.exists()) {
+               if (file12.delete()) {
+                   Log.i(TAG, "File deleted");
+               } else {
+                   Log.i(TAG, "File not deleted!");
+               }
+           }
+       }
     }
 
     private void onClick() {
@@ -231,72 +358,84 @@ public class IdentityDetailsActivity extends AppCompatActivity {
             case 12:
                 intent.putExtra("event_name", getString(R.string.capture_ration_card_back));
                 intent.putExtra("camera_id", "13");
+                intent.putExtra("camera_focus_id", "1");
                 startActivity(intent);
                 break;
 
             case 11:
                 intent.putExtra("event_name", getString(R.string.capture_ration_card_front));
                 intent.putExtra("camera_id", "12");
+                intent.putExtra("camera_focus_id", "1");
                 startActivity(intent);
                 break;
 
             case 10:
                 intent.putExtra("event_name", getString(R.string.capture_driving_license_back));
                 intent.putExtra("camera_id", "11");
+                intent.putExtra("camera_focus_id", "1");
                 startActivity(intent);
                 break;
 
             case 9:
                 intent.putExtra("event_name", getString(R.string.capture_driving_license_front));
                 intent.putExtra("camera_id", "10");
+                intent.putExtra("camera_focus_id", "1");
                 startActivity(intent);
                 break;
 
             case 8:
                 intent.putExtra("event_name", getString(R.string.capture_passport_back));
                 intent.putExtra("camera_id", "9");
+                intent.putExtra("camera_focus_id", "1");
                 startActivity(intent);
                 break;
 
             case 7:
                 intent.putExtra("event_name", getString(R.string.capture_passport_front));
                 intent.putExtra("camera_id", "8");
+                intent.putExtra("camera_focus_id", "1");
                 startActivity(intent);
                 break;
 
             case 6:
                 intent.putExtra("event_name", getString(R.string.capture_voter_id_back));
                 intent.putExtra("camera_id", "7");
+                intent.putExtra("camera_focus_id", "1");
                 startActivity(intent);
                 break;
 
             case 5:
                 intent.putExtra("event_name", getString(R.string.capture_voter_id_front));
                 intent.putExtra("camera_id", "6");
+                intent.putExtra("camera_focus_id", "1");
                 startActivity(intent);
                 break;
 
             case 4:
                 intent.putExtra("event_name", getString(R.string.capture_pan_back));
                 intent.putExtra("camera_id", "5");
+                intent.putExtra("camera_focus_id", "1");
                 startActivity(intent);
                 break;
 
             case 3:
                 intent.putExtra("event_name", getString(R.string.capture_pan_front));
                 intent.putExtra("camera_id", "4");
+                intent.putExtra("camera_focus_id", "1");
                 startActivity(intent);
                 break;
 
             case 2:
                 intent.putExtra("event_name", getString(R.string.capture_aadhar_back));
                 intent.putExtra("camera_id", "3");
+                intent.putExtra("camera_focus_id", "1");
                 startActivity(intent);
                 break;
 
             case 1:
                 intent.putExtra("event_name", getString(R.string.capture_aadhar_front));
                 intent.putExtra("camera_id", "2");
+                intent.putExtra("camera_focus_id", "1");
                 startActivity(intent);
                 break;
 
@@ -350,7 +489,7 @@ public class IdentityDetailsActivity extends AppCompatActivity {
             binding.edPanCard.requestFocus();
             return false;
         }
-        if (mPanNo.length() < 12) {
+        if (mPanNo.length() < 10) {
             binding.edPanCard.setError(getString(R.string.enter_10_digits_pan_no));
             binding.edPanCard.requestFocus();
             return false;
@@ -410,7 +549,7 @@ public class IdentityDetailsActivity extends AppCompatActivity {
             return false;
         }
         if (mDrivingLicenseNo.length() < 16) {
-            binding.edDrivingLicense.setError(getString(R.string.enter_8_digits_passport_no));
+            binding.edDrivingLicense.setError(getString(R.string.enter_16_digits_of_driving_license_no));
             binding.edDrivingLicense.requestFocus();
             return false;
         }
@@ -430,11 +569,11 @@ public class IdentityDetailsActivity extends AppCompatActivity {
             return false;
         }
         if (bitmapRationCardFront == null) {
-            Utils.showMessageInSnackbar(context, getString(R.string.capture_driving_license_front));
+            Utils.showMessageInSnackbar(context, getString(R.string.capture_ration_card_front));
             return false;
         }
         if (bitmapRationCardBack == null) {
-            Utils.showMessageInSnackbar(context, getString(R.string.capture_driving_license_back));
+            Utils.showMessageInSnackbar(context, getString(R.string.capture_ration_card_back));
             return false;
         }
         return true;

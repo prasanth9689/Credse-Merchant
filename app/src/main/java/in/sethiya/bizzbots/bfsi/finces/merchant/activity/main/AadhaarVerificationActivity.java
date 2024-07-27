@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +26,21 @@ public class AadhaarVerificationActivity extends AppCompatActivity {
         binding = ActivityAadhaarVerificationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+        binding.edAadharOtp.requestFocus();
+
         binding.submit.setOnClickListener(v -> {
+            String mPassCode = binding.edAadharOtp.getText().toString();
+            if (mPassCode.isEmpty()) {
+                binding.edAadharOtp.setError(getString(R.string.enter_otp));
+                binding.edAadharOtp.requestFocus();
+                return;
+            }
+            if (mPassCode.length() < 4) {
+                binding.edAadharOtp.setError(getString(R.string.enter_4_digits_aadhar_otp));
+                binding.edAadharOtp.requestFocus();
+                return;
+            }
             startActivity(new Intent(context, PersonalDetailsActivity.class));
         });
 

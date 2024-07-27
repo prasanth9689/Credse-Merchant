@@ -50,6 +50,7 @@
             android:fontFamily="sans-serif-light"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
+            android:maxLength="4"
             android:singleLine="true"
             android:inputType="numberDecimal"
             android:textCursorDrawable="@drawable/cursor_blue"
