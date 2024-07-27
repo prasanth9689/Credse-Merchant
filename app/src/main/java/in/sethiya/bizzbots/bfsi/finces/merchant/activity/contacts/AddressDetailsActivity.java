@@ -133,6 +133,11 @@ public class AddressDetailsActivity extends AppCompatActivity implements Selecti
                 R.array.floor_array, R.layout.custom_spinner);
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spinnerApartLevelFloor.setAdapter(adapter3);
+
+        ArrayAdapter<CharSequence> adapter4 = ArrayAdapter.createFromResource(this,
+                R.array.property_type_array, R.layout.custom_spinner);
+        adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        binding.spinnerPropertyType.setAdapter(adapter4);
     }
 
     private void onClick() {
@@ -175,6 +180,25 @@ public class AddressDetailsActivity extends AppCompatActivity implements Selecti
 
             }
         });
+
+        binding.spinnerPropertyType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mPropertyType = binding.spinnerPropertyType.getSelectedItem().toString();
+
+                if (!mHouseType.equals("Select")){
+                    binding.txtPropertyTypeNotValid.setVisibility(GONE);
+                    binding.txtErrorFound.setVisibility(GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
 
         binding.edNameOfHome.addTextChangedListener(new TextWatcher() {
             @Override
@@ -461,6 +485,34 @@ public class AddressDetailsActivity extends AppCompatActivity implements Selecti
                 binding.stateNotSelectError.setVisibility(View.VISIBLE);
             }
         });
+
+        binding.edDistrict.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                binding.txtErrorFound.setVisibility(GONE);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        binding.defaultCurrent.setOnClickListener(v -> {
+            binding.defaultPermanent.setChecked(false);
+            mIsCommunicationAddr = "Current";
+        });
+
+        binding.defaultPermanent.setOnClickListener(v -> {
+            binding.defaultCurrent.setChecked(false);
+            mIsCommunicationAddr = "Permanent Address";
+        });
+
     }
 
     private void loadDistricts(String mSelectedStateCode) {
@@ -537,6 +589,9 @@ public class AddressDetailsActivity extends AppCompatActivity implements Selecti
         mLandmark = binding.edLandmarl.getText().toString().trim();
         mAreaName = binding.edAreaNameLoca.getText().toString().trim();
         mSubDistrict = binding.edSubDistrict.getText().toString().trim();
+        mState = binding.edState.getText().toString().trim();
+        mDistrict = binding.edDistrict.getText().toString().trim();
+        mPropertyType = binding.spinnerPropertyType.getSelectedItem().toString();
 
         if("Select".equals(mLivingType)){
             Utils.showMessageInSnackbar(context, getString(R.string.select_living_type));
@@ -631,6 +686,24 @@ public class AddressDetailsActivity extends AppCompatActivity implements Selecti
          if (mSubDistrict.isEmpty()){
             binding.edSubDistrict.requestFocus();
             binding.edSubDistrict.setError(getString(R.string.enter_sub_district));
+            binding.txtErrorFound.setVisibility(View.VISIBLE);
+            return false;
+        }
+         if (mState.isEmpty()){
+             binding.edState.requestFocus();
+             binding.edState.setError(getString(R.string.select_state));
+             binding.txtErrorFound.setVisibility(View.VISIBLE);
+             return false;
+         }
+        if (mDistrict.isEmpty()){
+            binding.edDistrict.requestFocus();
+            binding.edDistrict.setError(getString(R.string.select_district));
+            binding.txtErrorFound.setVisibility(View.VISIBLE);
+            return false;
+        }
+        if ("Select".equals(mPropertyType)){
+            Utils.showMessageInSnackbar(context, getString(R.string.select_property));
+            binding.txtPropertyTypeNotValid.setVisibility(View.VISIBLE);
             binding.txtErrorFound.setVisibility(View.VISIBLE);
             return false;
         }

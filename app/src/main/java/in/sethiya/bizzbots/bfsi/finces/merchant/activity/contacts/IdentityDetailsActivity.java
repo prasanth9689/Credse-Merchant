@@ -331,6 +331,11 @@ public class IdentityDetailsActivity extends AppCompatActivity {
             binding.edAadharNo.requestFocus();
             return false;
         }
+        if (mAadharNo.length() < 12) {
+            binding.edAadharNo.setError(getString(R.string.enter_12_digits_aadhar_no));
+            binding.edAadharNo.requestFocus();
+            return false;
+        }
         if (bitmapAadharFront == null) {
            Utils.showMessageInSnackbar(context, getString(R.string.capture_aadhar_front));
            return false;
@@ -339,10 +344,14 @@ public class IdentityDetailsActivity extends AppCompatActivity {
             Utils.showMessageInSnackbar(context, getString(R.string.capture_aadhar_back));
             return false;
         }
-
         // Pan
         if (mPanNo.isEmpty()) {
             binding.edPanCard.setError(getString(R.string.enter_pan_no));
+            binding.edPanCard.requestFocus();
+            return false;
+        }
+        if (mPanNo.length() < 12) {
+            binding.edPanCard.setError(getString(R.string.enter_10_digits_pan_no));
             binding.edPanCard.requestFocus();
             return false;
         }
@@ -354,10 +363,14 @@ public class IdentityDetailsActivity extends AppCompatActivity {
             Utils.showMessageInSnackbar(context, getString(R.string.capture_pan_back));
             return false;
         }
-
         // Voter
         if (mVoterId.isEmpty()) {
             binding.edVoterId.setError(getString(R.string.enter_voter_id));
+            binding.edVoterId.requestFocus();
+            return false;
+        }
+        if (mVoterId.length() < 12) {
+            binding.edVoterId.setError(getString(R.string.enter_12_digits_voter_if_no));
             binding.edVoterId.requestFocus();
             return false;
         }
@@ -376,6 +389,11 @@ public class IdentityDetailsActivity extends AppCompatActivity {
             binding.edPassport.requestFocus();
             return false;
         }
+        if (mPassportNo.length() < 8) {
+            binding.edPassport.setError(getString(R.string.enter_8_digits_passport_no));
+            binding.edPassport.requestFocus();
+            return false;
+        }
         if (bitmapPassportFront == null) {
             Utils.showMessageInSnackbar(context, getString(R.string.capture_passport_front));
             return false;
@@ -388,6 +406,11 @@ public class IdentityDetailsActivity extends AppCompatActivity {
         // Driving License
         if (mDrivingLicenseNo.isEmpty()) {
             binding.edDrivingLicense.setError(getString(R.string.enter_driving_license_no));
+            binding.edDrivingLicense.requestFocus();
+            return false;
+        }
+        if (mDrivingLicenseNo.length() < 16) {
+            binding.edDrivingLicense.setError(getString(R.string.enter_8_digits_passport_no));
             binding.edDrivingLicense.requestFocus();
             return false;
         }

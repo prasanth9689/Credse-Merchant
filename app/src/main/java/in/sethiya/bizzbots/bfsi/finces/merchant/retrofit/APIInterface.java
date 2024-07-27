@@ -14,7 +14,7 @@ public interface APIInterface {
     @POST("server/Procurement.php")
     Call<ResponseBody> getStates(@Query("axn") String axn);
 
-    @POST("Procurement.php")
+    @POST("server/Procurement.php")
     Call<ResponseBody> getDistricts(@Query("axn") String axn,
                                     @Query("stateCode") String stateCode);
 }

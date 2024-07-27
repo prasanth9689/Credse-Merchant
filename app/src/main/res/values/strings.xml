@@ -313,6 +313,61 @@
     <string name="occupation">Occupation</string>
     <string name="capture_education_proof">Capture Education Proof</string>
     <string name="select_religion_practice">Select Religion Practice</string>
+    <string name="salaried_employed_with">Salaried Employed with</string>
+    <string name="please_specify">Please specify</string>
+    <string name="self_employed">Self Employed</string>
+    <string name="business">Business</string>
+    <string name="profession">Profession</string>
+    <string name="manufacture">Manufacture</string>
+    <string name="trade">Trade</string>
+    <string name="retail">Retail</string>
+    <string name="service">Service</string>
+    <string name="r_amp_d" translatable="false"><![CDATA[R&D]]></string>
+    <string name="recycling">Recycling</string>
+    <string name="others">Others</string>
+    <string name="type">Type</string>
+    <string name="description_of_business">Description of business</string>
+    <string name="type_of_profession">Type of Profession</string>
+    <string name="ca_cs" translatable="false">CA/CS</string>
+    <string name="doctor">Doctor</string>
+    <string name="advocate">Advocate</string>
+    <string name="architect">Architect</string>
+    <string name="plumber">Plumber</string>
+    <string name="electrician">Electrician</string>
+    <string name="carpenter">Carpenter</string>
+    <string name="tailor">Tailor</string>
+    <string name="other">Other</string>
+    <string name="description_of_profession">Description of profession</string>
+    <string name="gross_annual_income_range">Gross annual income range</string>
+    <string name="from" translatable="false">From</string>
+    <string name="to" translatable="false">To</string>
+    <string name="sources_of_income">Sources of income</string>
+    <string name="salary">Salary</string>
+    <string name="interest">Interest</string>
+    <string name="royalty">Royalty</string>
+    <string name="investments">Investments</string>
+    <string name="pension">Pension</string>
+    <string name="income_proof">Income proof</string>
+    <string name="type_income_proof">Type income proof</string>
+    <string name="supported_formats_pdf_jpg">Supported formats PDF, JPG</string>
+    <string name="upload_proof">Upload proof</string>
+    <string name="mobile_no_must_10_digits">Mobile no must 10 digits</string>
+    <string name="select_property">Select property</string>
+    <string name="enter_6_digits_of_otp">Enter 6 digits of OTP</string>
+    <string name="enter_10_digits_of_landline_no">Enter 10 digits of landline no</string>
+    <string name="enter_12_digits_aadhar_no">Enter 12 digits aadhar no</string>
+    <string name="enter_10_digits_pan_no">Enter 10 digits pan no</string>
+    <string name="enter_12_digits_voter_if_no">Enter 12 digits voter if no</string>
+    <string name="enter_8_digits_passport_no">Enter 8 digits passport no</string>
+
+    <array name="property_type">
+        <item>Select</item>
+        <item>Owned</item>
+        <item>Rented</item>
+        <item>Leased</item>
+        <item>Ancestral</item>
+        <item>Company Provided</item>
+    </array>
 
     <array name="rl_pract_array">
         <item>Select</item>

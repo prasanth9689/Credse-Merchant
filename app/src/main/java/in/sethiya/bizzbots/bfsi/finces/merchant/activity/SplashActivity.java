@@ -40,7 +40,7 @@ public class SplashActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
 
-                       startActivity(new Intent(context, AddressDetailsActivity.class));
+                       startActivity(new Intent(context, IdentityDetailsActivity.class));
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

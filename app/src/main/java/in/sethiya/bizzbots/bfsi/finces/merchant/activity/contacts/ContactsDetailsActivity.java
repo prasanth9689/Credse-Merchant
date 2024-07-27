@@ -4,7 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
@@ -32,6 +34,7 @@ public class ContactsDetailsActivity extends AppCompatActivity {
     private String mPrefCommunicationMode = "", mOTP;
     private String mResidenLandLine;
     private ArrayList<String> list;
+    private boolean isOtpVerified = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,8 +76,6 @@ public class ContactsDetailsActivity extends AppCompatActivity {
 
             }
         });
-
-        binding.verify.setOnClickListener(view -> binding.edOtpVerify.setVisibility(View.VISIBLE));
 
         binding.sms.setOnClickListener(v -> {
             CheckBox checkBox = (CheckBox) v;
@@ -118,6 +119,30 @@ public class ContactsDetailsActivity extends AppCompatActivity {
 
         binding.back.setOnClickListener(view -> finish());
 
+        binding.verify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.edOtpVerify.setVisibility(View.VISIBLE);
+                binding.verify.setText("Verify");
+
+                mOTP = binding.edOtpVerify.getText().toString();
+
+                if (mOTP.isEmpty()){
+                    binding.edOtpVerify.setError(getString(R.string.enter_otp));
+                    binding.edOtpVerify.requestFocus();
+                    return;
+                }
+                if (mOTP.length() < 6) {
+                    binding.edOtpVerify.setError(getString(R.string.enter_6_digits_of_otp));
+                    binding.edOtpVerify.requestFocus();
+                    return;
+                }
+                isOtpVerified = true;
+                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+                binding.edResidentialLaNo.requestFocus();
+            }
+        });
+
     }
 
     private void saveNow() {
@@ -140,31 +165,47 @@ public class ContactsDetailsActivity extends AppCompatActivity {
             binding.edPersonalMobileNo.requestFocus();
             return false;
         }
+        if (mPersonalMobileNo.length() < 10) {
+            binding.edPersonalMobileNo.setError(getString(R.string.mobile_no_must_10_digits));
+            binding.edPersonalMobileNo.requestFocus();
+            return false;
+        }
         if (mWhatsApp.isEmpty()){
             Log.e(TAG, "Enter WhatsApp number");
         }
-        if (mOTP.isEmpty()){
-            binding.edOtpVerify.setError(getString(R.string.enter_otp));
-            binding.edOtpVerify.requestFocus();
-            return false;
-        }
-        if (mResidenLandLine.isEmpty()){
-            binding.edResidentialLaNo.setError(getString(R.string.enter_residential_landline_number));
-            binding.edResidentialLaNo.requestFocus();
-            return false;
-        }
-        if (mPersonalEmailId.isEmpty()){
-            binding.edPersonalEmailId.setError(getString(R.string.enter_email_id));
-            binding.edPersonalEmailId.requestFocus();
-            return false;
-        }
-        if ("Select".equals(mPrefLangCommun)){
-            Utils.showMessageInSnackbar(context, getString(R.string.select_preferred_language));
-            binding.txtPrfLangNotValid.setVisibility(View.VISIBLE);
-            return false;
-        }
-        if (list.isEmpty()){
-            Utils.showMessageInSnackbar(context, getString(R.string.select_preferred_communication_mode));
+
+        if (isOtpVerified){
+            if (mResidenLandLine.isEmpty()){
+                binding.edResidentialLaNo.setError(getString(R.string.enter_residential_landline_number));
+                binding.edResidentialLaNo.requestFocus();
+                return false;
+            }
+            if (mResidenLandLine.length() < 10) {
+                binding.edResidentialLaNo.setError(getString(R.string.enter_10_digits_of_landline_no));
+                binding.edResidentialLaNo.requestFocus();
+                return false;
+            }
+            if (mPersonalEmailId.isEmpty()){
+                binding.edPersonalEmailId.setError(getString(R.string.enter_email_id));
+                binding.edPersonalEmailId.requestFocus();
+                return false;
+            }
+            if (!Patterns.EMAIL_ADDRESS.matcher(mPersonalEmailId).matches()){
+                binding.edPersonalEmailId.setError("Please enter valid email id");
+                binding.edPersonalEmailId.requestFocus();
+                return false;
+            }
+            if ("Select".equals(mPrefLangCommun)){
+                Utils.showMessageInSnackbar(context, getString(R.string.select_preferred_language));
+                binding.txtPrfLangNotValid.setVisibility(View.VISIBLE);
+                return false;
+            }
+            if (list.isEmpty()){
+                Utils.showMessageInSnackbar(context, getString(R.string.select_preferred_communication_mode));
+                return false;
+            }
+        }else {
+            Utils.showMessageInSnackbar(context, "Please Verify OTP");
             return false;
         }
         return true;
