@@ -363,6 +363,10 @@
     <string name="enter_pass_code">Enter Pass Code</string>
     <string name="enter_4_digits_pass_code">Enter 4 Digits Pass Code</string>
     <string name="enter_4_digits_aadhar_otp">Enter 4 digits aadhar OTP</string>
+    <string name="account_icon">Account Icon</string>
+    <string name="my_account">My Account</string>
+    <string name="general_settings">General settings</string>
+    <string name="click_to_logout_now">Click to logout now</string>
 
     <array name="property_type">
         <item>Select</item>
@@ -399,49 +403,49 @@
 
     <array name="income_from_array">
         <item>Select</item>
-        <item> 1 lacs </item>
-        <item> 2 lacs </item>
-        <item> 3 lacs </item>
-        <item> 4 lacs </item>
-        <item> 5 lacs </item>
-        <item> 6 lacs </item>
-        <item> 7 lacs </item>
-        <item> 8 lacs </item>
-        <item> 9 lacs </item>
-        <item> 10 lacs </item>
+        <item>1 lacs</item>
+        <item>2 lacs</item>
+        <item>3 lacs</item>
+        <item>4 lacs</item>
+        <item>5 lacs</item>
+        <item>6 lacs</item>
+        <item>7 lacs</item>
+        <item>8 lacs</item>
+        <item>9 lacs</item>
+        <item>10 lacs</item>
     </array>
 
     <array name="income_to_array">
         <item>Select</item>
-        <item> 1 lacs </item>
-        <item> 2 lacs </item>
-        <item> 3 lacs </item>
-        <item> 4 lacs </item>
-        <item> 5 lacs </item>
-        <item> 6 lacs </item>
-        <item> 7 lacs </item>
-        <item> 8 lacs </item>
-        <item> 9 lacs </item>
-        <item> 10 lacs </item>
-        <item> 11 lacs </item>
-        <item> 12 lacs </item>
-        <item> 13 lacs </item>
-        <item> 14 lacs </item>
-        <item> 15 lacs </item>
+        <item>1 lacs</item>
+        <item>2 lacs</item>
+        <item>3 lacs</item>
+        <item>4 lacs</item>
+        <item>5 lacs</item>
+        <item>6 lacs</item>
+        <item>7 lacs</item>
+        <item>8 lacs</item>
+        <item>9 lacs</item>
+        <item>10 lacs</item>
+        <item>11 lacs</item>
+        <item>12 lacs</item>
+        <item>13 lacs</item>
+        <item>14 lacs</item>
+        <item>15 lacs</item>
     </array>
 
 
     <array name="employed_with">
         <item>Select</item>
-        <item> Proprietorship </item>
-        <item> HUF </item>
-        <item> Partnership </item>
-        <item> LLP </item>
-        <item> OPC </item>
-        <item> Pvt Ltd </item>
-        <item> Public Ltd </item>
-        <item> Government </item>
-        <item> Others </item>
+        <item>Proprietorship</item>
+        <item>HUF</item>
+        <item>Partnership</item>
+        <item>LLP</item>
+        <item>OPC</item>
+        <item>Pvt Ltd</item>
+        <item>Public Ltd</item>
+        <item>Government</item>
+        <item>Others</item>
     </array>
 
 
@@ -469,9 +473,9 @@
 
     <array name="floor_array">
         <item>Select</item>
-        <item>Floor 1 </item>
-        <item>Floor2 </item>
-        <item>Floor 3 </item>
+        <item>Floor 1</item>
+        <item>Floor2</item>
+        <item>Floor 3</item>
     </array>
 
     <array name="language_array">

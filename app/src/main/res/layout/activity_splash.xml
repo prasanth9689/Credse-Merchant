@@ -11,7 +11,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@color/backgroundColor"
         tools:context=".activity.SplashActivity">
 
 
@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/made_in_india_with"
-                    android:textColor="@color/black"
+                    android:textColor="@color/textColor"
                     android:textStyle="bold"
                     />
 
@@ -82,12 +82,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:background="@color/white">
+                android:background="@color/backgroundColor">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="In Accordance With"
+                    android:textColor="@color/textLightColor"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
                     android:paddingBottom="10dp"
