@@ -766,27 +766,27 @@ public class EduOccupDetailsActivity extends AppCompatActivity {
     private void initSpinner() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.education_array, R.layout.custom_spinner);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.spinnerEducation.setAdapter(adapter);
 
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
                 R.array.occupation_array, R.layout.custom_spinner);
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter1.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.spinnerOccupation.setAdapter(adapter1);
 
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
                 R.array.employed_with, R.layout.custom_spinner);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter2.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.salariedEmployedWithSpinner.setAdapter(adapter2);
 
         ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this,
                 R.array.income_from_array, R.layout.custom_spinner);
-        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter3.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.spinnerAnIncomeFrom.setAdapter(adapter3);
 
         ArrayAdapter<CharSequence> adapter4 = ArrayAdapter.createFromResource(this,
                 R.array.income_to_array, R.layout.custom_spinner);
-        adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter4.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.spinnerAnIncomeTo.setAdapter(adapter4);
 
         ArrayAdapter<CharSequence> adapter5 = ArrayAdapter.createFromResource(this,
