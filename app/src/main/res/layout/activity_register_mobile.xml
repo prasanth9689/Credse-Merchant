@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/backgroundColor"
     tools:context=".activity.register.RegisterMobileActivity">
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/register"
-        android:textColor="@color/black"
+        android:textColor="@color/textColor"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,7 +28,7 @@
         android:fontFamily="sans-serif"
         android:layout_marginTop="80dp"
         android:text="@string/mobile_registration"
-        android:textColor="@color/black"
+        android:textColor="@color/textColor"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -53,6 +53,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:text="@string/enter_mobile_no"
+            android:textColor="@color/textLightColor"
             android:textSize="18sp"/>
 
 
@@ -64,6 +65,7 @@
             android:fontFamily="sans-serif-light"
             android:background="@drawable/edit_text_login"
             android:hint="@string/enter_mobile_no"
+            android:textColor="@color/textColor"
             android:inputType="phone"
             android:maxLength="10"
             android:paddingStart="10dp"

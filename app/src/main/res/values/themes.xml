@@ -1,14 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.CredseMerchant" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary2</item>
-        <item name="colorPrimaryDark">#FFFFFF</item>
-        <item name="colorAccent">@color/colorPrimary3</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimary2</item>
     </style>
 
-    <style name="Theme.CredseMerchant" parent="Base.Theme.CredseMerchant" >
-        <item name="colorPrimary">@color/colorPrimary2</item>
-        <item name="colorPrimaryDark">#FFFFFF</item>
-        <item name="colorAccent">@color/colorPrimary3</item>
-    </style>
+    <style name="Theme.CredseMerchant" parent="Base.Theme.CredseMerchant" />
 </resources>
