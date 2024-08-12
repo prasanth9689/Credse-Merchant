@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/backgroundColor"
     tools:context=".activity.GetStartedActivity">
 
     <RelativeLayout
@@ -20,7 +20,7 @@
             android:layout_marginStart="20dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/grow_your_nbusiness_nwith_us"
-            android:textColor="@color/black"
+            android:textColor="@color/textColor"
             android:textSize="40sp" />
 
         <Button
