@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/backgroundColor"
     tools:context=".activity.SetupPasscodeActivity">
 
 
@@ -27,7 +27,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:text="@string/enter_passcode"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/textColor"/>
 
 
         <EditText
@@ -73,7 +74,7 @@
         android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/setup_passcode"
-        android:textColor="@color/black"
+        android:textColor="@color/textColor"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -85,7 +86,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:text="@string/into_your_account"
-        android:textColor="@color/black"
+        android:textColor="@color/textColor"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />

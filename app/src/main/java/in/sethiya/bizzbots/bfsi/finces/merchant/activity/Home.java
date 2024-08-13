@@ -61,13 +61,13 @@ public class Home extends AppCompatActivity {
             binding.navDrawerLayout.userName.setText(user.getName());
             binding.navDrawerLayout.userName.setText(user.getName());
 
-            binding.toolbar.usernameLayout.setVisibility(View.VISIBLE);
-            binding.toolbar.loginTextLayout.setVisibility(View.INVISIBLE);
+     //       binding.toolbar.usernameLayout.setVisibility(View.VISIBLE);
+      //      binding.toolbar.loginTextLayout.setVisibility(View.INVISIBLE);
             // Drawer
         //    binding.navDrawerLayout.loginBtn.setVisibility(View.INVISIBLE);
         }else{
-            binding.toolbar.loginTextLayout.setVisibility(View.VISIBLE);
-            binding.toolbar.usernameLayout.setVisibility(View.INVISIBLE);
+      //      binding.toolbar.loginTextLayout.setVisibility(View.VISIBLE);
+       //     binding.toolbar.usernameLayout.setVisibility(View.INVISIBLE);
 
             // Drawer
             binding.navDrawerLayout.userName.setVisibility(View.INVISIBLE);

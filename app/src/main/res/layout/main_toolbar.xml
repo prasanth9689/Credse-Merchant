@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.Home"
-    android:background="@color/white"
+    android:background="@color/backgroundColor"
     >
 
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/backgroundColor"
         android:theme="@style/ThemeOverlay.AppCompat">
 
         <RelativeLayout
@@ -30,7 +30,7 @@
                 android:onClick="ClickMenu"
                 android:layout_marginStart="5dp"
                 android:layout_centerVertical="true"
-                app:tint="@color/black" />
+                app:tint="@color/textColor" />
 
 
             <TextView
@@ -45,7 +45,7 @@
                 android:focusable="false"
                 android:fontFamily="sans-serif"
                 android:text="Credse"
-                android:textColor="@color/black"
+                android:textColor="@color/textColor"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -68,45 +68,6 @@
 <!--                android:layout_alignParentRight="true"-->
 <!--                android:textSize="5dp" />-->
 
-            <RelativeLayout
-                android:id="@+id/login_text_layout"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@id/id_user_account">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/log_in"
-                    android:textColor="@color/white"
-                    android:textStyle="bold|italic" />
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/username_layout"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="10dp"
-                android:layout_toLeftOf="@id/id_user_account">
-
-                <TextView
-                    android:id="@+id/user_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:text=""
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/user_account_layout_btn"
@@ -116,15 +77,7 @@
 
             </RelativeLayout>
 
-            <ImageView
-                android:id="@+id/id_user_account"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/ic_user_new"
-                app:tint="@color/white" />
+
 
             <LinearLayout
                 android:onClick="onWalletStatements"
@@ -137,13 +90,14 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/account_balance_wallet"/>
+                    android:src="@drawable/account_balance_wallet"
+                    app:tint="@color/textColor" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="5,256.00"
-                    android:textColor="@color/black"
+                    android:textColor="@color/textColor"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="10dp"
                     android:fontFamily="sans-serif-medium"/>
@@ -185,7 +139,7 @@
                     android:inputType="text"
                     android:textColor="#1E1F20"
                     android:textColorHighlight="#00BCD4"
-                    android:textColorHint="#C46D6D6D"
+                    android:textColorHint="@color/textLightColor"
                     android:textColorLink="#00BCD4"
                     android:textSize="12dp" />
 
@@ -212,7 +166,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/all_contacts"
-                android:textColor="@color/black"
+                android:textColor="@color/textColor"
                 android:fontFamily="sans-serif-medium"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"/>
@@ -228,14 +182,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="(777)"
-                    android:textColor="#B3B3B3"/>
+                    android:textColor="@color/textLightColor"/>
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/ic_filter"
                     android:layout_marginStart="5dp"
-                    android:layout_marginEnd="10dp"/>
+                    android:layout_marginEnd="10dp"
+                    app:tint="@color/textLightColor" />
 
             </LinearLayout>
 

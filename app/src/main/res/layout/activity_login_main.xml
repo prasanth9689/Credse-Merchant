@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/backgroundColor"
     tools:context=".activity.register.LoginMainActivity">
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_marginTop="30dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/login"
-        android:textColor="@color/black"
+        android:textColor="@color/textColor"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
             android:text="@string/enter_passcode"
-            android:textColor="@color/black"
+            android:textColor="@color/textColor"
             android:textSize="18sp" />
 
 
@@ -61,6 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="@string/forgot_password"
+            android:textColor="@color/textLightColor"
             android:layout_gravity="end"/>
 
         <Button
