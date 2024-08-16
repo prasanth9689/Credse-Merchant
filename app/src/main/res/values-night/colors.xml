@@ -14,5 +14,5 @@
     <color name="backgroundColor">#0b141b</color>
     <color name="textColor">#FFFFFF</color>
     <color name="textLightColor">#F4F4F4</color>
-
+    <color name="cardBackgroundColor">#142532</color>
 </resources>

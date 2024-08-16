@@ -112,7 +112,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
-            android:background="@color/white"
+            android:background="@drawable/bg_btn_white"
             >
 
 
@@ -121,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="5dp"
+                android:background="@drawable/bg_btn_white"
                 android:layout_marginRight="5dp">
 
 
@@ -130,14 +131,14 @@
                     android:layout_height="35dp"
                     android:layout_centerInParent="true"
                     android:layout_marginLeft="10dp"
-                    android:background="@color/white"
+                    android:background="@drawable/bg_btn_white"
                     android:cursorVisible="false"
                     android:focusable="false"
                     android:fontFamily="sans-serif"
                     android:hint="@string/search_brands_smart_phones_headset_cloths"
                     android:imeOptions="actionSearch"
                     android:inputType="text"
-                    android:textColor="#1E1F20"
+                    android:textColor="@color/textLightColor"
                     android:textColorHighlight="#00BCD4"
                     android:textColorHint="@color/textLightColor"
                     android:textColorLink="#00BCD4"
@@ -160,7 +161,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#F2F2F3">
+            android:background="@drawable/bg_grey_home">
 
             <TextView
                 android:layout_width="wrap_content"

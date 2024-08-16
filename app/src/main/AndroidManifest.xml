@@ -57,6 +57,7 @@
             android:exported="false" />
         <activity
             android:name=".activity.contacts.PersonalDetailsActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".activity.navigation_drawer.WalletStatementActivity"
