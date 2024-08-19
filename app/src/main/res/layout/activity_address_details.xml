@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/backgroundColor"
     tools:context=".activity.contacts.AddressDetailsActivity">
 
 
@@ -13,17 +13,18 @@
         android:id="@+id/top"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:elevation="20dp"
-        android:background="#FFFFFF">
+        android:background="@color/backgroundColor"
+        android:elevation="20dp">
 
         <ImageView
             android:id="@+id/back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_back"
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
-            android:foreground="?android:attr/selectableItemBackground" />
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_back"
+            app:tint="@color/textColor" />
 
         <TextView
             android:id="@+id/title"
@@ -34,8 +35,8 @@
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
             android:text="@string/address_details"
-            android:textColor="@color/black"
-            android:textSize="20sp"/>
+            android:textColor="@color/textColor"
+            android:textSize="20sp" />
 
     </RelativeLayout>
 
@@ -65,7 +66,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/living_type"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <TextView
                 android:id="@+id/txt_living_ty_not_valid"
@@ -103,7 +104,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/house_type"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <TextView
                 android:id="@+id/txt_house_type_not_valid"
@@ -137,7 +138,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/name_of_home"
-            android:textColor="@color/black" />
+            android:textColor="@color/textColor" />
 
         <EditText
             android:id="@+id/ed_name_of_home"
@@ -172,7 +173,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:textSize="20dp"
                 android:text="@string/apartment_details"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -180,7 +181,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/house_no"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <EditText
                 android:id="@+id/ed_apart_house_no"
@@ -206,7 +207,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/level_floor"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <TextView
                     android:id="@+id/txt_lvl_floor_not_valid"
@@ -240,7 +241,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/block_no"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <EditText
                 android:id="@+id/ed_apart_block_no"
@@ -262,7 +263,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/apartment_name"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <EditText
                 android:id="@+id/ed_apartment_name"
@@ -301,7 +302,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/raw_house_details"
-                android:textColor="@color/black"
+                android:textColor="@color/textColor"
                 android:textSize="20dp"/>
 
             <TextView
@@ -310,7 +311,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/raw_house"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <EditText
                 android:id="@+id/ed_raw_house"
@@ -332,7 +333,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/property_name"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <EditText
                 android:id="@+id/ed_raw_property_name"
@@ -361,7 +362,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/door_no"
-            android:textColor="@color/black" />
+            android:textColor="@color/textColor" />
 
         <EditText
             android:id="@+id/ed_door_no"
@@ -383,7 +384,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/plot_no"
-            android:textColor="@color/black" />
+            android:textColor="@color/textColor" />
 
         <EditText
             android:id="@+id/ed_plot_no"
@@ -405,7 +406,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/street_name"
-            android:textColor="@color/black" />
+            android:textColor="@color/textColor" />
 
         <EditText
             android:id="@+id/ed_street_name"
@@ -427,7 +428,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/colony_name"
-            android:textColor="@color/black" />
+            android:textColor="@color/textColor" />
 
         <EditText
             android:id="@+id/ed_colony_name"
@@ -449,7 +450,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/landmark"
-            android:textColor="@color/black" />
+            android:textColor="@color/textColor" />
 
         <EditText
             android:id="@+id/ed_landmarl"
@@ -471,7 +472,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/area_locality"
-            android:textColor="@color/black" />
+            android:textColor="@color/textColor" />
 
         <EditText
             android:id="@+id/ed_area_name_loca"
@@ -494,7 +495,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/sub_district_talk"
-            android:textColor="@color/black" />
+            android:textColor="@color/textColor" />
 
         <EditText
             android:id="@+id/ed_sub_district"
@@ -520,7 +521,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/state"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <TextView
                 android:id="@+id/txt_state_not_valid"
@@ -560,7 +561,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/district"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <TextView
                 android:id="@+id/txt_district_not_valid"
@@ -599,7 +600,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/property_type"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <TextView
                 android:id="@+id/txt_property_type_not_valid"
@@ -635,7 +636,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/select_location_on_map"
-            android:textColor="@color/black" />
+            android:textColor="@color/textColor" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -679,7 +680,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/default_communication_address"
-            android:textColor="@color/black" />
+            android:textColor="@color/textColor" />
 
         <LinearLayout
             android:layout_width="match_parent"

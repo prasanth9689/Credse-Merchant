@@ -76,22 +76,22 @@ public class PersonalDetailsActivity extends AppCompatActivity {
     private void initSpinner() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.gender, R.layout.custom_spinner);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.spinnerGender.setAdapter(adapter);
 
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
                 R.array.countries_array, R.layout.custom_spinner);
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter1.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.spinnerCitizenship.setAdapter(adapter1);
 
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
                 R.array.marital_status, R.layout.custom_spinner);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter2.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.mStatus.setAdapter(adapter2);
 
         ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this,
                 R.array.title_array, R.layout.custom_spinner);
-        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter3.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.title.setAdapter(adapter3);
     }
 

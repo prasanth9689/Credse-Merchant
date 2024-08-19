@@ -106,7 +106,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif-medium"
                             android:text="@string/title"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
 
 
@@ -146,7 +146,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif-medium"
                             android:text="@string/first_name"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                         <TextView
                             android:id="@+id/txt_fname_not_valid"
@@ -187,7 +187,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/surname"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <EditText
                 android:id="@+id/surname"
@@ -209,7 +209,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/father_name"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <EditText
                 android:id="@+id/father_name"
@@ -231,7 +231,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/mother_name"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <EditText
                 android:id="@+id/mother_name"
@@ -267,7 +267,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif-medium"
                             android:text="@string/gender"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                     </RelativeLayout>
 
@@ -300,7 +300,7 @@
                         android:layout_marginTop="10dp"
                         android:fontFamily="sans-serif-medium"
                         android:text="@string/dob"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/textColor" />
 
                     <EditText
                         android:id="@+id/dob"
@@ -326,7 +326,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/place_of_birth"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <EditText
                 android:id="@+id/pl_of_birth"
@@ -352,7 +352,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/citizenship"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <TextView
                     android:id="@+id/txt_citizen_not_valid"
@@ -399,7 +399,7 @@
                         android:layout_marginTop="10dp"
                         android:fontFamily="sans-serif-medium"
                         android:text="@string/marital_status"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/textColor" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -430,7 +430,7 @@
                         android:layout_marginTop="10dp"
                         android:fontFamily="sans-serif-medium"
                         android:text="@string/doa"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/textColor" />
 
                     <EditText
                         android:id="@+id/doa"
@@ -456,7 +456,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/spouse_name"
-                android:textColor="@color/black" />
+                android:textColor="@color/textColor" />
 
             <EditText
                 android:id="@+id/spouse"

@@ -32,6 +32,10 @@
         android:theme="@style/Theme.CredseMerchant"
         tools:targetApi="31">
         <activity
+            android:name=".activity.settings.Display"
+            android:exported="false"
+            android:configChanges="uiMode"/>
+        <activity
             android:name=".activity.settings.Settings"
             android:exported="false" />
         <activity
@@ -57,8 +61,8 @@
             android:exported="false" />
         <activity
             android:name=".activity.contacts.PersonalDetailsActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".activity.navigation_drawer.WalletStatementActivity"
             android:exported="false" />

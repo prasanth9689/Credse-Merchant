@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/backgroundColor"
     tools:context=".activity.contacts.IdentityDetailsActivity">
 
     <RelativeLayout
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:elevation="20dp"
-        android:background="#FFFFFF">
+        android:background="@color/backgroundColor">
 
         <ImageView
             android:id="@+id/back"
@@ -22,7 +22,8 @@
             android:src="@drawable/ic_back"
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
-            android:foreground="?android:attr/selectableItemBackground" />
+            android:foreground="?android:attr/selectableItemBackground"
+            app:tint="@color/textColor" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,7 +33,7 @@
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
             android:text="@string/identity_details"
-            android:textColor="@color/black"
+            android:textColor="@color/textColor"
             android:textSize="20sp"/>
 
     </RelativeLayout>
@@ -72,7 +73,7 @@
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
                     android:text="@string/aadhar"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <EditText
                     android:id="@+id/ed_aadhar_no"
@@ -120,7 +121,7 @@
                             android:text="@string/front_side"
                             android:layout_centerVertical="true"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                         <ImageView
                             android:layout_width="35dp"
@@ -200,7 +201,7 @@
                             android:text="@string/back_side"
                             android:layout_centerVertical="true"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                         <ImageView
                             android:layout_width="35dp"
@@ -271,7 +272,7 @@
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
                     android:text="@string/pan_card"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <EditText
                     android:id="@+id/ed_pan_card"
@@ -320,7 +321,7 @@
                             android:text="@string/front_side"
                             android:layout_centerVertical="true"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                         <ImageView
                             android:layout_width="35dp"
@@ -400,7 +401,7 @@
                             android:text="@string/back_side"
                             android:layout_centerVertical="true"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                         <ImageView
                             android:layout_width="35dp"
@@ -473,7 +474,7 @@
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
                     android:text="@string/voter_card"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <EditText
                     android:id="@+id/ed_voter_id"
@@ -522,7 +523,7 @@
                             android:text="@string/front_side"
                             android:layout_centerVertical="true"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                         <ImageView
 
@@ -602,7 +603,7 @@
                             android:text="@string/back_side"
                             android:layout_centerVertical="true"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                         <ImageView
                             android:layout_width="35dp"
@@ -675,7 +676,7 @@
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
                     android:text="@string/passport"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <EditText
                     android:id="@+id/ed_passport"
@@ -722,7 +723,7 @@
                             android:text="@string/front_side"
                             android:layout_centerVertical="true"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                         <ImageView
 
@@ -802,7 +803,7 @@
                             android:text="@string/back_side"
                             android:layout_centerVertical="true"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                         <ImageView
                             android:layout_width="35dp"
@@ -876,7 +877,7 @@
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
                     android:text="@string/driving_license"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <EditText
                     android:id="@+id/ed_driving_license"
@@ -923,7 +924,7 @@
                             android:text="@string/front_side"
                             android:layout_centerVertical="true"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                         <ImageView
 
@@ -1003,7 +1004,7 @@
                             android:text="@string/back_side"
                             android:layout_centerVertical="true"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                         <ImageView
 
@@ -1077,7 +1078,7 @@
                     android:fontFamily="sans-serif-medium"
                     android:textSize="20dp"
                     android:text="@string/ration_card"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <EditText
                     android:id="@+id/ed_ration_card"
@@ -1123,7 +1124,7 @@
                             android:text="@string/front_side"
                             android:layout_centerVertical="true"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                         <ImageView
                             android:layout_width="35dp"
@@ -1202,7 +1203,7 @@
                             android:text="@string/back_side"
                             android:layout_centerVertical="true"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/textColor" />
 
                         <ImageView
 

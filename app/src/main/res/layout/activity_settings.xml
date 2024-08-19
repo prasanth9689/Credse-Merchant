@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:elevation="20dp"
-        android:background="#FFFFFF">
+        android:background="@color/backgroundColor">
 
         <ImageView
             android:id="@+id/back"
@@ -58,7 +58,8 @@
                 android:src="@drawable/ic_user_account"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:contentDescription="@string/account_icon" />
+                android:contentDescription="@string/account_icon"
+                />
 
             <TextView
                 android:id="@+id/my_ac_profile_main_text"
@@ -71,7 +72,7 @@
                 android:textStyle="bold"
                 android:maxLines="1"
                 android:text="@string/my_account"
-                android:textColor="@color/black"
+                android:textColor="@color/textColor"
                 android:textSize="16sp" />
 
             <TextView
@@ -81,7 +82,8 @@
                 android:layout_below="@+id/my_ac_profile_main_text"
                 android:layout_alignStart="@+id/my_ac_profile_main_text"
                 android:maxLines="1"
-                android:text="Manage your account, Bill Payments"
+                android:text="@string/manage_your_account_bill_payments"
+                android:textColor="@color/textLightColor"
                 android:fontFamily="sans-serif"
                 android:textSize="14sp" />
         </RelativeLayout>
@@ -91,6 +93,7 @@
             android:id="@+id/my_channel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onDisplay"
             android:background="@drawable/button_click_default"
             android:padding="8dp">
             <ImageView
@@ -98,7 +101,9 @@
                 android:src="@drawable/ic_general"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:contentDescription="@string/general_settings" />
+                android:contentDescription="@string/general_settings"
+                app:tint="@color/textColor"/>
+                />
 
             <TextView
                 android:id="@+id/my_channel_main_text"
@@ -109,8 +114,8 @@
                 android:fontFamily="@font/ubuntu_medium"
                 android:textStyle="bold"
                 android:maxLines="1"
-                android:text="Display"
-                android:textColor="@color/black"
+                android:text="@string/display"
+                android:textColor="@color/textColor"
                 android:textSize="16sp"
                 android:layout_width="wrap_content" />
 
@@ -121,7 +126,8 @@
                 android:layout_below="@+id/my_channel_main_text"
                 android:layout_alignStart="@+id/my_channel_main_text"
                 android:maxLines="1"
-                android:text="Theme, font size"
+                android:text="@string/theme_font_size"
+                android:textColor="@color/textLightColor"
                 android:fontFamily="sans-serif"
                 android:textSize="14sp" />
 
@@ -138,7 +144,9 @@
                 android:src="@drawable/ic_settings"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:contentDescription="@string/settings" />
+                android:contentDescription="@string/settings"
+                app:tint="@color/textColor"/>
+                />
 
             <TextView
                 android:id="@+id/settings_main_text"
@@ -147,16 +155,17 @@
                 android:layout_marginStart="12dp"
                 android:layout_toEndOf="@+id/settings_img"
                 android:maxLines="1"
-                android:text="App language"
+                android:text="@string/app_language"
                 android:fontFamily="@font/ubuntu_medium"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/textColor"
                 android:textSize="16sp"
                 android:layout_width="wrap_content" />
 
             <TextView
                 android:id="@+id/settings_des_text"
-                android:text="English ( device default language )"
+                android:text="@string/english_device_default_language"
+                android:textColor="@color/textLightColor"
                 android:fontFamily="sans-serif"
                 android:textSize="14sp"
                 android:maxLines="1"
@@ -177,7 +186,9 @@
                 android:src="@drawable/ic_logout"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:contentDescription="@string/logout" />
+                android:contentDescription="@string/logout"
+                app:tint="@color/textColor"/>
+                />
 
             <TextView
                 android:id="@+id/logout_main_text"
@@ -189,13 +200,14 @@
                 android:fontFamily="@font/ubuntu_medium"
                 android:textStyle="bold"
                 android:text="@string/logout"
-                android:textColor="@color/black"
+                android:textColor="@color/textColor"
                 android:textSize="16sp"
                 android:layout_width="wrap_content" />
 
             <TextView
                 android:id="@+id/logout_des_text"
                 android:text="@string/click_to_logout_now"
+                android:textColor="@color/textLightColor"
                 android:textSize="14sp"
                 android:maxLines="1"
                 android:layout_width="match_parent"

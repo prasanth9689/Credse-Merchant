@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/backgroundColor"
     tools:context=".activity.main.RegisteredOffenceActivity">
 
     <RelativeLayout
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:elevation="20dp"
-        android:background="#FFFFFF">
+        android:background="@color/backgroundColor">
 
         <ImageView
             android:id="@+id/back"
@@ -22,7 +22,8 @@
             android:src="@drawable/ic_back"
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
-            android:foreground="?android:attr/selectableItemBackground" />
+            android:foreground="?android:attr/selectableItemBackground"
+            app:tint="@color/textColor" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,7 +33,7 @@
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
             android:text="@string/registered_offence_record"
-            android:textColor="@color/black"
+            android:textColor="@color/textColor"
             android:textSize="14sp"/>
 
     </RelativeLayout>
@@ -62,13 +63,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/name"
-                android:textColor="@color/grey"
+                android:textColor="@color/textLightColor"
                 android:fontFamily="sans-serif"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="@color/textColor"
                 android:text=": Sathish Mani B"
                 android:fontFamily="sans-serif-medium"
                 android:layout_marginStart="50dp"/>
@@ -84,13 +85,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/address"
-                android:textColor="@color/grey"
+                android:textColor="@color/textLightColor"
                 android:fontFamily="sans-serif"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="@color/textColor"
                 android:text=": 6a, 3rd Lane Raja Street, St.thomas Mount, Alandur, Alandur, Kanchipuram, Tamil Nadu, India"
                 android:fontFamily="sans-serif-medium"
                 android:layout_marginStart="50dp"/>
@@ -102,7 +103,7 @@
             android:layout_marginTop="10dp"
             android:orientation="vertical"
             android:layout_gravity="center_vertical"
-            android:background="@color/shadow_1">
+            android:background="@drawable/bg_grey_home">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -111,7 +112,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:fontFamily="sans-serif-medium"
-                android:textColor="@color/black"/>
+                android:textColor="@color/textColor"/>
 
         </RelativeLayout>
 
@@ -123,7 +124,7 @@
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"
             android:background="@drawable/bg_card_view"
-            app:cardBackgroundColor="#FFFFFF"
+            app:cardBackgroundColor="@color/cardBackgroundColor"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
             app:cardCornerRadius="10dp"
@@ -150,7 +151,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:hint="@string/offence_no_1"
-                        android:textColorHint="@color/black"
+                        android:textColorHint="@color/textColor"
                         android:fontFamily="sans-serif-medium"
                         android:textSize="14sp"/>
 
@@ -160,7 +161,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:hint="F.I.R No : 12/2024 at S1, Kanchipuram"
-                        android:textColorHint="@color/grey"
+                        android:textColor="@color/textLightColor"
                         android:fontFamily="sans-serif"
                         android:textSize="11sp"/>
 
@@ -175,6 +176,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="0dp"
+                            android:textColor="@color/textLightColor"
                             android:text="Theft on 26-07-2024 at 12:00 PM at Chennai"
                             android:fontFamily="sans-serif"
                             android:textSize="11sp"
@@ -187,6 +189,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="0dp"
                         android:text="Oral evidence avaolable"
+                        android:textColor="@color/textLightColor"
                         android:fontFamily="sans-serif"
                         android:textSize="11sp"
                         />
@@ -198,6 +201,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
                     android:text="@string/allegation_proved"
+                    android:textColor="@color/textColor"
                     android:fontFamily="sans-serif"
                     android:textSize="11sp"
                     android:layout_alignParentBottom="true"

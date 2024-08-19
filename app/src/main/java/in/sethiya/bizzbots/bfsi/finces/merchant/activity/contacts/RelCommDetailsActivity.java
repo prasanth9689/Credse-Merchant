@@ -55,7 +55,7 @@ public class RelCommDetailsActivity extends AppCompatActivity {
     private void initSpinner() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.rl_pract_array, R.layout.custom_spinner);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.spinnerRrPract.setAdapter(adapter);
     }
 }

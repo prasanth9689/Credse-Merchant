@@ -1,7 +1,9 @@
 package in.sethiya.bizzbots.bfsi.finces.merchant.activity.settings;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,5 +24,9 @@ public class Settings extends AppCompatActivity {
         binding = ActivitySettingsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+    }
+
+    public void onDisplay(View view) {
+        startActivity(new Intent(context, Display.class));
     }
 }

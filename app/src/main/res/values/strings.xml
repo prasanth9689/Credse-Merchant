@@ -367,6 +367,19 @@
     <string name="my_account">My Account</string>
     <string name="general_settings">General settings</string>
     <string name="click_to_logout_now">Click to logout now</string>
+    <string name="display_settings">Display Settings</string>
+    <string name="theme">Theme</string>
+    <string name="system_default">System default</string>
+    <string name="choose_theme">Choose theme</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="manage_your_account_bill_payments">Manage your account, Bill Payments</string>
+    <string name="display">Display</string>
+    <string name="theme_font_size">Theme, font size</string>
+    <string name="app_language">App language</string>
+    <string name="english_device_default_language">English ( device default language )</string>
 
     <array name="property_type">
         <item>Select</item>

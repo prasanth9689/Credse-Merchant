@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/backgroundColor"
     tools:context=".activity.contacts.ContactsDetailsActivity">
 
     <RelativeLayout
@@ -12,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:elevation="20dp"
-        android:background="#FFFFFF">
+        android:background="@color/backgroundColor">
 
         <ImageView
             android:id="@+id/back"
@@ -21,7 +22,8 @@
             android:src="@drawable/ic_back"
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
-            android:foreground="?android:attr/selectableItemBackground" />
+            android:foreground="?android:attr/selectableItemBackground"
+            app:tint="@color/textColor" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,7 +33,7 @@
             android:layout_toEndOf="@+id/back"
             android:fontFamily="sans-serif-medium"
             android:text="@string/contact_details"
-            android:textColor="@color/black"
+            android:textColor="@color/textColor"
             android:textSize="20sp"/>
 
     </RelativeLayout>
@@ -64,7 +66,7 @@
                android:layout_marginTop="10dp"
                android:fontFamily="sans-serif-medium"
                android:text="@string/personal_mobile_no"
-               android:textColor="@color/black" />
+               android:textColor="@color/textColor" />
 
            <EditText
                android:id="@+id/ed_personal_mobile_no"
@@ -125,7 +127,7 @@
                android:layout_marginTop="10dp"
                android:fontFamily="sans-serif-medium"
                android:text="@string/residential_landline"
-               android:textColor="@color/black" />
+               android:textColor="@color/textColor" />
 
            <EditText
                android:id="@+id/ed_residential_la_no"
@@ -147,7 +149,7 @@
                android:layout_marginTop="10dp"
                android:fontFamily="sans-serif-medium"
                android:text="@string/personal_email_id"
-               android:textColor="@color/black" />
+               android:textColor="@color/textColor" />
 
            <EditText
                android:id="@+id/ed_personal_email_id"
@@ -173,7 +175,7 @@
                    android:layout_marginTop="10dp"
                    android:fontFamily="sans-serif-medium"
                    android:text="@string/preferred_language_of_communication"
-                   android:textColor="@color/black" />
+                   android:textColor="@color/textColor" />
 
                <TextView
                    android:id="@+id/txt_prf_lang_not_valid"
@@ -208,7 +210,7 @@
                android:layout_marginTop="10dp"
                android:fontFamily="sans-serif-medium"
                android:text="@string/preferred_mode_of_communication"
-               android:textColor="@color/black" />
+               android:textColor="@color/textColor" />
 
            <LinearLayout
                android:layout_width="match_parent"
@@ -220,7 +222,7 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:fontFamily="sans-serif"
-                   android:buttonTint="@color/black"
+                   android:buttonTint="@color/textColor"
                    android:text="@string/sms" />
 
                <CheckBox
@@ -228,7 +230,7 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="10dp"
-                   android:buttonTint="@color/black"
+                   android:buttonTint="@color/textColor"
                    android:fontFamily="sans-serif"
                    android:text="@string/whatsapp" />
 
@@ -237,7 +239,7 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="10dp"
-                   android:buttonTint="@color/black"
+                   android:buttonTint="@color/textColor"
                    android:fontFamily="sans-serif"
                    android:text="@string/email" />
 
@@ -245,7 +247,7 @@
                    android:id="@+id/call"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:buttonTint="@color/black"
+                   android:buttonTint="@color/textColor"
                    android:layout_marginStart="10dp"
                    android:fontFamily="sans-serif"
                    android:text="@string/call" />

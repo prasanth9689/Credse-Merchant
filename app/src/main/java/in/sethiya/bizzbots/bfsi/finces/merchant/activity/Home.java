@@ -26,12 +26,14 @@ import java.util.Locale;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.EnterAadhaarNoActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.MyReviewActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.AboutActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.BusinessAreaActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.MyCompanyActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.ProfileActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.SoleProprietorshipActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.WalletStatementActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.settings.Settings;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityHomeBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.LocaleHelper;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.SessionHandler;
@@ -184,6 +186,10 @@ public class Home extends AppCompatActivity {
         startActivity(new Intent(context, WalletStatementActivity.class));
     }
 
+    public void onSettings(View view) {
+        startActivity(new Intent(context, Settings.class));
+    }
+
     public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         ArrayList<Integer> exploreImage;
         ArrayList<String> exploreName;
@@ -221,7 +227,8 @@ public class Home extends AppCompatActivity {
 
             holder.layout.setOnClickListener(v -> {
                 switch (position){
-
+                    default:
+                        startActivity(new Intent(context, MyReviewActivity.class));
                 }
             });
         }

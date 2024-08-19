@@ -121,22 +121,22 @@ public class AddressDetailsActivity extends AppCompatActivity implements Selecti
     private void initSpinnerArray() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.living_type_array, R.layout.custom_spinner);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.spinnerLivingType.setAdapter(adapter);
 
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
                 R.array.house_type_array, R.layout.custom_spinner);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter2.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.spinnerHouseType.setAdapter(adapter2);
 
         ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this,
                 R.array.floor_array, R.layout.custom_spinner);
-        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter3.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.spinnerApartLevelFloor.setAdapter(adapter3);
 
         ArrayAdapter<CharSequence> adapter4 = ArrayAdapter.createFromResource(this,
                 R.array.property_type_array, R.layout.custom_spinner);
-        adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter4.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
         binding.spinnerPropertyType.setAdapter(adapter4);
     }
 

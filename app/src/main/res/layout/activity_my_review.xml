@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/backgroundColor"
     tools:context=".activity.main.MyReviewActivity">
 
     <ScrollView
@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:elevation="20dp"
-                android:background="#FFFFFF">
+                android:background="@color/backgroundColor">
 
                 <ImageView
                     android:id="@+id/back"
@@ -31,7 +31,8 @@
                     android:src="@drawable/ic_back"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
-                    android:foreground="?android:attr/selectableItemBackground" />
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:tint="@color/textColor" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -41,7 +42,7 @@
                     android:layout_toEndOf="@+id/back"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/my_review"
-                    android:textColor="@color/black"
+                    android:textColor="@color/textColor"
                     android:textSize="14sp"/>
 
             </RelativeLayout>
@@ -61,7 +62,7 @@
                     android:gravity="start"
                     android:text="@string/all_the_details_amp_feedbacks_provided_here_are_only_for_your_own_organizations_internal_usage_and_for_calculating_personality_score_of_customer_which_will_be_used_publically"
                     android:textSize="13sp"
-
+                    android:textColor="@color/textLightColor"
                     />
 
                 <TextView
@@ -70,7 +71,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/personality_traits"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -81,6 +82,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textLightColor"
                         android:text="@string/honesty" />
 
                     <LinearLayout
@@ -131,6 +133,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textLightColor"
                         android:text="@string/kindness" />
 
                     <LinearLayout
@@ -181,6 +184,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textLightColor"
                         android:text="@string/friendliness" />
 
                     <LinearLayout
@@ -231,6 +235,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textLightColor"
                         android:text="@string/smartness" />
 
                     <LinearLayout
@@ -281,6 +286,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textLightColor"
                         android:text="@string/sensibility" />
 
                     <LinearLayout
@@ -328,7 +334,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/other_aspects"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -339,6 +345,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textLightColor"
                         android:text="@string/financial_credibility" />
 
                     <LinearLayout
@@ -389,6 +396,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textLightColor"
                         android:text="@string/political_activeness" />
 
                     <LinearLayout
@@ -439,6 +447,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textLightColor"
                         android:text="@string/religious_activenes" />
 
                     <LinearLayout
@@ -486,7 +495,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/feedback"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <EditText
                     android:id="@+id/mobile"
@@ -510,7 +519,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/offences"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -523,13 +532,14 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
                         android:text="@string/registered_offence"
-                        android:textColor="#6A6A6A" />
+                        android:textColor="@color/textLightColor" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/textColor"
                         android:text="0" />
 
                     <TextView
@@ -555,14 +565,15 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
                         android:text="@string/un_registered_offence"
-                        android:textColor="#6A6A6A" />
+                        android:textColor="@color/textLightColor" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif-medium"
-                        android:text="0" />
+                        android:text="0"
+                        android:textColor="@color/textColor"/>
 
                 </LinearLayout>
 
@@ -572,6 +583,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif"
                     android:gravity="start"
+                    android:textColor="@color/textLightColor"
                     android:text="@string/any_offences_submitted_here_will_only_be_posted_live_after_successful_verification_by_police_department"
                     android:textSize="13sp" />
 
@@ -581,7 +593,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/add_offences"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -905,7 +917,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/overall_experience"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/textColor" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -929,6 +941,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
+                            android:textColor="@color/textLightColor"
                             android:text="@string/strongly_n_negative" />
 
 
@@ -949,6 +962,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/textLightColor"
                             android:text="@string/negative" />
 
 
@@ -969,6 +983,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/textLightColor"
                             android:text="@string/neutral" />
 
 
@@ -989,6 +1004,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/textLightColor"
                             android:text="@string/positive" />
 
 
@@ -1009,6 +1025,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/textLightColor"
                             android:text="@string/strongly_n_positive" />
 
 
@@ -1023,6 +1040,7 @@
                     android:layout_marginTop="20dp"
                     android:fontFamily="sans-serif"
                     android:gravity="start"
+                    android:textColor="@color/textLightColor"
                     android:text="@string/any_attempt_of_misinterpretation_of_facts_or_willful_dishonesty_in_data_provisioning_for_any_reasons_will_result_to_initiation_of_civil_and_criminal_proceedings_under_section_499_of_ipc_for_defamation_along_with_suspension_of_user_account_deletion_of_all_customer_data_and_proceeding_towards_damage_recovery"
                     android:textSize="13sp" />
 
