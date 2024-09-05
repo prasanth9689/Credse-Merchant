@@ -44,8 +44,8 @@ public class SplashActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
 
-        //initApp();
-        startActivity(new Intent(context, Display.class));
+        initApp();
+      //  startActivity(new Intent(context, Display.class));
     }
 
     private void initApp() {
