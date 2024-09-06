@@ -32,9 +32,12 @@
         android:theme="@style/Theme.CredseMerchant"
         tools:targetApi="31">
         <activity
+            android:name=".payments.PaymentsOptionsActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.settings.Display"
-            android:exported="false"
-            android:configChanges="uiMode"/>
+            android:configChanges="uiMode"
+            android:exported="false" />
         <activity
             android:name=".activity.settings.Settings"
             android:exported="false" />

@@ -23,11 +23,13 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.EduOccupDetail
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.RelCommDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.MyReviewActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.RegisteredOffenceActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.WalletStatementActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.settings.Display;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.settings.Settings;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityEduOccupDetailsBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivitySplashBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.SessionHandler;
+import in.sethiya.bizzbots.bfsi.finces.merchant.payments.PaymentsOptionsActivity;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
@@ -44,8 +46,8 @@ public class SplashActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
 
-        initApp();
-      //  startActivity(new Intent(context, Display.class));
+    //    initApp();
+       startActivity(new Intent(context, PaymentsOptionsActivity.class));
     }
 
     private void initApp() {
