@@ -26,4 +26,13 @@ public interface APIInterface {
 
     @POST("server/common.php")
     Call<ResponseBody> savePersonalDetails(@Body RequestBody params);
+
+    @POST("server/common.php")
+    Call<ResponseBody> saveEduOccupation(@Body RequestBody params);
+
+    @POST("server/common.php")
+    Call<ResponseBody> saveIdentity(@Body RequestBody params);
+
+    @POST("server/common.php")
+    Call<ResponseBody> login(@Body RequestBody params);
 }

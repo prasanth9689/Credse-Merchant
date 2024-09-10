@@ -10,18 +10,30 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.CameraX;
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.ImageViewActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityIdentityDetailsBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.Utils;
+import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIClient;
+import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIInterface;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class IdentityDetailsActivity extends AppCompatActivity {
     private ActivityIdentityDetailsBinding binding;
@@ -452,8 +464,38 @@ public class IdentityDetailsActivity extends AppCompatActivity {
     }
 
     private void saveNow() {
-        Toast.makeText(context, "Valid", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(context, EduOccupDetailsActivity.class));
+        String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+        String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+        String currentTimeZone = new SimpleDateFormat("z", Locale.getDefault()).format(new Date());
+        String timeZone = currentDate +" "+ currentTime +" "+ currentTimeZone;
+
+        RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("axn", "save_identity")
+                .addFormDataPart("date", currentDate)
+                .addFormDataPart("time", currentTime)
+                .addFormDataPart("time_zone", currentTimeZone)
+                .build();
+
+        APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
+        Call<ResponseBody> call = apiInterface.saveIdentity(requestBody);
+
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(@NonNull Call<ResponseBody> call, @NonNull Response<ResponseBody> response) {
+                if (response.isSuccessful()){
+                    if (response.body() != null) {
+
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<ResponseBody> call, @NonNull Throwable t) {
+                startActivity(new Intent(context, EduOccupDetailsActivity.class));
+                Toast.makeText(context, "Error!" + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private boolean validateInputs() {

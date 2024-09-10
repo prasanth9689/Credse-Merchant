@@ -18,12 +18,23 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.CameraX;
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.ImageViewActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityEduOccupDetailsBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.Utils;
+import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIClient;
+import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIInterface;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class EduOccupDetailsActivity extends AppCompatActivity {
     private ActivityEduOccupDetailsBinding binding;
@@ -35,6 +46,7 @@ public class EduOccupDetailsActivity extends AppCompatActivity {
     private int OCCUPATION_SALARY = 1;
     private int OCCUPATION_SELF_EMPLOYED = 2;
     private int OCCUPATION_OTHER = 3;
+    private String mEducation, mOccupation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -699,13 +711,45 @@ public class EduOccupDetailsActivity extends AppCompatActivity {
     }
 
     private void saveNow() {
-        Toast.makeText(context, "Valid", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(context, RelCommDetailsActivity.class));
+        String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+        String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+        String currentTimeZone = new SimpleDateFormat("z", Locale.getDefault()).format(new Date());
+        String timeZone = currentDate +" "+ currentTime +" "+ currentTimeZone;
+
+        RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("axn", "save_edu")
+                .addFormDataPart("education", mEducation)
+                .addFormDataPart("occupation", mOccupation)
+                .addFormDataPart("date", currentDate)
+                .addFormDataPart("time", currentTime)
+                .addFormDataPart("time_zone", currentTimeZone)
+                .build();
+
+        APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
+        Call<ResponseBody> call = apiInterface.saveEduOccupation(requestBody);
+
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                if (response.isSuccessful()){
+                    if (response.body() != null) {
+
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                startActivity(new Intent(context, RelCommDetailsActivity.class));
+                Toast.makeText(context, "Error!" + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private boolean validateInputs() {
-        String mEducation = binding.spinnerEducation.getSelectedItem().toString();
-        String mOccupation = binding.spinnerOccupation.getSelectedItem().toString();
+         mEducation = binding.spinnerEducation.getSelectedItem().toString();
+         mOccupation = binding.spinnerOccupation.getSelectedItem().toString();
 
         if("Select".equals(mEducation)){
             Utils.showMessageInSnackbar(context, "Select education");

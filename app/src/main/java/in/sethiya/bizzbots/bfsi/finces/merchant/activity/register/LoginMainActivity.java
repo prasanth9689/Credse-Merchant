@@ -4,15 +4,30 @@ import android.app.KeyguardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.List;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.SetupPasscodeActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.EduOccupDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityLoginMainBinding;
+import in.sethiya.bizzbots.bfsi.finces.merchant.helper.Utils;
+import in.sethiya.bizzbots.bfsi.finces.merchant.model.Login;
+import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIClient;
+import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIInterface;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginMainActivity extends AppCompatActivity {
     private ActivityLoginMainBinding binding;
@@ -39,6 +54,8 @@ public class LoginMainActivity extends AppCompatActivity {
                     return;
                 }
 
+            //    loginNow();
+
                 KeyguardManager km = (KeyguardManager)getSystemService(KEYGUARD_SERVICE);
                 if(km.isKeyguardSecure()) {
 
@@ -50,6 +67,34 @@ public class LoginMainActivity extends AppCompatActivity {
                 }
 
 
+            }
+        });
+    }
+
+    private void loginNow() {
+        String passCode = binding.edPasscode.getText().toString();
+
+        RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("passcode", passCode)
+                .build();
+
+        APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
+        Call<ResponseBody> call = apiInterface.login(requestBody);
+
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                if (response.isSuccessful()){
+                    if (response.body() != null) {
+
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Toast.makeText(context, "Error!" + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
