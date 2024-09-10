@@ -380,6 +380,7 @@
     <string name="theme_font_size">Theme, font size</string>
     <string name="app_language">App language</string>
     <string name="english_device_default_language">English ( device default language )</string>
+    <string name="why_is_it_important"><u>Why is it important?</u></string>
 
     <array name="property_type">
         <item>Select</item>

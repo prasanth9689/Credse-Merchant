@@ -24,6 +24,7 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.RelCommDetails
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.MyReviewActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.RegisteredOffenceActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.WalletStatementActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.LoginMainActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.settings.Display;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.settings.Settings;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityEduOccupDetailsBinding;
@@ -47,7 +48,7 @@ public class SplashActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
 
     //    initApp();
-       startActivity(new Intent(context, PaymentsOptionsActivity.class));
+       startActivity(new Intent(context, LoginMainActivity.class));
     }
 
     private void initApp() {

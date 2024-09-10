@@ -23,8 +23,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
 import in.sethiya.bizzbots.bfsi.finces.merchant.adapter.SelectionAdapter;
@@ -33,6 +36,8 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.helper.Utils;
 import in.sethiya.bizzbots.bfsi.finces.merchant.model.States;
 import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIClient;
 import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIInterface;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -568,8 +573,58 @@ public class AddressDetailsActivity extends AppCompatActivity implements Selecti
     }
 
     private void saveNow() {
-        startActivity(new Intent(context, ContactsDetailsActivity.class));
-        Toast.makeText(context, "Valid", Toast.LENGTH_SHORT).show();
+
+        String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+        String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+        String currentTimeZone = new SimpleDateFormat("z", Locale.getDefault()).format(new Date());
+        String timeZone = currentDate +" "+ currentTime +" "+ currentTimeZone;
+
+        RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("axn", "addr_save")
+                .addFormDataPart("live_type", mLivingType)
+                .addFormDataPart("house_type", mHouseType)
+                .addFormDataPart("name_of_home", mNameOfHome)
+                .addFormDataPart("apart_house_no", mApartHouseNo)
+                .addFormDataPart("apart_lel_floor", mApartLevelFloor)
+                .addFormDataPart("apart_block_no", mApartBlockNo)
+                .addFormDataPart("apart_name", mApartName)
+                .addFormDataPart("raw_house", mRawHouse)
+                .addFormDataPart("raw_property_name", mRawPropertyName)
+                .addFormDataPart("door_no", mDoorNo)
+                .addFormDataPart("plot_no", mPlotNo)
+                .addFormDataPart("street_name", mStreetName)
+                .addFormDataPart("colony_name", mColonyName)
+                .addFormDataPart("landmark", mLandmark)
+                .addFormDataPart("area_name", mAreaName)
+                .addFormDataPart("sub_district", mSubDistrict)
+                .addFormDataPart("state", mSubDistrict)
+                .addFormDataPart("district", mSubDistrict)
+                .addFormDataPart("property_type", mSubDistrict)
+                .addFormDataPart("date", currentDate)
+                .addFormDataPart("time", currentTime)
+                .addFormDataPart("time_zone", currentTimeZone)
+                .build();
+
+        APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
+        Call<ResponseBody> call = apiInterface.saveAddressDetails(requestBody);
+
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(@NonNull Call<ResponseBody> call, @NonNull Response<ResponseBody> response) {
+                if (response.isSuccessful()){
+                    if (response.body() != null) {
+
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<ResponseBody> call, @NonNull Throwable t) {
+                startActivity(new Intent(context, ContactsDetailsActivity.class));
+                Toast.makeText(context, "Error!" + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private boolean validateInputs() {

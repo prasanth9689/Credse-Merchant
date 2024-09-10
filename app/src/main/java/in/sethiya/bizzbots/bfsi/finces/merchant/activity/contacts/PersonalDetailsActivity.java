@@ -21,6 +21,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -34,12 +35,21 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.CameraX;
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.ImageViewActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityPersonalDetailsBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.Utils;
+import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIClient;
+import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIInterface;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class PersonalDetailsActivity extends AppCompatActivity {
     private ActivityPersonalDetailsBinding binding;
@@ -389,8 +399,50 @@ public class PersonalDetailsActivity extends AppCompatActivity {
     }
 
     private void saveNow() {
-        Toast.makeText(context, "Valid", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(context, AddressDetailsActivity.class));
+        String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+        String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+        String currentTimeZone = new SimpleDateFormat("z", Locale.getDefault()).format(new Date());
+        String timeZone = currentDate +" "+ currentTime +" "+ currentTimeZone;
+
+        RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("axn", "save_personal")
+                .addFormDataPart("title", mTitle)
+                .addFormDataPart("f_name", mFirstName)
+                .addFormDataPart("s_name", mSurName)
+                .addFormDataPart("father_name", mFatherName)
+                .addFormDataPart("m_name", mMotherName)
+                .addFormDataPart("gender", mGender)
+                .addFormDataPart("dob", mDOB)
+                .addFormDataPart("pl_brth", mPlaceOfBirth)
+                .addFormDataPart("citizenship", mCitizenship)
+                .addFormDataPart("m_status", mMaritalStatus)
+                .addFormDataPart("doa", mDOA)
+                .addFormDataPart("sp_name", mSpouseName)
+                .addFormDataPart("date", currentDate)
+                .addFormDataPart("time", currentTime)
+                .addFormDataPart("time_zone", currentTimeZone)
+                .build();
+
+        APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
+        Call<ResponseBody> call = apiInterface.savePersonalDetails(requestBody);
+
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(@NonNull Call<ResponseBody> call, @NonNull Response<ResponseBody> response) {
+                if (response.isSuccessful()){
+                    if (response.body() != null) {
+
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<ResponseBody> call, @NonNull Throwable t) {
+                startActivity(new Intent(context, AddressDetailsActivity.class));
+                Toast.makeText(context, "Error!" + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private boolean validateInputs() {

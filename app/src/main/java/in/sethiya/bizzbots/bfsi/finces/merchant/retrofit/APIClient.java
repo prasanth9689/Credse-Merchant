@@ -38,7 +38,7 @@ public class APIClient {
 
         if(retrofit ==null){
             retrofit = new Retrofit.Builder()
-                    .baseUrl("http://dev.godairy.in/")
+                    .baseUrl("https://credse.in")
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(okHttpClient)
                     .build();

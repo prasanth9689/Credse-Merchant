@@ -1,10 +1,12 @@
 package in.sethiya.bizzbots.bfsi.finces.merchant.activity.register;
 
+import android.app.KeyguardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +17,7 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityLoginMainBin
 public class LoginMainActivity extends AppCompatActivity {
     private ActivityLoginMainBinding binding;
     private final Context context = this;
+    private static int CODE_AUTHENTICATION_VERIFICATION = 241;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +39,33 @@ public class LoginMainActivity extends AppCompatActivity {
                     return;
                 }
 
-                startActivity(new Intent(context, SetupPasscodeActivity.class));
-                finish();
+                KeyguardManager km = (KeyguardManager)getSystemService(KEYGUARD_SERVICE);
+                if(km.isKeyguardSecure()) {
+
+                    Intent i = km.createConfirmDeviceCredentialIntent("Authentication required", "password");
+                    startActivityForResult(i, CODE_AUTHENTICATION_VERIFICATION);
+                }else{
+                    startActivity(new Intent(context, SetupPasscodeActivity.class));
+                    finish();
+                }
+
+
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode==RESULT_OK && requestCode==CODE_AUTHENTICATION_VERIFICATION)
+        {
+            startActivity(new Intent(context, SetupPasscodeActivity.class));
+            finish();
+            Toast.makeText(this, "Success: Verified", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(this, "Failure: Unable to verify user's identity", Toast.LENGTH_SHORT).show();
+        }
     }
 }

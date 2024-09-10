@@ -32,6 +32,12 @@
         android:theme="@style/Theme.CredseMerchant"
         tools:targetApi="31">
         <activity
+            android:name=".payments.AddNewUpiIdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".payments.AddNewCardActivity"
+            android:exported="false" />
+        <activity
             android:name=".payments.PaymentsOptionsActivity"
             android:exported="false" />
         <activity

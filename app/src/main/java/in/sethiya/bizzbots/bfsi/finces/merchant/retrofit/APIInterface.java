@@ -11,10 +11,19 @@ import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface APIInterface {
-    @POST("server/Procurement.php")
+    @POST("server/common.php")
     Call<ResponseBody> getStates(@Query("axn") String axn);
 
-    @POST("server/Procurement.php")
+    @POST("server/common.php")
     Call<ResponseBody> getDistricts(@Query("axn") String axn,
                                     @Query("stateCode") String stateCode);
+
+    @POST("server/common.php")
+    Call<ResponseBody> saveAddressDetails(@Body RequestBody params);
+
+    @POST("server/common.php")
+    Call<ResponseBody> saveContactDetails(@Body RequestBody params);
+
+    @POST("server/common.php")
+    Call<ResponseBody> savePersonalDetails(@Body RequestBody params);
 }

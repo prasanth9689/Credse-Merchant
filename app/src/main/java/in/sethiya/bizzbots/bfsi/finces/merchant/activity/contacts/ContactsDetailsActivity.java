@@ -13,18 +13,30 @@ import android.widget.CheckBox;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.LinkedHashSet;
+import java.util.Locale;
 import java.util.Set;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityContactsDetailsBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.Utils;
+import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIClient;
+import in.sethiya.bizzbots.bfsi.finces.merchant.retrofit.APIInterface;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ContactsDetailsActivity extends AppCompatActivity {
     private ActivityContactsDetailsBinding binding;
@@ -148,9 +160,45 @@ public class ContactsDetailsActivity extends AppCompatActivity {
     private void saveNow() {
         Set<String> s = new LinkedHashSet<>(list);
         String arrayList = s.toString();
-        Toast.makeText(context, "Valid", Toast.LENGTH_SHORT).show();
 
-        startActivity(new Intent(context, IdentityDetailsActivity.class));
+        String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+        String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+        String currentTimeZone = new SimpleDateFormat("z", Locale.getDefault()).format(new Date());
+        String timeZone = currentDate +" "+ currentTime +" "+ currentTimeZone;
+
+        RequestBody requestBody = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("axn", "save_cont_details")
+                .addFormDataPart("p_mobile", mPersonalMobileNo)
+                .addFormDataPart("res_landline_no", mResidenLandLine)
+                .addFormDataPart("p_email", mPersonalEmailId)
+                .addFormDataPart("pref_lang", mPrefLangCommun)
+                .addFormDataPart("date", currentDate)
+                .addFormDataPart("time", currentTime)
+                .addFormDataPart("time_zone", currentTimeZone)
+                .build();
+
+        APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
+        Call<ResponseBody> call = apiInterface.saveContactDetails(requestBody);
+
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(@NonNull Call<ResponseBody> call, @NonNull Response<ResponseBody> response) {
+                if (response.isSuccessful()){
+                    if (response.body() != null) {
+
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<ResponseBody> call, @NonNull Throwable t) {
+                startActivity(new Intent(context, IdentityDetailsActivity.class));
+                Toast.makeText(context, "Error!" + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 
     private boolean validateInputs() {

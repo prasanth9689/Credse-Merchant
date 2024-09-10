@@ -3,11 +3,13 @@ package in.sethiya.bizzbots.bfsi.finces.merchant.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +35,8 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.MyCom
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.ProfileActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.SoleProprietorshipActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.WalletStatementActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.LoginMainActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.RegisterMobileActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.settings.Settings;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityHomeBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.LocaleHelper;
@@ -47,6 +51,8 @@ public class Home extends AppCompatActivity {
     private String currentLanguage = "en", currentLang;
     private Locale myLocale;
     private User user;
+    Handler handler;
+    Runnable r;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +64,22 @@ public class Home extends AppCompatActivity {
 
         session = new SessionHandler(getApplicationContext());
         user = session.getUserDetails();
+
+        handler = new Handler();
+        r = new Runnable() {
+
+            @Override
+            public void run() {
+                // TODO Auto-generated method stub
+                finish();
+                Toast.makeText(context, "user is inactive. session end",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), LoginMainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+            }
+        };
+        startHandler();
 
         if(session.isLoggedIn()){
             binding.navDrawerLayout.userName.setText(user.getName());
@@ -251,5 +273,19 @@ public class Home extends AppCompatActivity {
                 layout = view.findViewById(R.id.layout);
             }
         }
+    }
+
+    @Override
+    public void onUserInteraction() {
+        // TODO Auto-generated method stub
+        super.onUserInteraction();
+        stopHandler();//stop first and then start
+        startHandler();
+    }
+    public void stopHandler() {
+        handler.removeCallbacks(r);
+    }
+    public void startHandler() {
+        handler.postDelayed(r, 5*60*1000); //for 5 minutes
     }
 }
