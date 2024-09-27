@@ -7,14 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
-
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 public class AdapterHomePayments extends RecyclerView.Adapter<AdapterHomePayments.ViewHolder> {
     ArrayList<Integer> exploreImage;
@@ -42,6 +41,12 @@ public class AdapterHomePayments extends RecyclerView.Adapter<AdapterHomePayment
 
         holder.layout.setOnClickListener(v -> {
             switch (position){
+                case 2:
+                    IntentIntegrator intentIntegrator = new IntentIntegrator(LoginActivity.this);
+                    intentIntegrator.setPrompt("Scan QR Code");
+                    intentIntegrator.setOrientationLocked(false);
+                    intentIntegrator.initiateScan();
+                    break;
                 /*
                 case 0:
                     startActivity(new Intent(context, Activity.class));

@@ -15,15 +15,15 @@
 
         <include
             android:id="@+id/toolbar"
-            layout="@layout/main_toolbar"/>
+            layout="@layout/main_toolbar" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Home"
-            android:textStyle="bold"
             android:gravity="center"
-            android:textSize="50dp"/>
+            android:text="Home"
+            android:textSize="50dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

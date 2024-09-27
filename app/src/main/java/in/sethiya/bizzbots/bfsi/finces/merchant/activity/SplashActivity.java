@@ -19,7 +19,9 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.databinding.DataBindingUtil;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.ContactsDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.EduOccupDetailsActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.IdentityDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.RelCommDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.MyReviewActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.RegisteredOffenceActivity;
@@ -47,8 +49,8 @@ public class SplashActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
 
-    //    initApp();
-       startActivity(new Intent(context, LoginMainActivity.class));
+      //  initApp();
+       startActivity(new Intent(context, Home.class));
     }
 
     private void initApp() {
