@@ -136,6 +136,10 @@
         <activity
             android:name=".activity.register.RegisterMobileActivity"
             android:exported="false" />
+        <activity android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+
         <activity
             android:name=".activity.SplashActivity"
             android:exported="true">

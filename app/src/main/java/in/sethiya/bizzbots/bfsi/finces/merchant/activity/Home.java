@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
@@ -21,6 +22,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,6 +45,7 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityHomeBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.LocaleHelper;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.SessionHandler;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.User;
+import in.sethiya.bizzbots.bfsi.finces.merchant.payments.PaymentsOptionsActivity;
 
 public class Home extends AppCompatActivity {
     private ActivityHomeBinding binding;
@@ -112,8 +116,35 @@ public class Home extends AppCompatActivity {
     }
 
     private void onClick() {
-
+        binding.toolbar.payBills.setOnClickListener(v -> {
+            IntentIntegrator intentIntegrator = new IntentIntegrator(this);
+            intentIntegrator.setPrompt("Scan QR Code");
+            intentIntegrator.setOrientationLocked(false);
+            intentIntegrator.initiateScan();
+        });
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        // if the intentResult is null then
+        // toast a message as "cancelled"
+        if (intentResult != null) {
+            if (intentResult.getContents() == null) {
+                Toast.makeText(getBaseContext(), "Cancelled", Toast.LENGTH_SHORT).show();
+            } else {
+                    Intent intent = new Intent(context, PaymentsOptionsActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                    finish();
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
+
 
     private void loadHome() {
         ArrayList<Integer> dashboardImage = new ArrayList<>(Arrays.asList(

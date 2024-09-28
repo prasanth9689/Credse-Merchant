@@ -41,12 +41,12 @@ public class AdapterHomePayments extends RecyclerView.Adapter<AdapterHomePayment
 
         holder.layout.setOnClickListener(v -> {
             switch (position){
-                case 2:
-                    IntentIntegrator intentIntegrator = new IntentIntegrator(LoginActivity.this);
-                    intentIntegrator.setPrompt("Scan QR Code");
-                    intentIntegrator.setOrientationLocked(false);
-                    intentIntegrator.initiateScan();
-                    break;
+//                case 2:
+//                    IntentIntegrator intentIntegrator = new IntentIntegrator(LoginActivity.this);
+//                    intentIntegrator.setPrompt("Scan QR Code");
+//                    intentIntegrator.setOrientationLocked(false);
+//                    intentIntegrator.initiateScan();
+//                    break;
                 /*
                 case 0:
                     startActivity(new Intent(context, Activity.class));
