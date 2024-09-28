@@ -33,6 +33,7 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityEduOccupDeta
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivitySplashBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.SessionHandler;
 import in.sethiya.bizzbots.bfsi.finces.merchant.payments.PaymentsOptionsActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.payments.UpiEnterPaymentActivity;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {

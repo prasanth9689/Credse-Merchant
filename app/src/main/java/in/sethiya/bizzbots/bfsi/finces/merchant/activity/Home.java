@@ -46,6 +46,7 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.helper.LocaleHelper;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.SessionHandler;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.User;
 import in.sethiya.bizzbots.bfsi.finces.merchant.payments.PaymentsOptionsActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.payments.UpiEnterPaymentActivity;
 
 public class Home extends AppCompatActivity {
     private ActivityHomeBinding binding;
@@ -134,7 +135,7 @@ public class Home extends AppCompatActivity {
             if (intentResult.getContents() == null) {
                 Toast.makeText(getBaseContext(), "Cancelled", Toast.LENGTH_SHORT).show();
             } else {
-                    Intent intent = new Intent(context, PaymentsOptionsActivity.class);
+                    Intent intent = new Intent(context, UpiEnterPaymentActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                     finish();
