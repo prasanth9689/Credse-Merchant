@@ -52,6 +52,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Payments"
@@ -62,6 +63,7 @@
                 android:layout_gravity="center_horizontal"/>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
                 android:id="@+id/recycler_view_payments"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -86,6 +88,7 @@
                 />
 
             <TextView
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Investments"
@@ -96,6 +99,7 @@
                 android:layout_gravity="center_horizontal"/>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
                 android:id="@+id/recycler_view_investments"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -103,6 +107,7 @@
                 />
 
             <TextView
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Loans"
@@ -113,6 +118,7 @@
                 android:layout_gravity="center_horizontal"/>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
                 android:id="@+id/recycler_view_loans"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -120,6 +126,7 @@
                 />
 
             <TextView
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Insurance"
@@ -130,6 +137,7 @@
                 android:layout_gravity="center_horizontal"/>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
                 android:id="@+id/recycler_view_insurance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

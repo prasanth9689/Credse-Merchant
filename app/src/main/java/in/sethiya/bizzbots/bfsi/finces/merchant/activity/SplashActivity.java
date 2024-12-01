@@ -23,13 +23,16 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.ContactsDetail
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.EduOccupDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.IdentityDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.RelCommDetailsActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.EnterAadhaarNoActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.MyReviewActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.RegisteredOffenceActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.WalletStatementActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.LoginActivity2;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.LoginMainActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.settings.Display;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.settings.Settings;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityEduOccupDetailsBinding;
+import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityEnterAadhaarNoBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivitySplashBinding;
 import in.sethiya.bizzbots.bfsi.finces.merchant.helper.session.SessionHandler;
 import in.sethiya.bizzbots.bfsi.finces.merchant.payments.PaymentsOptionsActivity;
@@ -50,11 +53,39 @@ public class SplashActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
 
-      //  initApp();
-       startActivity(new Intent(context, Home.class));
+        /*
+         * Normal init app
+         *
+         * Splash -> Language selection -> Get started -> Register mobile -> Verification -> Device registration -> Login -> Setup passcode -> Home
+         */
+    //    normalInitApp();
+
+        /*
+         *  Bypass init application
+         *
+         *  Splash -> Login -> Setup passcode -> Home
+         */
+   //     byPassInitApp();
+
+        testInitApp();
     }
 
-    private void initApp() {
+    private void testInitApp() {
+        startActivity(new Intent(context, EnterAadhaarNoActivity.class));
+        finish();
+    }
+
+    private void byPassInitApp() {
+        Handler handler = new Handler();
+        handler.postDelayed(() -> {
+            Intent intent = new Intent(context, LoginActivity2.class);
+       startActivity(intent);
+       finish();
+
+        },1500);
+    }
+
+    private void normalInitApp() {
         initTheme();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.Locale;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.ContactDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.EnterAadhaarNoActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.main.MyReviewActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.AboutActivity;
@@ -38,6 +39,7 @@ import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.MyCom
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.ProfileActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.SoleProprietorshipActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.navigation_drawer.WalletStatementActivity;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.LoginActivity2;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.LoginMainActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.register.RegisterMobileActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.activity.settings.Settings;
@@ -77,8 +79,8 @@ public class Home extends AppCompatActivity {
             public void run() {
                 // TODO Auto-generated method stub
                 finish();
-                Toast.makeText(context, "user is inactive. session end",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), LoginMainActivity.class);
+                //Toast.makeText(context, "user is inactive. session end",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), LoginActivity2.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
@@ -282,7 +284,7 @@ public class Home extends AppCompatActivity {
             holder.layout.setOnClickListener(v -> {
                 switch (position){
                     default:
-                        startActivity(new Intent(context, MyReviewActivity.class));
+                        startActivity(new Intent(context, ContactDetailsActivity.class));
                 }
             });
         }

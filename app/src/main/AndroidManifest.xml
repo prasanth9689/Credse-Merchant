@@ -32,6 +32,9 @@
         android:theme="@style/Theme.CredseMerchant"
         tools:targetApi="31">
         <activity
+            android:name=".activity.register.LoginActivity2"
+            android:exported="false" />
+        <activity
             android:name=".payments.UpiEnterPaymentActivity"
             android:exported="false" />
         <activity

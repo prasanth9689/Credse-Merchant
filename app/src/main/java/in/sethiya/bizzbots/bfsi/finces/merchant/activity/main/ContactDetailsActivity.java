@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import in.sethiya.bizzbots.bfsi.finces.merchant.R;
+import in.sethiya.bizzbots.bfsi.finces.merchant.activity.contacts.AddressDetailsActivity;
 import in.sethiya.bizzbots.bfsi.finces.merchant.databinding.ActivityContactDetailsBinding;
 
 public class ContactDetailsActivity extends AppCompatActivity {
@@ -35,6 +36,13 @@ public class ContactDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, ReportActivity.class));
+            }
+        });
+
+        binding.addDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(context, AddressDetailsActivity.class));
             }
         });
 

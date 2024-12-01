@@ -1,8 +1,5 @@
 package in.sethiya.bizzbots.bfsi.finces.merchant.retrofit;
 
-import java.util.List;
-
-import in.sethiya.bizzbots.bfsi.finces.merchant.model.Login;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -33,6 +30,6 @@ public interface APIInterface {
     @POST("server/common.php")
     Call<ResponseBody> saveIdentity(@Body RequestBody params);
 
-    @POST("server/common.php")
+    @POST("/credse_main.php")
     Call<ResponseBody> login(@Body RequestBody params);
 }

@@ -28,7 +28,7 @@ public class EnterAadhaarNoActivity extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         binding.edAadharNo.requestFocus();
 
-        binding.getOtp.setOnClickListener(new View.OnClickListener() {
+        binding.sendOtp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String mAadharNo = binding.edAadharNo.getText().toString();
@@ -43,10 +43,14 @@ public class EnterAadhaarNoActivity extends AppCompatActivity {
                     return;
                 }
 
-                startActivity(new Intent(context, AadhaarVerificationActivity.class));
+                sendOtp(mAadharNo);
             }
         });
 
         binding.back.setOnClickListener(v -> finish());
+    }
+
+    private void sendOtp(String aadharNumber) {
+
     }
 }

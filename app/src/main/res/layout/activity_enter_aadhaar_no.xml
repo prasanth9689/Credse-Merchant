@@ -68,33 +68,64 @@
 
         <EditText
             android:id="@+id/ed_aadhar_no"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/edit_text_login"
             android:fontFamily="sans-serif"
             android:hint=""
+            android:gravity="center"
+            android:textColor="@color/textColor"
+            android:textSize="38sp"
             android:maxLength="12"
             android:inputType="phone"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:singleLine="true"
-            android:textCursorDrawable="@drawable/cursor_blue"
+            android:textCursorDrawable="@drawable/cursor_black"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/get_otp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:background="@drawable/bg_blue_gradient"
-            android:fontFamily="sans-serif-medium"
+        <RelativeLayout
+            android:id="@+id/send_otp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
             android:foreground="?android:attr/selectableItemBackground"
-            android:text="@string/send_otp"
-            android:textColor="@color/white" />
+            android:background="@drawable/bg_black">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/progress_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/send_otp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:visibility="visible"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:indeterminateDrawable="@drawable/progressbar_cs_white"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
     </LinearLayout>
 

@@ -27,7 +27,7 @@ public class BusinessAreaActivity extends AppCompatActivity {
         binding = ActivityBsinessAreaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        loadBusiness();
+        loadSavings();
     }
 
     private void loadBusiness() {
@@ -77,7 +77,7 @@ public class BusinessAreaActivity extends AppCompatActivity {
         AdapterHomeSavings adapter = new AdapterHomeSavings(context, dashboardImage, dashboardName);
         binding.recyclerViewSavings.setAdapter(adapter);
 
-        loadInvestments();
+      //  loadInvestments();
 
         binding.logout.setOnClickListener(v -> finish());
     }
